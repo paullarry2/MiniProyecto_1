@@ -96,7 +96,7 @@ cinit FF8 FFF CODE FF8 0
 maintext FF2 FF7 CODE FF2 0
 %locals
 dist/default/production\SlaveTerm.X.production.o
-C:\Users\Universidad\AppData\Local\Temp\sr2c.s
+C:\Users\Universidad\AppData\Local\Temp\sqio.s
 422 7FC 0 CODE 0
 425 7FC 0 CODE 0
 431 7FC 0 CODE 0

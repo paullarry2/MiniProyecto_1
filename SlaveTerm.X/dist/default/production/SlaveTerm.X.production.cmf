@@ -15,7 +15,7 @@ $dist/default/production\SlaveTerm.X.production.o
 cinit CODE 0 7FC 7FC 4 2
 maintext CODE 0 7F9 7F9 3 2
 config CONFIG 4 2007 2007 2 2
-$C:\Users\Universidad\AppData\Local\Temp\sr2c.o
+$C:\Users\Universidad\AppData\Local\Temp\sqio.o
 end_init CODE 0 0 0 3 2
 config CONFIG 4 2007 2007 2 2
 # %UNUSED Section
@@ -64,11 +64,11 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\SlaveTerm.X.production.o
-7FC cinit CODE >422:C:\Users\Universidad\AppData\Local\Temp\sr2c.s
-7FC cinit CODE >425:C:\Users\Universidad\AppData\Local\Temp\sr2c.s
-7FC cinit CODE >431:C:\Users\Universidad\AppData\Local\Temp\sr2c.s
-7FC cinit CODE >433:C:\Users\Universidad\AppData\Local\Temp\sr2c.s
-7FD cinit CODE >434:C:\Users\Universidad\AppData\Local\Temp\sr2c.s
+7FC cinit CODE >422:C:\Users\Universidad\AppData\Local\Temp\sqio.s
+7FC cinit CODE >425:C:\Users\Universidad\AppData\Local\Temp\sqio.s
+7FC cinit CODE >431:C:\Users\Universidad\AppData\Local\Temp\sqio.s
+7FC cinit CODE >433:C:\Users\Universidad\AppData\Local\Temp\sqio.s
+7FD cinit CODE >434:C:\Users\Universidad\AppData\Local\Temp\sqio.s
 7F9 maintext CODE >42:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveTerm.X\main.c
 7F9 maintext CODE >43:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveTerm.X\main.c
 7F9 maintext CODE >44:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveTerm.X\main.c
@@ -92,26 +92,26 @@ __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\sr2c.o
+___sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\sqio.o
 _main FF2 0 CODE 0 maintext dist/default/production\SlaveTerm.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\SlaveTerm.X.production.o
-start 0 0 CODE 0 init C:\Users\Universidad\AppData\Local\Temp\sr2c.o
+start 0 0 CODE 0 init C:\Users\Universidad\AppData\Local\Temp\sqio.o
 __size_of_main 0 0 ABS 0 - dist/default/production\SlaveTerm.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sr2c.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sr2c.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sr2c.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sr2c.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sr2c.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sr2c.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sqio.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sqio.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sqio.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sqio.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sqio.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sqio.o
 wtemp0 7E 0 ABS 0 - dist/default/production\SlaveTerm.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\sr2c.o
-___stacklo 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\sr2c.o
+___stackhi 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\sqio.o
+___stacklo 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\sqio.o
 start_initialization FF8 0 CODE 0 cinit dist/default/production\SlaveTerm.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\sr2c.o
+___int_sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\sqio.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -149,7 +149,7 @@ __S1 0 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Universidad\AppData\Local\Temp\sr2c.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Universidad\AppData\Local\Temp\sqio.o
 __pmaintext FF2 0 CODE 0 maintext dist/default/production\SlaveTerm.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
