@@ -28,6 +28,7 @@
 
 #include <xc.h>
 #include <stdint.h>
+#include "SPI.h"
 #include "Adc_int_.h"
 
 #define _XTAL_FREQ (8000000)
@@ -67,23 +68,26 @@ void main(void) {
 //******************************************************************************
 //FUNCIONES
 //******************************************************************************
-void conf_but(void){
+
+void conf_but(void) {
     // CONFIGURACION PUERTOS
     INTCONbits.GIE = 1; //Habilito mis interrupciones
     INTCONbits.PEIE = 1; //Habilita interrupciones perifericas 
-    ANSEL = 0;// Indicar que el ansel y el anselh esten en 0, (digirales)
+    ANSEL = 0; // Indicar que el ansel y el anselh esten en 0, (digirales)
     ANSELH = 0;
     ANSELbits.ANS0 = 1; //Excepto el pin AN0 (Pot)
-    TRISC=0x00; 
-    TRISB=0x00; //Pone los puertos como outputs, en b los prim 2 pin input
-    TRISD=0x00;
-    TRISE=0x00;
-    TRISA=0;
-    TRISAbits.TRISA0 = 1;//habilita como entrada el puerto analogico (pot)
+    TRISC = 0x00;
+    TRISB = 0x00; //Pone los puertos como outputs, en b los prim 2 pin input
+    TRISD = 0x00;
+    TRISE = 0x00;
+    TRISA = 0;
+    TRISAbits.TRISA0 = 1; //habilita como entrada el puerto analogico (pot)
     PORTD = 0;
     PORTB = 0;
     PORTC = 0;
     PORTE = 0;
+    spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+    //Configuracion de mi slave,  SSPSTAT IGUAL A 0, habilitado el SSPEN, CKP = 0
 }
 //******************************************************************************
 //Interrupcion
@@ -98,4 +102,9 @@ void __interrupt() ISR(void) {//Interrupciones
 
     }
     PIR1bits.ADIF = 0; //Apagar bandera de conversion
+
+    if (SSPIF == 1) {
+        spiWrite(pot);
+        SSPIF = 0;
+    }
 }

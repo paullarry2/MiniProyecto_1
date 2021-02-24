@@ -28,6 +28,7 @@
 
 #include <xc.h>
 #include "Adc_int_.h"
+#include "SPI.h"
 #define _XTAL_FREQ (8000000)
 #define led_r RD2
 #define led_a RD1
@@ -91,8 +92,7 @@ void conf_but(void){
     INTCONbits.PEIE = 1; //Habilita interrupciones perifericas 
     ANSEL = 0;// Indicar que el ansel y el anselh esten en 0, (digirales)
     ANSELH = 0;
-    ANSELbits.ANS0 = 1; //Excepto el pin AN0 (Pot)
-    TRISC=0x00; 
+    ANSELbits.ANS0 = 1; //Excepto el pin AN0 (Term)
     TRISB=0x00; //Pone los puertos como outputs, en b los prim 2 pin input
     TRISD=0x00;
     TRISE=0x00;
@@ -102,6 +102,8 @@ void conf_but(void){
     PORTB = 0;
     PORTC = 0;
     PORTE = 0;
+    spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+    //Configuracion de mi slave,  SSPSTAT IGUAL A 0, habilitado el SSPEN, CKP = 0
 }  
 //******************************************************************************
 //Interrupcion
@@ -116,4 +118,9 @@ void __interrupt() ISR(void) {//Interrupciones
 
     }
     PIR1bits.ADIF = 0; //Apagar bandera de conversion
+    
+    if (SSPIF == 1) {
+        spiWrite(term);
+        SSPIF = 0;
+    }
 }

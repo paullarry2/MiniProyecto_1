@@ -28,6 +28,7 @@
 
 #include <xc.h>
 #include <stdint.h>
+#include "SPI.h"
 
 #define _XTAL_FREQ (8000000)
 
@@ -61,7 +62,6 @@ void conf_but(void) {
     INTCONbits.RBIE = 1;
     ANSEL = 0; // Indicar que el ansel y el anselh esten en 0, (digirales)
     ANSELH = 0;
-    TRISC = 0x00;
     TRISB = 0x00; //Pone los puertos como outputs, en b los prim 2 pin input
     TRISBbits.TRISB0 = 1;
     TRISBbits.TRISB1 = 1; //Habilitar los puertos como entradas
@@ -73,11 +73,13 @@ void conf_but(void) {
     PORTB = 0;
     PORTC = 0;
     PORTE = 0;
-    
+
+    spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+    //Configuracion de mi slave,  SSPSTAT IGUAL A 0, habilitado el SSPEN, CKP = 0
 }
-    //******************************************************************************
-    //Interrupcion
-    //******************************************************************************
+//******************************************************************************
+//Interrupcion
+//******************************************************************************
 
 void __interrupt() ISR(void) {//Interrupciones
     if (INTCONbits.RBIF == 1) { // Si la bandera del interrupt on change "if"
@@ -86,8 +88,12 @@ void __interrupt() ISR(void) {//Interrupciones
             PORTD++; //Si el boton esta presionado, aumenta el puerto
         } else if (PORTBbits.RB0 == 1) {
             PORTD--; // Si el boton esta presionado, decrementa
-            }
         }
+    }
     INTCONbits.RBIF = 0; //Apaga bandera al terminar la accion.
+
+    if (SSPIF == 1) {
+        spiWrite(PORTB);
+        SSPIF = 0;
+    }
 }
-    
