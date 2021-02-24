@@ -38,11 +38,18 @@
 int pot;
 int adc_fin;
 
+
+//******************************************************************************
+//Prototipos
+//******************************************************************************
+void conf_but(void);
+
 //******************************************************************************
 //Main Loop
 //******************************************************************************
 
 void main(void) {
+    conf_but();
     confADC();
     conf_ch(0);
     while (1) {
@@ -55,6 +62,29 @@ void main(void) {
     }
 }
 
+
+
+//******************************************************************************
+//FUNCIONES
+//******************************************************************************
+void conf_but(void){
+    // CONFIGURACION PUERTOS
+    INTCONbits.GIE = 1; //Habilito mis interrupciones
+    INTCONbits.PEIE = 1; //Habilita interrupciones perifericas 
+    ANSEL = 0;// Indicar que el ansel y el anselh esten en 0, (digirales)
+    ANSELH = 0;
+    ANSELbits.ANS0 = 1; //Excepto el pin AN0 (Pot)
+    TRISC=0x00; 
+    TRISB=0x00; //Pone los puertos como outputs, en b los prim 2 pin input
+    TRISD=0x00;
+    TRISE=0x00;
+    TRISA=0;
+    TRISAbits.TRISA0 = 1;//habilita como entrada el puerto analogico (pot)
+    PORTD = 0;
+    PORTB = 0;
+    PORTC = 0;
+    PORTE = 0;
+}
 //******************************************************************************
 //Interrupcion
 //******************************************************************************

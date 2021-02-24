@@ -29,20 +29,91 @@
 #include <xc.h>
 #include "Adc_int_.h"
 #define _XTAL_FREQ (8000000)
+#define led_r RD2
+#define led_a RD1
+#define led_g RD0
 
 //******************************************************************************
 //Variables
 //******************************************************************************
+int term;
+int adc_fin;
 
+
+//******************************************************************************
+//Prototipos
+//******************************************************************************
+void conf_but(void);
 
 //******************************************************************************
 //Main
 //******************************************************************************
 
 void main(void) {
-    return;
+    conf_but();
+    adc_fin=0;
+    confADC();
+    term = 0;
+    conf_ch(0);
+    
+    while(1){
+        if (adc_fin == 0) {
+            adc_fin = 1;
+            __delay_ms(10); // Acquisition time
+            ADCON0bits.GO = 1; // Enciende la conversion   
+        }  
+        
+        if (term < 100){
+            led_g = 1;
+            led_a = 0;
+            led_r = 0;
+        }
+        else if (100 < term & term < 114){
+            led_a = 1;
+            led_g = 0;
+            led_r = 0;
+        }
+        else if (114 < term){
+            led_a = 0;
+            led_g = 0;
+            led_r = 1;
+        }
+    }
 }
 
+
+//******************************************************************************
+//FUNCIONES
+//******************************************************************************
+void conf_but(void){
+    // CONFIGURACION PUERTOS
+    INTCONbits.GIE = 1; //Habilito mis interrupciones
+    INTCONbits.PEIE = 1; //Habilita interrupciones perifericas 
+    ANSEL = 0;// Indicar que el ansel y el anselh esten en 0, (digirales)
+    ANSELH = 0;
+    ANSELbits.ANS0 = 1; //Excepto el pin AN0 (Pot)
+    TRISC=0x00; 
+    TRISB=0x00; //Pone los puertos como outputs, en b los prim 2 pin input
+    TRISD=0x00;
+    TRISE=0x00;
+    TRISA=0;
+    TRISAbits.TRISA0 = 1;//habilita como entrada el puerto analogico (pot)
+    PORTD = 0;
+    PORTB = 0;
+    PORTC = 0;
+    PORTE = 0;
+}  
 //******************************************************************************
 //Interrupcion
 //******************************************************************************
+
+void __interrupt() ISR(void) {//Interrupciones
+
+    if (PIR1bits.ADIF == 1) { //Termino de convevrtir?
+        //Chequea la bandera del ADC
+        term = ADRESH; //Copia el valor de la conversion al puerto C
+        adc_fin = 0; //Apagar bandera de copiando 
+
+    }
+    PIR1bits.ADIF = 0; //Apagar bandera de conversion
+}
