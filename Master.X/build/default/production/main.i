@@ -20,7 +20,7 @@
 #pragma config LVP = OFF
 
 
-
+#pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
 
 
@@ -2696,10 +2696,30 @@ uint8_t get_spi(unsigned SS);
 void main(void) {
     setup();
     while (1) {
-        pot = get_spi(PORTBbits.RB0);
-        contador = get_spi(PORTBbits.RB1);
-        termometro = get_spi(PORTBbits.RB2);
-        PORTD = termometro;
+
+        PORTBbits.RB0 = 0;
+        _delay((unsigned long)((1)*((8000000)/4000.0)));
+        spiWrite(1);
+        pot = spiRead();
+        _delay((unsigned long)((1)*((8000000)/4000.0)));
+        PORTBbits.RB0 = 1;
+
+        PORTBbits.RB1 = 0;
+        _delay((unsigned long)((1)*((8000000)/4000.0)));
+        spiWrite(1);
+        contador = spiRead();
+        _delay((unsigned long)((1)*((8000000)/4000.0)));
+        PORTBbits.RB1 = 1;
+
+        PORTBbits.RB2 = 0;
+        _delay((unsigned long)((1)*((8000000)/4000.0)));
+        spiWrite(1);
+        termometro = spiRead();
+        _delay((unsigned long)((1)*((8000000)/4000.0)));
+        PORTBbits.RB2 = 1;
+
+
+
     }
 }
 
@@ -2712,7 +2732,7 @@ void setup(void) {
     ANSEL = 0;
     ANSELH = 0;
     TRISC = 0;
-    TRISCbits.TRISC4 = 1;
+    TRISC4 = 1;
     TRISB = 0;
     TRISD = 0;
     PORTB = 0;

@@ -63,10 +63,23 @@ void main(void) {
         pot = spiRead();
         __delay_ms(1);
         S_Pot = 1; //Slave Deselect  
-       // pot = get_spi(S_Pot);
-        //contador = get_spi(S_Cont);
-        //termometro = get_spi(S_Term);
-        PORTD = pot;
+
+        S_Cont = 0; //Slave Select
+        __delay_ms(1);
+        spiWrite(1);
+        contador = spiRead();
+        __delay_ms(1);
+        S_Cont = 1; //Slave Deselect   
+        
+        S_Term = 0; //Slave Select
+        __delay_ms(1);
+        spiWrite(1);
+        termometro = spiRead();
+        __delay_ms(1);
+        S_Term = 1; //Slave Deselect  
+        
+        
+ 
     }
 }
 
@@ -79,7 +92,7 @@ void setup(void) {
     ANSEL = 0;
     ANSELH = 0;
     TRISC = 0;
-    TRISCbits.TRISC4 = 1;
+    TRISC4 = 1;
     TRISB = 0;
     TRISD = 0;
     PORTB = 0;
