@@ -25,7 +25,7 @@ cstackBANK0 BANK0 1 20 20 6 1
 intentry CODE 0 4 4 8 2
 bssCOMMON COMMON 1 75 75 4 1
 config CONFIG 4 2007 2007 2 2
-$C:\Users\Universidad\AppData\Local\Temp\sfa8.o
+$C:\Users\Universidad\AppData\Local\Temp\s52g.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
@@ -75,15 +75,15 @@ STRING DC-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\SlavePot.X.production.o
-F cinit CODE >798:C:\Users\Universidad\AppData\Local\Temp\sfa8.s
-F cinit CODE >801:C:\Users\Universidad\AppData\Local\Temp\sfa8.s
-F cinit CODE >815:C:\Users\Universidad\AppData\Local\Temp\sfa8.s
-10 cinit CODE >816:C:\Users\Universidad\AppData\Local\Temp\sfa8.s
-11 cinit CODE >817:C:\Users\Universidad\AppData\Local\Temp\sfa8.s
-12 cinit CODE >818:C:\Users\Universidad\AppData\Local\Temp\sfa8.s
-13 cinit CODE >824:C:\Users\Universidad\AppData\Local\Temp\sfa8.s
-13 cinit CODE >826:C:\Users\Universidad\AppData\Local\Temp\sfa8.s
-14 cinit CODE >827:C:\Users\Universidad\AppData\Local\Temp\sfa8.s
+F cinit CODE >799:C:\Users\Universidad\AppData\Local\Temp\s52g.s
+F cinit CODE >802:C:\Users\Universidad\AppData\Local\Temp\s52g.s
+F cinit CODE >816:C:\Users\Universidad\AppData\Local\Temp\s52g.s
+10 cinit CODE >817:C:\Users\Universidad\AppData\Local\Temp\s52g.s
+11 cinit CODE >818:C:\Users\Universidad\AppData\Local\Temp\s52g.s
+12 cinit CODE >819:C:\Users\Universidad\AppData\Local\Temp\s52g.s
+13 cinit CODE >825:C:\Users\Universidad\AppData\Local\Temp\s52g.s
+13 cinit CODE >827:C:\Users\Universidad\AppData\Local\Temp\s52g.s
+14 cinit CODE >828:C:\Users\Universidad\AppData\Local\Temp\s52g.s
 4 intentry CODE >98:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlavePot.X\main.c
 D6 text6 CODE >34:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlavePot.X\SPI.c
 D7 text6 CODE >36:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlavePot.X\SPI.c
@@ -175,19 +175,19 @@ __Hspace_4 4010 0 ABS 0 - -
 spiInit@sTransmitEdge 22 0 BANK0 1 cstackBANK0 dist/default/production\SlavePot.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\sfa8.o
+___sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\s52g.o
 _main 2E 0 CODE 0 maintext dist/default/production\SlavePot.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\SlavePot.X.production.o
-start 18 0 CODE 0 init C:\Users\Universidad\AppData\Local\Temp\sfa8.o
+start 18 0 CODE 0 init C:\Users\Universidad\AppData\Local\Temp\s52g.o
 __size_of_main 0 0 ABS 0 - dist/default/production\SlavePot.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sfa8.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sfa8.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sfa8.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sfa8.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sfa8.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sfa8.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\s52g.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\s52g.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\s52g.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\s52g.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\s52g.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\s52g.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\SlavePot.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -198,8 +198,8 @@ _ANSELH 189 0 ABS 0 - dist/default/production\SlavePot.X.production.o
 __size_of_spiInit 0 0 ABS 0 - dist/default/production\SlavePot.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 _adc_fin 75 0 COMMON 1 bssCOMMON dist/default/production\SlavePot.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\sfa8.o
-___stacklo 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\sfa8.o
+___stackhi 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\s52g.o
+___stacklo 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\s52g.o
 spiInit@sDataSample 20 0 BANK0 1 cstackBANK0 dist/default/production\SlavePot.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\SlavePot.X.production.o
 _TRISAbits 85 0 ABS 0 - dist/default/production\SlavePot.X.production.o
@@ -209,7 +209,7 @@ _SSPBUF 13 0 ABS 0 - dist/default/production\SlavePot.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\SlavePot.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\SlavePot.X.production.o
 _TRISC5 43D 0 ABS 0 - dist/default/production\SlavePot.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\sfa8.o
+___int_sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\s52g.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -256,7 +256,7 @@ _pot 77 0 COMMON 1 bssCOMMON dist/default/production\SlavePot.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\SlavePot.X.production.o
 __end_of_ISR DE 0 CODE 0 text5 dist/default/production\SlavePot.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Universidad\AppData\Local\Temp\sfa8.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Universidad\AppData\Local\Temp\s52g.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\SlavePot.X.production.o
 __end_of_confADC 1AC 0 CODE 0 text4 dist/default/production\SlavePot.X.production.o
 __end_of_conf_ch 186 0 CODE 0 text1 dist/default/production\SlavePot.X.production.o

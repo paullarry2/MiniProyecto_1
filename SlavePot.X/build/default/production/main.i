@@ -20,7 +20,7 @@
 #pragma config LVP = OFF
 
 
-
+#pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
 
 

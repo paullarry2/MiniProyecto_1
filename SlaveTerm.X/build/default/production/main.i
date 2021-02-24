@@ -2748,7 +2748,7 @@ void conf_but(void){
     TRISE=0x00;
     TRISA=0;
     TRISC = 0;
-    TRISCbits.TRISC4 = 1;
+    TRISC4 = 1;
     TRISAbits.TRISA0 = 1;
     PORTD = 0;
     PORTB = 0;

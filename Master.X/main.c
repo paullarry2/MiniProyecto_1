@@ -58,24 +58,24 @@ void main(void) {
     while (1) {
         
         S_Pot = 0; //Slave Select
-        __delay_ms(1);
+        __delay_ms(5);
         spiWrite(1);
         pot = spiRead();
-        __delay_ms(1);
+        __delay_ms(5);
         S_Pot = 1; //Slave Deselect  
 
         S_Cont = 0; //Slave Select
-        __delay_ms(1);
+        __delay_ms(5);
         spiWrite(1);
         contador = spiRead();
-        __delay_ms(1);
+        __delay_ms(5);
         S_Cont = 1; //Slave Deselect   
         
         S_Term = 0; //Slave Select
-        __delay_ms(1);
+        __delay_ms(5);
         spiWrite(1);
         termometro = spiRead();
-        __delay_ms(1);
+        __delay_ms(5);
         S_Term = 1; //Slave Deselect  
         
         

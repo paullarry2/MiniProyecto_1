@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Universidad\AppData\Local\Temp\sa28.o
+$C:\Users\Universidad\AppData\Local\Temp\smo8.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
@@ -72,11 +72,11 @@ STRING 9C-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\SlaveCont.X.production.o
-F cinit CODE >630:C:\Users\Universidad\AppData\Local\Temp\sa28.s
-F cinit CODE >633:C:\Users\Universidad\AppData\Local\Temp\sa28.s
-F cinit CODE >639:C:\Users\Universidad\AppData\Local\Temp\sa28.s
-F cinit CODE >641:C:\Users\Universidad\AppData\Local\Temp\sa28.s
-10 cinit CODE >642:C:\Users\Universidad\AppData\Local\Temp\sa28.s
+F cinit CODE >630:C:\Users\Universidad\AppData\Local\Temp\smo8.s
+F cinit CODE >633:C:\Users\Universidad\AppData\Local\Temp\smo8.s
+F cinit CODE >639:C:\Users\Universidad\AppData\Local\Temp\smo8.s
+F cinit CODE >641:C:\Users\Universidad\AppData\Local\Temp\smo8.s
+10 cinit CODE >642:C:\Users\Universidad\AppData\Local\Temp\smo8.s
 4 intentry CODE >86:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
 96 text4 CODE >34:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
 97 text4 CODE >36:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
@@ -151,26 +151,26 @@ spiInit@sTransmitEdge 22 0 BANK0 1 cstackBANK0 dist/default/production\SlaveCont
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
 _IOCB 96 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\sa28.o
+___sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\smo8.o
 _main 11A 0 CODE 0 maintext dist/default/production\SlaveCont.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
-start 18 0 CODE 0 init C:\Users\Universidad\AppData\Local\Temp\sa28.o
+start 18 0 CODE 0 init C:\Users\Universidad\AppData\Local\Temp\smo8.o
 __size_of_main 0 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sa28.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sa28.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sa28.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sa28.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sa28.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sa28.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\smo8.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\smo8.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\smo8.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\smo8.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\smo8.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\smo8.o
 wtemp0 7E 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 _ANSELH 189 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 __size_of_spiInit 0 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\sa28.o
-___stacklo 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\sa28.o
+___stackhi 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\smo8.o
+___stacklo 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\smo8.o
 spiInit@sDataSample 20 0 BANK0 1 cstackBANK0 dist/default/production\SlaveCont.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\SlaveCont.X.production.o
 _TRISBbits 86 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
@@ -180,7 +180,7 @@ _SSPBUF 13 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 _TRISC5 43D 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\sa28.o
+___int_sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\smo8.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -225,7 +225,7 @@ __S3 0 0 ABS 0 - -
 saved_w 7E 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 __end_of_ISR 98 0 CODE 0 text3 dist/default/production\SlaveCont.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Universidad\AppData\Local\Temp\sa28.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Universidad\AppData\Local\Temp\smo8.o
 __pmaintext 11A 0 CODE 0 maintext dist/default/production\SlaveCont.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -

@@ -172,6 +172,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x FCMEN  =  OFF       ]
 "23
 [p x LVP  =  OFF         ]
+"26
+[p x BOR4V  =  BOR40V    ]
 "27
 [p x WRT  =  OFF  ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h

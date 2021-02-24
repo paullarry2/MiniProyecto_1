@@ -42,6 +42,7 @@ __Hfunctab 0 0 ENTRY 0
 __Lfunctab 0 0 ENTRY 0
 _TRISC3 43B 0 ABS 0
 _ADCON1 9F 0 ABS 0
+_TRISC4 43C 0 ABS 0
 _TRISC5 43D 0 ABS 0
 __Hcommon 0 0 ABS 0
 __Lcommon 0 0 ABS 0
@@ -84,7 +85,6 @@ __size_of_ISR 0 0 ABS 0
 ___stacklo 0 0 ABS 0
 __end_of_spiInit F3 0 CODE 0
 _TRISAbits 85 0 ABS 0
-_TRISCbits 87 0 ABS 0
 _ANSELbits 188 0 ABS 0
 __Hstrings 0 0 ABS 0
 __Lstrings 0 0 ABS 0
@@ -168,7 +168,7 @@ cstackCOMMON 70 78 COMMON 70 1
 cstackBANK0 20 25 BANK0 20 1
 %locals
 dist/default/production\SlaveTerm.X.production.o
-C:\Users\Universidad\AppData\Local\Temp\sjs4.s
+C:\Users\Universidad\AppData\Local\Temp\si7g.s
 804 F 0 CODE 0
 807 F 0 CODE 0
 821 F 0 CODE 0

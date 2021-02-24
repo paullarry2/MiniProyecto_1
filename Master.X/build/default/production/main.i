@@ -2698,24 +2698,24 @@ void main(void) {
     while (1) {
 
         PORTBbits.RB0 = 0;
-        _delay((unsigned long)((1)*((8000000)/4000.0)));
+        _delay((unsigned long)((5)*((8000000)/4000.0)));
         spiWrite(1);
         pot = spiRead();
-        _delay((unsigned long)((1)*((8000000)/4000.0)));
+        _delay((unsigned long)((5)*((8000000)/4000.0)));
         PORTBbits.RB0 = 1;
 
         PORTBbits.RB1 = 0;
-        _delay((unsigned long)((1)*((8000000)/4000.0)));
+        _delay((unsigned long)((5)*((8000000)/4000.0)));
         spiWrite(1);
         contador = spiRead();
-        _delay((unsigned long)((1)*((8000000)/4000.0)));
+        _delay((unsigned long)((5)*((8000000)/4000.0)));
         PORTBbits.RB1 = 1;
 
         PORTBbits.RB2 = 0;
-        _delay((unsigned long)((1)*((8000000)/4000.0)));
+        _delay((unsigned long)((5)*((8000000)/4000.0)));
         spiWrite(1);
         termometro = spiRead();
-        _delay((unsigned long)((1)*((8000000)/4000.0)));
+        _delay((unsigned long)((5)*((8000000)/4000.0)));
         PORTBbits.RB2 = 1;
 
 

@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Tue Feb 23 23:12:11 2021
+                                                                                               Wed Feb 24 00:33:45 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	16F887
@@ -395,14 +395,14 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    381  008C                     _PIE1bits	set	140
    382  009F                     _ADCON1	set	159
    383  0085                     _TRISAbits	set	133
-   384  0087                     _TRISCbits	set	135
-   385  0087                     _TRISC	set	135
-   386  0085                     _TRISA	set	133
-   387  0089                     _TRISE	set	137
-   388  0088                     _TRISD	set	136
-   389  0086                     _TRISB	set	134
-   390  043B                     _TRISC3	set	1083
-   391  043D                     _TRISC5	set	1085
+   384  0087                     _TRISC	set	135
+   385  0085                     _TRISA	set	133
+   386  0089                     _TRISE	set	137
+   387  0088                     _TRISD	set	136
+   388  0086                     _TRISB	set	134
+   389  043B                     _TRISC3	set	1083
+   390  043D                     _TRISC5	set	1085
+   391  043C                     _TRISC4	set	1084
    392  0188                     _ANSELbits	set	392
    393  0189                     _ANSELH	set	393
    394  0188                     _ANSEL	set	392
@@ -886,7 +886,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    872  00C2  0187               	clrf	7	;volatile
    873  00C3                     l896:
    874                           
-   875                           ;main.c: 101:     TRISCbits.TRISC4 = 1;
+   875                           ;main.c: 101:     TRISC4 = 1;
    876  00C3  1607               	bsf	7,4	;volatile
    877  00C4                     l898:
    878                           
@@ -1436,7 +1436,7 @@ DATA                 0      0       F      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Tue Feb 23 23:12:11 2021
+Symbol Table                                                                                   Wed Feb 24 00:33:45 2021
 
             _SSPSTATbits 0094                       l68 008D                       l77 00D4  
                      l95 011B                       l98 00FD                      l100 0107  
@@ -1475,18 +1475,18 @@ Symbol Table                                                                    
         __end_of_spiInit 00F3                    status 0003                    wtemp0 007E  
         __initialization 000F             __end_of_main 0091                   ??_main 0024  
                  _ADCON1 009F                   _ADRESH 001E                   _ANSELH 0189  
-                 _TRISC3 043B                   _TRISC5 043D                   _SSPCON 0014  
-                 _SSPBUF 0013         __end_of_conf_but 00D5                ??_confADC 0075  
-              ??_conf_ch 0075                   saved_w 007E         __end_of_spiWrite 0122  
-              ??_spiInit 0075  __end_of__initialization 0013           __pcstackCOMMON 0070  
-             __pmaintext 0017               __pintentry 0004                ?_conf_but 0070  
-                _SSPSTAT 0094                ?_spiWrite 0070                  _adc_fin 0075  
-              _ANSELbits 0188                  _confADC 0108                  __ptext1 00F3  
-                __ptext2 00B5                  __ptext3 00D5                  __ptext4 0108  
-                __ptext5 0091                  __ptext6 011C                  _conf_ch 00F3  
-           __size_of_ISR 0024                  _spiInit 00D5               ??_conf_but 0075  
-   end_of_initialization 0013               ??_spiWrite 0070                _TRISAbits 0085  
-              _TRISCbits 0087               conf_ch@sel 0020              spiWrite@dat 0070  
+                 _TRISC3 043B                   _TRISC4 043C                   _TRISC5 043D  
+                 _SSPCON 0014                   _SSPBUF 0013         __end_of_conf_but 00D5  
+              ??_confADC 0075                ??_conf_ch 0075                   saved_w 007E  
+       __end_of_spiWrite 0122                ??_spiInit 0075  __end_of__initialization 0013  
+         __pcstackCOMMON 0070               __pmaintext 0017               __pintentry 0004  
+              ?_conf_but 0070                  _SSPSTAT 0094                ?_spiWrite 0070  
+                _adc_fin 0075                _ANSELbits 0188                  _confADC 0108  
+                __ptext1 00F3                  __ptext2 00B5                  __ptext3 00D5  
+                __ptext4 0108                  __ptext5 0091                  __ptext6 011C  
+                _conf_ch 00F3             __size_of_ISR 0024                  _spiInit 00D5  
+             ??_conf_but 0075     end_of_initialization 0013               ??_spiWrite 0070  
+              _TRISAbits 0085               conf_ch@sel 0020              spiWrite@dat 0070  
     start_initialization 000F              __end_of_ISR 00B5              __pbssCOMMON 0075  
               ___latbits 0002            __pcstackBANK0 0020        __size_of_conf_but 0020  
       __size_of_spiWrite 0006                 ?_confADC 0070                 ?_conf_ch 0020  

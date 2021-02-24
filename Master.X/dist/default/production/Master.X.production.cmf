@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Universidad\AppData\Local\Temp\sm7o.o
+$C:\Users\Universidad\AppData\Local\Temp\sjvg.o
 end_init CODE 0 0 0 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\Master.X.production.o
@@ -71,15 +71,15 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Master.X.production.o
-7F8 cinit CODE >778:C:\Users\Universidad\AppData\Local\Temp\sm7o.s
-7F8 cinit CODE >781:C:\Users\Universidad\AppData\Local\Temp\sm7o.s
-7F8 cinit CODE >801:C:\Users\Universidad\AppData\Local\Temp\sm7o.s
-7F9 cinit CODE >802:C:\Users\Universidad\AppData\Local\Temp\sm7o.s
-7FA cinit CODE >803:C:\Users\Universidad\AppData\Local\Temp\sm7o.s
-7FB cinit CODE >804:C:\Users\Universidad\AppData\Local\Temp\sm7o.s
-7FC cinit CODE >810:C:\Users\Universidad\AppData\Local\Temp\sm7o.s
-7FC cinit CODE >812:C:\Users\Universidad\AppData\Local\Temp\sm7o.s
-7FD cinit CODE >813:C:\Users\Universidad\AppData\Local\Temp\sm7o.s
+7F8 cinit CODE >778:C:\Users\Universidad\AppData\Local\Temp\sjvg.s
+7F8 cinit CODE >781:C:\Users\Universidad\AppData\Local\Temp\sjvg.s
+7F8 cinit CODE >801:C:\Users\Universidad\AppData\Local\Temp\sjvg.s
+7F9 cinit CODE >802:C:\Users\Universidad\AppData\Local\Temp\sjvg.s
+7FA cinit CODE >803:C:\Users\Universidad\AppData\Local\Temp\sjvg.s
+7FB cinit CODE >804:C:\Users\Universidad\AppData\Local\Temp\sjvg.s
+7FC cinit CODE >810:C:\Users\Universidad\AppData\Local\Temp\sjvg.s
+7FC cinit CODE >812:C:\Users\Universidad\AppData\Local\Temp\sjvg.s
+7FD cinit CODE >813:C:\Users\Universidad\AppData\Local\Temp\sjvg.s
 750 text5 CODE >12:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
 751 text5 CODE >14:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
 754 text5 CODE >15:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
@@ -156,20 +156,20 @@ __Hspace_4 4010 0 ABS 0 - -
 spiInit@sTransmitEdge 72 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\sm7o.o
+___sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\sjvg.o
 _main F02 0 CODE 0 maintext dist/default/production\Master.X.production.o
 _temp 76 0 COMMON 1 bssCOMMON dist/default/production\Master.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Master.X.production.o
-start 0 0 CODE 0 init C:\Users\Universidad\AppData\Local\Temp\sm7o.o
+start 0 0 CODE 0 init C:\Users\Universidad\AppData\Local\Temp\sjvg.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Master.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sm7o.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sm7o.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sm7o.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sm7o.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sm7o.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sm7o.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sjvg.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sjvg.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sjvg.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sjvg.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sjvg.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sjvg.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\Master.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -179,8 +179,8 @@ _termometro 78 0 COMMON 1 bssCOMMON dist/default/production\Master.X.production.
 __size_of_spiInit 0 0 ABS 0 - dist/default/production\Master.X.production.o
 __size_of_spiRead 0 0 ABS 0 - dist/default/production\Master.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\sm7o.o
-___stacklo 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\sm7o.o
+___stackhi 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\sjvg.o
+___stacklo 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\sjvg.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\Master.X.production.o
 spiInit@sDataSample 70 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 start_initialization FF0 0 CODE 0 cinit dist/default/production\Master.X.production.o
@@ -189,7 +189,7 @@ _SSPCON 14 0 ABS 0 - dist/default/production\Master.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\Master.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\Master.X.production.o
 _TRISC5 43D 0 ABS 0 - dist/default/production\Master.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\sm7o.o
+___int_sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\sjvg.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -234,7 +234,7 @@ __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 _pot 79 0 COMMON 1 bssCOMMON dist/default/production\Master.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Universidad\AppData\Local\Temp\sm7o.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Universidad\AppData\Local\Temp\sjvg.o
 __pmaintext F02 0 CODE 0 maintext dist/default/production\Master.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -

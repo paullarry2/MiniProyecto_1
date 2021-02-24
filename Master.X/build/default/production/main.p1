@@ -349,8 +349,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 60:         PORTBbits.RB0 = 0;
 [e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
 "61
-[; ;main.c: 61:         _delay((unsigned long)((1)*((8000000)/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 61:         _delay((unsigned long)((5)*((8000000)/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "62
 [; ;main.c: 62:         spiWrite(1);
 [e ( _spiWrite (1 -> -> 1 `i `uc ]
@@ -358,8 +358,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 63:         pot = spiRead();
 [e = _pot -> ( _spiRead ..  `uc ]
 "64
-[; ;main.c: 64:         _delay((unsigned long)((1)*((8000000)/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 64:         _delay((unsigned long)((5)*((8000000)/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "65
 [; ;main.c: 65:         PORTBbits.RB0 = 1;
 [e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
@@ -367,8 +367,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 67:         PORTBbits.RB1 = 0;
 [e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
 "68
-[; ;main.c: 68:         _delay((unsigned long)((1)*((8000000)/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 68:         _delay((unsigned long)((5)*((8000000)/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "69
 [; ;main.c: 69:         spiWrite(1);
 [e ( _spiWrite (1 -> -> 1 `i `uc ]
@@ -376,8 +376,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 70:         contador = spiRead();
 [e = _contador -> ( _spiRead ..  `uc ]
 "71
-[; ;main.c: 71:         _delay((unsigned long)((1)*((8000000)/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 71:         _delay((unsigned long)((5)*((8000000)/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "72
 [; ;main.c: 72:         PORTBbits.RB1 = 1;
 [e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
@@ -385,8 +385,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 74:         PORTBbits.RB2 = 0;
 [e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
 "75
-[; ;main.c: 75:         _delay((unsigned long)((1)*((8000000)/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 75:         _delay((unsigned long)((5)*((8000000)/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "76
 [; ;main.c: 76:         spiWrite(1);
 [e ( _spiWrite (1 -> -> 1 `i `uc ]
@@ -394,8 +394,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 77:         termometro = spiRead();
 [e = _termometro -> ( _spiRead ..  `uc ]
 "78
-[; ;main.c: 78:         _delay((unsigned long)((1)*((8000000)/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 78:         _delay((unsigned long)((5)*((8000000)/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "79
 [; ;main.c: 79:         PORTBbits.RB2 = 1;
 [e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]

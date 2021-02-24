@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Wed Feb 24 00:22:42 2021
+                                                                                               Wed Feb 24 00:30:12 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	16F887
@@ -533,10 +533,10 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    519  0788  1006               	bcf	6,0	;volatile
    520  0789                     l895:
    521                           
-   522                           ;main.c: 61:         _delay((unsigned long)((1)*((8000000)/4000.0)));
-   523  0789  3003               	movlw	3
+   522                           ;main.c: 61:         _delay((unsigned long)((5)*((8000000)/4000.0)));
+   523  0789  300D               	movlw	13
    524  078A  00F5               	movwf	??_main+1
-   525  078B  3097               	movlw	151
+   525  078B  30FB               	movlw	251
    526  078C  00F4               	movwf	??_main
    527  078D                     u77:
    528  078D  0BF4               	decfsz	??_main,f
@@ -558,10 +558,10 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    544  079F  00F9               	movwf	_pot
    545  07A0                     l901:
    546                           
-   547                           ;main.c: 64:         _delay((unsigned long)((1)*((8000000)/4000.0)));
-   548  07A0  3003               	movlw	3
+   547                           ;main.c: 64:         _delay((unsigned long)((5)*((8000000)/4000.0)));
+   548  07A0  300D               	movlw	13
    549  07A1  00F5               	movwf	??_main+1
-   550  07A2  3097               	movlw	151
+   550  07A2  30FB               	movlw	251
    551  07A3  00F4               	movwf	??_main
    552  07A4                     u87:
    553  07A4  0BF4               	decfsz	??_main,f
@@ -581,10 +581,10 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    567  07AC  1086               	bcf	6,1	;volatile
    568  07AD                     l907:
    569                           
-   570                           ;main.c: 68:         _delay((unsigned long)((1)*((8000000)/4000.0)));
-   571  07AD  3003               	movlw	3
+   570                           ;main.c: 68:         _delay((unsigned long)((5)*((8000000)/4000.0)));
+   571  07AD  300D               	movlw	13
    572  07AE  00F5               	movwf	??_main+1
-   573  07AF  3097               	movlw	151
+   573  07AF  30FB               	movlw	251
    574  07B0  00F4               	movwf	??_main
    575  07B1                     u97:
    576  07B1  0BF4               	decfsz	??_main,f
@@ -606,10 +606,10 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    592  07C3  00F7               	movwf	_contador
    593  07C4                     l913:
    594                           
-   595                           ;main.c: 71:         _delay((unsigned long)((1)*((8000000)/4000.0)));
-   596  07C4  3003               	movlw	3
+   595                           ;main.c: 71:         _delay((unsigned long)((5)*((8000000)/4000.0)));
+   596  07C4  300D               	movlw	13
    597  07C5  00F5               	movwf	??_main+1
-   598  07C6  3097               	movlw	151
+   598  07C6  30FB               	movlw	251
    599  07C7  00F4               	movwf	??_main
    600  07C8                     u107:
    601  07C8  0BF4               	decfsz	??_main,f
@@ -629,10 +629,10 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    615  07D0  1106               	bcf	6,2	;volatile
    616  07D1                     l919:
    617                           
-   618                           ;main.c: 75:         _delay((unsigned long)((1)*((8000000)/4000.0)));
-   619  07D1  3003               	movlw	3
+   618                           ;main.c: 75:         _delay((unsigned long)((5)*((8000000)/4000.0)));
+   619  07D1  300D               	movlw	13
    620  07D2  00F5               	movwf	??_main+1
-   621  07D3  3097               	movlw	151
+   621  07D3  30FB               	movlw	251
    622  07D4  00F4               	movwf	??_main
    623  07D5                     u117:
    624  07D5  0BF4               	decfsz	??_main,f
@@ -654,10 +654,10 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    640  07E7  00F8               	movwf	_termometro
    641  07E8                     l925:
    642                           
-   643                           ;main.c: 78:         _delay((unsigned long)((1)*((8000000)/4000.0)));
-   644  07E8  3003               	movlw	3
+   643                           ;main.c: 78:         _delay((unsigned long)((5)*((8000000)/4000.0)));
+   644  07E8  300D               	movlw	13
    645  07E9  00F5               	movwf	??_main+1
-   646  07EA  3097               	movlw	151
+   646  07EA  30FB               	movlw	251
    647  07EB  00F4               	movwf	??_main
    648  07EC                     u127:
    649  07EC  0BF4               	decfsz	??_main,f
@@ -1165,7 +1165,7 @@ DATA                 0      0       A      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Wed Feb 24 00:22:42 2021
+Symbol Table                                                                                   Wed Feb 24 00:30:12 2021
 
             _SSPSTATbits 0094                       l20 0740                       l23 0746  
                      l16 0760                       l17 0765                       l34 074F  
