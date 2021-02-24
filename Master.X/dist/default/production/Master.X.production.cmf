@@ -11,19 +11,20 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Universidad\AppData\Local\Temp\skf0.o
+$C:\Users\Universidad\AppData\Local\Temp\smes.o
 end_init CODE 0 0 0 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\Master.X.production.o
 cinit CODE 0 7F8 7F8 8 2
-text1 CODE 0 77C 77C 1B 2
-text2 CODE 0 766 766 16 2
-text3 CODE 0 797 797 1C 2
-text4 CODE 0 75D 75D 9 2
-text5 CODE 0 756 756 7 2
+text1 CODE 0 776 776 1B 2
+text2 CODE 0 760 760 16 2
+text3 CODE 0 791 791 22 2
+text4 CODE 0 74A 74A 6 2
+text5 CODE 0 757 757 9 2
+text6 CODE 0 750 750 7 2
 maintext CODE 0 7B3 7B3 45 2
-cstackCOMMON COMMON 1 70 70 8 1
-bssCOMMON COMMON 1 78 78 4 1
+cstackCOMMON COMMON 1 70 70 9 1
+bssCOMMON COMMON 1 79 79 4 1
 config CONFIG 4 2007 2007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -39,23 +40,23 @@ BANK0 20-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
-CONST 3-755 2
+CONST 3-749 2
 CONST 800-1FFF 2
-ENTRY 3-755 2
+ENTRY 3-749 2
 ENTRY 800-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
-CODE 3-755 2
+CODE 3-749 2
 CODE 800-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
-COMMON 7C-7D 1
+COMMON 7D-7D 1
 EEDATA 2100-21FF 2
-STRCODE 3-755 2
+STRCODE 3-749 2
 STRCODE 800-1FFF 2
-STRING 3-755 2
+STRING 3-749 2
 STRING 800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -71,55 +72,59 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Master.X.production.o
-7F8 cinit CODE >777:C:\Users\Universidad\AppData\Local\Temp\skf0.s
-7F8 cinit CODE >780:C:\Users\Universidad\AppData\Local\Temp\skf0.s
-7F8 cinit CODE >800:C:\Users\Universidad\AppData\Local\Temp\skf0.s
-7F9 cinit CODE >801:C:\Users\Universidad\AppData\Local\Temp\skf0.s
-7FA cinit CODE >802:C:\Users\Universidad\AppData\Local\Temp\skf0.s
-7FB cinit CODE >803:C:\Users\Universidad\AppData\Local\Temp\skf0.s
-7FC cinit CODE >809:C:\Users\Universidad\AppData\Local\Temp\skf0.s
-7FC cinit CODE >811:C:\Users\Universidad\AppData\Local\Temp\skf0.s
-7FD cinit CODE >812:C:\Users\Universidad\AppData\Local\Temp\skf0.s
-756 text5 CODE >29:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
-756 text5 CODE >31:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
-75C text5 CODE >32:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
-75D text4 CODE >47:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
-75D text4 CODE >49:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
-762 text4 CODE >50:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
-765 text4 CODE >51:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
-797 text3 CODE >86:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
-797 text3 CODE >87:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
-797 text3 CODE >88:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
-7A0 text3 CODE >89:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
-7A8 text3 CODE >90:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
-7B1 text3 CODE >91:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+7F8 cinit CODE >778:C:\Users\Universidad\AppData\Local\Temp\smes.s
+7F8 cinit CODE >781:C:\Users\Universidad\AppData\Local\Temp\smes.s
+7F8 cinit CODE >801:C:\Users\Universidad\AppData\Local\Temp\smes.s
+7F9 cinit CODE >802:C:\Users\Universidad\AppData\Local\Temp\smes.s
+7FA cinit CODE >803:C:\Users\Universidad\AppData\Local\Temp\smes.s
+7FB cinit CODE >804:C:\Users\Universidad\AppData\Local\Temp\smes.s
+7FC cinit CODE >810:C:\Users\Universidad\AppData\Local\Temp\smes.s
+7FC cinit CODE >812:C:\Users\Universidad\AppData\Local\Temp\smes.s
+7FD cinit CODE >813:C:\Users\Universidad\AppData\Local\Temp\smes.s
+750 text6 CODE >29:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+750 text6 CODE >31:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+756 text6 CODE >32:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+757 text5 CODE >47:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+757 text5 CODE >49:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+75C text5 CODE >50:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+75F text5 CODE >51:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+74A text4 CODE >34:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+74B text4 CODE >36:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+74F text4 CODE >37:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+791 text3 CODE >86:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+791 text3 CODE >87:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+791 text3 CODE >88:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+79A text3 CODE >89:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+7A0 text3 CODE >90:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+7A8 text3 CODE >91:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
 7B1 text3 CODE >92:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
-7B2 text3 CODE >93:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
-766 text2 CODE >12:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
-767 text2 CODE >14:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
-76A text2 CODE >15:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
-76E text2 CODE >17:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
-770 text2 CODE >18:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
-771 text2 CODE >19:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
-772 text2 CODE >22:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
-775 text2 CODE >23:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
-776 text2 CODE >24:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
-776 text2 CODE >26:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
-77B text2 CODE >27:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
-77C text1 CODE >71:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
-77C text1 CODE >72:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
-77F text1 CODE >73:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
-780 text1 CODE >74:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
-783 text1 CODE >75:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
-784 text1 CODE >76:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
-785 text1 CODE >77:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
-786 text1 CODE >78:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
-789 text1 CODE >79:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
-78A text1 CODE >80:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
-78B text1 CODE >81:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
-78C text1 CODE >82:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
-78D text1 CODE >83:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
-796 text1 CODE >84:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+7B1 text3 CODE >93:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+7B2 text3 CODE >94:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+760 text2 CODE >12:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+761 text2 CODE >14:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+764 text2 CODE >15:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+768 text2 CODE >17:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+76A text2 CODE >18:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+76B text2 CODE >19:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+76C text2 CODE >22:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+76F text2 CODE >23:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+770 text2 CODE >24:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+770 text2 CODE >26:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+775 text2 CODE >27:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+776 text1 CODE >71:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+776 text1 CODE >72:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+779 text1 CODE >73:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+77A text1 CODE >74:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+77D text1 CODE >75:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+77E text1 CODE >76:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+77F text1 CODE >77:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+780 text1 CODE >78:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+783 text1 CODE >79:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+784 text1 CODE >80:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+785 text1 CODE >81:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+786 text1 CODE >82:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+787 text1 CODE >83:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+790 text1 CODE >84:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
 7B3 maintext CODE >56:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
 7B3 maintext CODE >57:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
 7B8 maintext CODE >58:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
@@ -141,47 +146,48 @@ $dist/default/production\Master.X.production.o
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\Master.X.production.o
 __Hspace_0 800 0 ABS 0 - -
-__Hspace_1 7C 0 ABS 0 - -
+__Hspace_1 7D 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
 spiInit@sTransmitEdge 72 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\skf0.o
+___sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\smes.o
 _main F66 0 CODE 0 maintext dist/default/production\Master.X.production.o
-_temp 78 0 COMMON 1 bssCOMMON dist/default/production\Master.X.production.o
+_temp 79 0 COMMON 1 bssCOMMON dist/default/production\Master.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Master.X.production.o
-start 0 0 CODE 0 init C:\Users\Universidad\AppData\Local\Temp\skf0.o
+start 0 0 CODE 0 init C:\Users\Universidad\AppData\Local\Temp\smes.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Master.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
-_get_spi F2E 0 CODE 0 text3 dist/default/production\Master.X.production.o
+_get_spi F22 0 CODE 0 text3 dist/default/production\Master.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\skf0.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\skf0.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\skf0.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\skf0.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\skf0.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\skf0.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\smes.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\smes.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\smes.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\smes.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\smes.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\smes.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\Master.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 _ANSELH 189 0 ABS 0 - dist/default/production\Master.X.production.o
-_termometro 7A 0 COMMON 1 bssCOMMON dist/default/production\Master.X.production.o
+_termometro 7B 0 COMMON 1 bssCOMMON dist/default/production\Master.X.production.o
 __size_of_spiInit 0 0 ABS 0 - dist/default/production\Master.X.production.o
 __size_of_spiRead 0 0 ABS 0 - dist/default/production\Master.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\skf0.o
-___stacklo 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\skf0.o
+___stackhi 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\smes.o
+___stacklo 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\smes.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\Master.X.production.o
 spiInit@sDataSample 70 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 start_initialization FF0 0 CODE 0 cinit dist/default/production\Master.X.production.o
+_TRISCbits 87 0 ABS 0 - dist/default/production\Master.X.production.o
 _SSPBUF 13 0 ABS 0 - dist/default/production\Master.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\Master.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\Master.X.production.o
 _TRISC5 43D 0 ABS 0 - dist/default/production\Master.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\skf0.o
+___int_sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\smes.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -190,8 +196,8 @@ __Hcinit 1000 0 CODE 0 cinit -
 __size_of_spiReceiveWait 0 0 ABS 0 - dist/default/production\Master.X.production.o
 __Hstack 0 0 STACK 2 stack -
 __Hmaintext 0 0 ABS 0 maintext -
-__end_of_spiInit EF8 0 CODE 0 text2 dist/default/production\Master.X.production.o
-__end_of_spiRead ECC 0 CODE 0 text4 dist/default/production\Master.X.production.o
+__end_of_spiInit EEC 0 CODE 0 text2 dist/default/production\Master.X.production.o
+__end_of_spiRead EC0 0 CODE 0 text5 dist/default/production\Master.X.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 4 config -
 __Lbank0 0 0 ABS 0 bank0 -
@@ -221,14 +227,14 @@ __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _RE0 48 0 ABS 0 - dist/default/production\Master.X.production.o
 _RE1 49 0 ABS 0 - dist/default/production\Master.X.production.o
 __S0 800 0 ABS 0 - -
-__S1 7C 0 ABS 0 - -
+__S1 7D 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_pot 7B 0 COMMON 1 bssCOMMON dist/default/production\Master.X.production.o
-get_spi@SS 70 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
+_pot 7C 0 COMMON 1 bssCOMMON dist/default/production\Master.X.production.o
+get_spi@SS 71 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 __size_of_get_spi 0 0 ABS 0 - dist/default/production\Master.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Universidad\AppData\Local\Temp\skf0.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Universidad\AppData\Local\Temp\smes.o
 __pmaintext F66 0 CODE 0 maintext dist/default/production\Master.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
@@ -237,7 +243,7 @@ __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__pbssCOMMON 78 0 COMMON 1 bssCOMMON dist/default/production\Master.X.production.o
+__pbssCOMMON 79 0 COMMON 1 bssCOMMON dist/default/production\Master.X.production.o
 __Lend_init 0 0 CODE 0 end_init -
 __end_of_get_spi F66 0 CODE 0 text3 dist/default/production\Master.X.production.o
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
@@ -245,20 +251,23 @@ end_of_initialization FF8 0 CODE 0 cinit dist/default/production\Master.X.produc
 __Hintentry 0 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 0 0 CODE 0 reset_vec -
-__ptext1 EF8 0 CODE 0 text1 dist/default/production\Master.X.production.o
-__ptext2 ECC 0 CODE 0 text2 dist/default/production\Master.X.production.o
-__ptext3 F2E 0 CODE 0 text3 dist/default/production\Master.X.production.o
-__ptext4 EBA 0 CODE 0 text4 dist/default/production\Master.X.production.o
-__ptext5 EAC 0 CODE 0 text5 dist/default/production\Master.X.production.o
-_spiInit ECC 0 CODE 0 text2 dist/default/production\Master.X.production.o
-_spiRead EBA 0 CODE 0 text4 dist/default/production\Master.X.production.o
+__ptext1 EEC 0 CODE 0 text1 dist/default/production\Master.X.production.o
+__ptext2 EC0 0 CODE 0 text2 dist/default/production\Master.X.production.o
+__ptext3 F22 0 CODE 0 text3 dist/default/production\Master.X.production.o
+__ptext4 E94 0 CODE 0 text4 dist/default/production\Master.X.production.o
+__ptext5 EAE 0 CODE 0 text5 dist/default/production\Master.X.production.o
+__ptext6 EA0 0 CODE 0 text6 dist/default/production\Master.X.production.o
+_spiInit EC0 0 CODE 0 text2 dist/default/production\Master.X.production.o
+_spiRead EAE 0 CODE 0 text5 dist/default/production\Master.X.production.o
+spiWrite@dat 70 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 spiInit@sType 73 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
 __end_of__initialization FF8 0 CODE 0 cinit dist/default/production\Master.X.production.o
+__size_of_spiWrite 0 0 ABS 0 - dist/default/production\Master.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-_spiReceiveWait EAC 0 CODE 0 text5 dist/default/production\Master.X.production.o
+_spiReceiveWait EA0 0 CODE 0 text6 dist/default/production\Master.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 _SSPSTAT 94 0 ABS 0 - dist/default/production\Master.X.production.o
@@ -267,19 +276,20 @@ __end_of_main FF0 0 CODE 0 maintext dist/default/production\Master.X.production.
 _ANSEL 188 0 ABS 0 - dist/default/production\Master.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\Master.X.production.o
 _PORTD 8 0 ABS 0 - dist/default/production\Master.X.production.o
-_TRISA 85 0 ABS 0 - dist/default/production\Master.X.production.o
 _TRISB 86 0 ABS 0 - dist/default/production\Master.X.production.o
 _TRISC 87 0 ABS 0 - dist/default/production\Master.X.production.o
 _TRISD 88 0 ABS 0 - dist/default/production\Master.X.production.o
-__end_of_setup F2E 0 CODE 0 text1 dist/default/production\Master.X.production.o
+__end_of_setup F22 0 CODE 0 text1 dist/default/production\Master.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_setup EF8 0 CODE 0 text1 dist/default/production\Master.X.production.o
+_setup EEC 0 CODE 0 text1 dist/default/production\Master.X.production.o
 _SSPSTATbits 94 0 ABS 0 - dist/default/production\Master.X.production.o
-_contador 79 0 COMMON 1 bssCOMMON dist/default/production\Master.X.production.o
+_contador 7A 0 COMMON 1 bssCOMMON dist/default/production\Master.X.production.o
 spiInit@sClockIdle 71 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 __initialization FF0 0 CODE 0 cinit dist/default/production\Master.X.production.o
-__end_of_spiReceiveWait EBA 0 CODE 0 text5 dist/default/production\Master.X.production.o
+_spiWrite E94 0 CODE 0 text4 dist/default/production\Master.X.production.o
+__end_of_spiReceiveWait EAE 0 CODE 0 text6 dist/default/production\Master.X.production.o
+__end_of_spiWrite EA0 0 CODE 0 text4 dist/default/production\Master.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -306,13 +316,14 @@ __end_of_spiReceiveWait EBA 0 CODE 0 text5 dist/default/production\Master.X.prod
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7F8 FF0 8 2
-text1 0 77C EF8 1B 2
-text2 0 766 ECC 16 2
-text3 0 797 F2E 1C 2
-text4 0 75D EBA 9 2
-text5 0 756 EAC 7 2
+text1 0 776 EEC 1B 2
+text2 0 760 EC0 16 2
+text3 0 791 F22 22 2
+text4 0 74A E94 6 2
+text5 0 757 EAE 9 2
+text6 0 750 EA0 7 2
 maintext 0 7B3 F66 45 2
-cstackCOMMON 1 70 70 C 1
+cstackCOMMON 1 70 70 D 1
 reset_vec 0 0 0 3 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section

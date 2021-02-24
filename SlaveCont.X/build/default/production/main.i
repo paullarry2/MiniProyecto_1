@@ -2702,8 +2702,10 @@ void conf_but(void) {
     ANSEL = 0;
     ANSELH = 0;
     TRISB = 0x00;
+    TRISC = 0;
     TRISBbits.TRISB0 = 1;
     TRISBbits.TRISB1 = 1;
+    TRISCbits.TRISC4 = 1;
     IOCB = 0b00000011;
     TRISD = 0x00;
     TRISE = 0x00;

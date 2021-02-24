@@ -26,12 +26,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3449
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3449: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
 [v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
-"1416
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1416: extern volatile unsigned char TRISA __attribute__((address(0x085)));
-[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
 "1540
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1540: extern volatile unsigned char TRISC __attribute__((address(0x087)));
 [v _TRISC `Vuc ~T0 @X0 0 e@135 ]
+"1546
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1546:     struct {
+[s S57 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S57 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"1545
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1545: typedef union {
+[u S56 `S57 1 ]
+[n S56 . . ]
+"1557
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1557: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x087)));
+[v _TRISCbits `VS56 ~T0 @X0 0 e@135 ]
 "1478
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1478: extern volatile unsigned char TRISB __attribute__((address(0x086)));
 [v _TRISB `Vuc ~T0 @X0 0 e@134 ]
@@ -58,7 +66,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "92 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
 [v __delay `JF1256 ~T0 @X0 0 e ]
 [p i __delay ]
-"49 ./SPI.h
+"47 ./SPI.h
+[; ;./SPI.h: 47: void spiWrite(char);
+[v _spiWrite `(v ~T0 @X0 0 ef1`uc ]
+"49
 [; ;./SPI.h: 49: char spiRead();
 [v _spiRead `(uc ~T0 @X0 0 e? ]
 "14 main.c
@@ -353,8 +364,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 61:         termometro = get_spi(PORTBbits.RB2);
 [e = _termometro ( _get_spi (1 -> . . _PORTBbits 0 2 `ui ]
 "62
-[; ;main.c: 62:         PORTD = pot;
-[e = _PORTD _pot ]
+[; ;main.c: 62:         PORTD = termometro;
+[e = _PORTD _termometro ]
 "63
 [; ;main.c: 63:     }
 }
@@ -378,11 +389,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 73:     ANSELH = 0;
 [e = _ANSELH -> -> 0 `i `uc ]
 "74
-[; ;main.c: 74:     TRISA = 0;
-[e = _TRISA -> -> 0 `i `uc ]
-"75
-[; ;main.c: 75:     TRISC = 0;
+[; ;main.c: 74:     TRISC = 0;
 [e = _TRISC -> -> 0 `i `uc ]
+"75
+[; ;main.c: 75:     TRISCbits.TRISC4 = 1;
+[e = . . _TRISCbits 0 4 -> -> 1 `i `uc ]
 "76
 [; ;main.c: 76:     TRISB = 0;
 [e = _TRISB -> -> 0 `i `uc ]
@@ -425,19 +436,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 88:         _delay((unsigned long)((1)*((8000000)/4000.0)));
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "89
-[; ;main.c: 89:         temp = spiRead();
-[e = _temp -> ( _spiRead ..  `uc ]
+[; ;main.c: 89:         spiWrite(1);
+[e ( _spiWrite (1 -> -> 1 `i `uc ]
 "90
-[; ;main.c: 90:         _delay((unsigned long)((1)*((8000000)/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;main.c: 90:         temp = spiRead();
+[e = _temp -> ( _spiRead ..  `uc ]
 "91
-[; ;main.c: 91:         SS = 1;
-[e = _SS -> -> 1 `i `ui ]
+[; ;main.c: 91:         _delay((unsigned long)((1)*((8000000)/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "92
-[; ;main.c: 92:         return (temp);
+[; ;main.c: 92:         SS = 1;
+[e = _SS -> -> 1 `i `ui ]
+"93
+[; ;main.c: 93:         return (temp);
 [e ) _temp ]
 [e $UE 143  ]
-"93
-[; ;main.c: 93: }
+"94
+[; ;main.c: 94: }
 [e :UE 143 ]
 }

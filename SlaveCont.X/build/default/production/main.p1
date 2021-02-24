@@ -27,6 +27,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1478
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1478: extern volatile unsigned char TRISB __attribute__((address(0x086)));
 [v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"1540
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1540: extern volatile unsigned char TRISC __attribute__((address(0x087)));
+[v _TRISC `Vuc ~T0 @X0 0 e@135 ]
 "1484
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1484:     struct {
 [s S55 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -38,6 +41,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1495
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1495: extern volatile TRISBbits_t TRISBbits __attribute__((address(0x086)));
 [v _TRISBbits `VS54 ~T0 @X0 0 e@134 ]
+"1546
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1546:     struct {
+[s S57 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S57 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"1545
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1545: typedef union {
+[u S56 `S57 1 ]
+[n S56 . . ]
+"1557
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1557: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x087)));
+[v _TRISCbits `VS56 ~T0 @X0 0 e@135 ]
 "2416
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2416: extern volatile unsigned char IOCB __attribute__((address(0x096)));
 [v _IOCB `Vuc ~T0 @X0 0 e@150 ]
@@ -62,8 +76,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "414
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 414: extern volatile unsigned char PORTE __attribute__((address(0x009)));
 [v _PORTE `Vuc ~T0 @X0 0 e@9 ]
-"77 main.c
-[; ;main.c: 77:     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+"79 main.c
+[; ;main.c: 79:     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 [c E1292 32 33 34 35 36 37 .. ]
 [n E1292 . SPI_MASTER_OSC_DIV4 SPI_MASTER_OSC_DIV16 SPI_MASTER_OSC_DIV64 SPI_MASTER_TMR2 SPI_SLAVE_SS_EN SPI_SLAVE_SS_DIS  ]
 [c E1300 0 128 .. ]
@@ -403,100 +417,106 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 65:     TRISB = 0x00;
 [e = _TRISB -> -> 0 `i `uc ]
 "66
-[; ;main.c: 66:     TRISBbits.TRISB0 = 1;
-[e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 66:     TRISC = 0;
+[e = _TRISC -> -> 0 `i `uc ]
 "67
-[; ;main.c: 67:     TRISBbits.TRISB1 = 1;
-[e = . . _TRISBbits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 67:     TRISBbits.TRISB0 = 1;
+[e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
 "68
-[; ;main.c: 68:     IOCB = 0b00000011;
-[e = _IOCB -> -> 3 `i `uc ]
+[; ;main.c: 68:     TRISBbits.TRISB1 = 1;
+[e = . . _TRISBbits 0 1 -> -> 1 `i `uc ]
 "69
-[; ;main.c: 69:     TRISD = 0x00;
-[e = _TRISD -> -> 0 `i `uc ]
+[; ;main.c: 69:     TRISCbits.TRISC4 = 1;
+[e = . . _TRISCbits 0 4 -> -> 1 `i `uc ]
 "70
-[; ;main.c: 70:     TRISE = 0x00;
-[e = _TRISE -> -> 0 `i `uc ]
+[; ;main.c: 70:     IOCB = 0b00000011;
+[e = _IOCB -> -> 3 `i `uc ]
 "71
-[; ;main.c: 71:     TRISA = 0;
-[e = _TRISA -> -> 0 `i `uc ]
+[; ;main.c: 71:     TRISD = 0x00;
+[e = _TRISD -> -> 0 `i `uc ]
 "72
-[; ;main.c: 72:     PORTD = 0;
-[e = _PORTD -> -> 0 `i `uc ]
+[; ;main.c: 72:     TRISE = 0x00;
+[e = _TRISE -> -> 0 `i `uc ]
 "73
-[; ;main.c: 73:     PORTB = 0;
-[e = _PORTB -> -> 0 `i `uc ]
+[; ;main.c: 73:     TRISA = 0;
+[e = _TRISA -> -> 0 `i `uc ]
 "74
-[; ;main.c: 74:     PORTC = 0;
-[e = _PORTC -> -> 0 `i `uc ]
+[; ;main.c: 74:     PORTD = 0;
+[e = _PORTD -> -> 0 `i `uc ]
 "75
-[; ;main.c: 75:     PORTE = 0;
-[e = _PORTE -> -> 0 `i `uc ]
+[; ;main.c: 75:     PORTB = 0;
+[e = _PORTB -> -> 0 `i `uc ]
+"76
+[; ;main.c: 76:     PORTC = 0;
+[e = _PORTC -> -> 0 `i `uc ]
 "77
-[; ;main.c: 77:     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
-[e ( _spiInit (4 , , , . `E1292 4 . `E1300 0 . `E1304 1 . `E1308 0 ]
+[; ;main.c: 77:     PORTE = 0;
+[e = _PORTE -> -> 0 `i `uc ]
 "79
-[; ;main.c: 79: }
+[; ;main.c: 79:     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+[e ( _spiInit (4 , , , . `E1292 4 . `E1300 0 . `E1304 1 . `E1308 0 ]
+"81
+[; ;main.c: 81: }
 [e :UE 142 ]
 }
 [v $root$_ISR `(v ~T0 @X0 0 e ]
-"84
-[; ;main.c: 84: void __attribute__((picinterrupt(("")))) ISR(void) {
+"86
+[; ;main.c: 86: void __attribute__((picinterrupt(("")))) ISR(void) {
 [v _ISR `(v ~T1 @X0 1 ef ]
 {
 [e :U _ISR ]
 [f ]
-"85
-[; ;main.c: 85:     if (INTCONbits.RBIF == 1) {
+"87
+[; ;main.c: 87:     if (INTCONbits.RBIF == 1) {
 [e $ ! == -> . . _INTCONbits 0 0 `i -> 1 `i 144  ]
 {
-"86
-[; ;main.c: 86:         _delay((unsigned long)((100)*((8000000)/4000.0)));
+"88
+[; ;main.c: 88:         _delay((unsigned long)((100)*((8000000)/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"87
-[; ;main.c: 87:         if (PORTBbits.RB1 == 1) {
+"89
+[; ;main.c: 89:         if (PORTBbits.RB1 == 1) {
 [e $ ! == -> . . _PORTBbits 0 1 `i -> 1 `i 145  ]
 {
-"88
-[; ;main.c: 88:             PORTD++;
+"90
+[; ;main.c: 90:             PORTD++;
 [e ++ _PORTD -> -> 1 `i `Vuc ]
-"89
-[; ;main.c: 89:         } else if (PORTBbits.RB0 == 1) {
+"91
+[; ;main.c: 91:         } else if (PORTBbits.RB0 == 1) {
 }
 [e $U 146  ]
 [e :U 145 ]
 [e $ ! == -> . . _PORTBbits 0 0 `i -> 1 `i 147  ]
 {
-"90
-[; ;main.c: 90:             PORTD--;
+"92
+[; ;main.c: 92:             PORTD--;
 [e -- _PORTD -> -> 1 `i `Vuc ]
-"91
-[; ;main.c: 91:         }
+"93
+[; ;main.c: 93:         }
 }
 [e :U 147 ]
 [e :U 146 ]
-"92
-[; ;main.c: 92:     }
+"94
+[; ;main.c: 94:     }
 }
 [e :U 144 ]
-"93
-[; ;main.c: 93:     INTCONbits.RBIF = 0;
-[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
 "95
-[; ;main.c: 95:     if (SSPIF == 1) {
+[; ;main.c: 95:     INTCONbits.RBIF = 0;
+[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
+"97
+[; ;main.c: 97:     if (SSPIF == 1) {
 [e $ ! == -> _SSPIF `i -> 1 `i 148  ]
 {
-"96
-[; ;main.c: 96:         spiWrite(PORTB);
-[e ( _spiWrite (1 -> _PORTB `uc ]
-"97
-[; ;main.c: 97:         SSPIF = 0;
-[e = _SSPIF -> -> 0 `i `b ]
 "98
-[; ;main.c: 98:     }
+[; ;main.c: 98:         spiWrite(PORTB);
+[e ( _spiWrite (1 -> _PORTB `uc ]
+"99
+[; ;main.c: 99:         SSPIF = 0;
+[e = _SSPIF -> -> 0 `i `b ]
+"100
+[; ;main.c: 100:     }
 }
 [e :U 148 ]
-"99
-[; ;main.c: 99: }
+"101
+[; ;main.c: 101: }
 [e :UE 143 ]
 }

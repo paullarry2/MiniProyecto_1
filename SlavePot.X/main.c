@@ -59,7 +59,7 @@ void main(void) {
             __delay_ms(10); // Acquisition time
             ADCON0bits.GO = 1; // Enciende la conversion   
         }
-
+        PORTD = pot;
     }
 }
 
@@ -77,11 +77,13 @@ void conf_but(void) {
     ANSELH = 0;
     ANSELbits.ANS0 = 1; //Excepto el pin AN0 (Pot)
     TRISC = 0x00;
+    TRISCbits.TRISC4 = 1;
     TRISB = 0x00; //Pone los puertos como outputs, en b los prim 2 pin input
     TRISD = 0x00;
     TRISE = 0x00;
     TRISA = 0;
     TRISAbits.TRISA0 = 1; //habilita como entrada el puerto analogico (pot)
+    TRISAbits.TRISA5 = 1;
     PORTD = 0;
     PORTB = 0;
     PORTC = 0;
@@ -99,7 +101,6 @@ void __interrupt() ISR(void) {//Interrupciones
         //Chequea la bandera del ADC
         pot = ADRESH; //Copia el valor de la conversion al puerto C
         adc_fin = 0; //Apagar bandera de copiando 
-
     }
     PIR1bits.ADIF = 0; //Apagar bandera de conversion
 

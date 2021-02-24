@@ -2699,7 +2699,7 @@ void main(void) {
         pot = get_spi(PORTBbits.RB0);
         contador = get_spi(PORTBbits.RB1);
         termometro = get_spi(PORTBbits.RB2);
-        PORTD = pot;
+        PORTD = termometro;
     }
 }
 
@@ -2711,8 +2711,8 @@ void main(void) {
 void setup(void) {
     ANSEL = 0;
     ANSELH = 0;
-    TRISA = 0;
     TRISC = 0;
+    TRISCbits.TRISC4 = 1;
     TRISB = 0;
     TRISD = 0;
     PORTB = 0;
@@ -2726,6 +2726,7 @@ void setup(void) {
 uint8_t get_spi(unsigned SS){
         SS = 0;
         _delay((unsigned long)((1)*((8000000)/4000.0)));
+        spiWrite(1);
         temp = spiRead();
         _delay((unsigned long)((1)*((8000000)/4000.0)));
         SS = 1;

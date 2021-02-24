@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\SlaveCont.X.production.sym \
   --cmf=dist/default/production\SlaveCont.X.production.cmf -z -Q16F887 \
-  -oC:\Users\Universidad\AppData\Local\Temp\s5ug.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\Universidad\AppData\Local\Temp\sa28.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/SlaveCont.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK \
   -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\Universidad\AppData\Local\Temp\s5ug.o \
+  -pfunctab=ENTRY -k C:\Users\Universidad\AppData\Local\Temp\sa28.o \
   dist/default/production\SlaveCont.X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Universidad\AppData\Local\Temp\s5ug.o
+C:\Users\Universidad\AppData\Local\Temp\sa28.o
                 end_init                              C        C        3        8       0
                 reset_vec                             0        0        3        0       0
                 config                             2007     2007        2        0       4
@@ -36,11 +36,11 @@ dist/default/production\SlaveCont.X.production.o
                 cinit                                 F        F        4        8       0
                 intentry                              4        4        8        8       0
                 config                             2007     2007        2        0       4
-                text4                                94       94        6        8       0
+                text4                                96       96        6        8       0
                 text3                                13       13       39        8       0
-                text2                                6D       6D       1E        8       0
-                text1                                4C       4C       21        8       0
-                maintext                             8B       8B        9        8       0
+                text2                                6F       6F       1E        8       0
+                text1                                4C       4C       23        8       0
+                maintext                             8D       8D        9        8       0
                 cstackBANK0                          20       20        3       20       1
                 cstackCOMMON                         70       70        7       70       1
 
@@ -52,11 +52,11 @@ TOTAL           Name                               Link     Load   Length     Sp
                 cinit                                 F        F        4         0
                 intentry                              4        4        8         0
                 reset_vec                             0        0        3         0
-                text4                                94       94        6         0
+                text4                                96       96        6         0
                 text3                                13       13       39         0
-                text2                                6D       6D       1E         0
-                text1                                4C       4C       21         0
-                maintext                             8B       8B        9         0
+                text2                                6F       6F       1E         0
+                text1                                4C       4C       23         0
+                maintext                             8D       8D        9         0
 
         CLASS   STRCODE        
 
@@ -103,7 +103,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
-                intentry                       000004  000096  00009A         8       0  CODE        2
+                intentry                       000004  000098  00009C         8       0  CODE        2
                 cstackBANK0                    000020  000003  000023        20       1  BANK0       1
                 cstackCOMMON                   000070  000007  000077        70       1  COMMON      1
 
@@ -116,13 +116,13 @@ UNUSED ADDRESS RANGES
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
         CODE             0003-0003              1           2
-                         009A-1FFF            800
+                         009C-1FFF            800
         COMMON           0077-007D              7           1
         CONST            0003-0003              1           2
-                         009A-1FFF            100
+                         009C-1FFF            100
         EEDATA           2100-21FF            100           2
         ENTRY            0003-0003              1           2
-                         009A-1FFF            100
+                         009C-1FFF            100
         IDLOC            2000-2003              4           2
         RAM              0023-006F             4D           1
                          00A0-00EF             50
@@ -134,9 +134,9 @@ UNUSED ADDRESS RANGES
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
         STRCODE          0003-0003              1           2
-                         009A-1FFF           1F66
+                         009C-1FFF           1F64
         STRING           0003-0003              1           2
-                         009A-1FFF            100
+                         009C-1FFF            100
 
                                   Symbol Table
 
@@ -158,8 +158,10 @@ _SSPSTATbits             (abs)        0094
 _TRISA                   (abs)        0085
 _TRISB                   (abs)        0086
 _TRISBbits               (abs)        0086
+_TRISC                   (abs)        0087
 _TRISC3                  (abs)        043B
 _TRISC5                  (abs)        043D
+_TRISCbits               (abs)        0087
 _TRISD                   (abs)        0088
 _TRISE                   (abs)        0089
 __Habs1                  abs1         0000
@@ -187,7 +189,7 @@ __Hsfr0                  sfr0         0000
 __Hsfr1                  sfr1         0000
 __Hsfr2                  sfr2         0000
 __Hsfr3                  sfr3         0000
-__Hspace_0               (abs)        009A
+__Hspace_0               (abs)        009C
 __Hspace_1               (abs)        0077
 __Hspace_2               (abs)        0000
 __Hspace_3               (abs)        0000
@@ -228,7 +230,7 @@ __Lspace_4               (abs)        0000
 __Lstack                 stack        0000
 __Lstrings               strings      0000
 __Ltext                  text         0000
-__S0                     (abs)        009A
+__S0                     (abs)        009C
 __S1                     (abs)        0077
 __S2                     (abs)        0000
 __S3                     (abs)        0000
@@ -239,28 +241,28 @@ ___stackhi               (abs)        0000
 ___stacklo               (abs)        0000
 __end_of_ISR             text3        004C
 __end_of__initialization cinit        000F
-__end_of_conf_but        text1        006D
-__end_of_main            maintext     0094
-__end_of_spiInit         text2        008B
-__end_of_spiWrite        text4        009A
+__end_of_conf_but        text1        006F
+__end_of_main            maintext     0096
+__end_of_spiInit         text2        008D
+__end_of_spiWrite        text4        009C
 __initialization         cinit        000F
 __pcstackBANK0           cstackBANK0  0020
 __pcstackCOMMON          cstackCOMMON 0070
 __pintentry              intentry     0004
-__pmaintext              maintext     008B
+__pmaintext              maintext     008D
 __ptext1                 text1        004C
-__ptext2                 text2        006D
+__ptext2                 text2        006F
 __ptext3                 text3        0013
-__ptext4                 text4        0094
+__ptext4                 text4        0096
 __size_of_ISR            (abs)        0000
 __size_of_conf_but       (abs)        0000
 __size_of_main           (abs)        0000
 __size_of_spiInit        (abs)        0000
 __size_of_spiWrite       (abs)        0000
 _conf_but                text1        004C
-_main                    maintext     008B
-_spiInit                 text2        006D
-_spiWrite                text4        0094
+_main                    maintext     008D
+_spiInit                 text2        006F
+_spiWrite                text4        0096
 btemp                    (abs)        007E
 end_of_initialization    cinit        000F
 interrupt_function       intentry     0004
@@ -378,7 +380,7 @@ Total ram usage:        4 bytes
 
  *************** function _ISR *****************
  Defined at:
-		line 84 in file "main.c"
+		line 86 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -445,15 +447,15 @@ shared
 shared estimated size: 1
 
 SPI.c
-		_spiWrite      		CODE           	0094	0000	6
-		_spiInit       		CODE           	006D	0000	30
+		_spiWrite      		CODE           	0096	0000	6
+		_spiInit       		CODE           	006F	0000	30
 
 SPI.c estimated size: 36
 
 main.c
 		_ISR           		CODE           	0013	0000	57
-		_main          		CODE           	008B	0000	9
-		_conf_but      		CODE           	004C	0000	33
+		_main          		CODE           	008D	0000	9
+		_conf_but      		CODE           	004C	0000	35
 
-main.c estimated size: 99
+main.c estimated size: 101
 

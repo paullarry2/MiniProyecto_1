@@ -62,9 +62,11 @@ void conf_but(void) {
     INTCONbits.RBIE = 1;
     ANSEL = 0; // Indicar que el ansel y el anselh esten en 0, (digirales)
     ANSELH = 0;
-    TRISB = 0x00; //Pone los puertos como outputs, en b los prim 2 pin input
+    TRISB = 0x00;
+    TRISC = 0;//Pone los puertos como outputs, en b los prim 2 pin input
     TRISBbits.TRISB0 = 1;
     TRISBbits.TRISB1 = 1; //Habilitar los puertos como entradas
+    TRISCbits.TRISC4 = 1;
     IOCB = 0b00000011; //Indicar que pines estan 
     TRISD = 0x00;
     TRISE = 0x00;

@@ -23,7 +23,7 @@
 #pragma config LVP = OFF        // Low Voltage Programming Enable bit (RB3 pin has digital I/O, HV on MCLR must be used for programming)
 
 // CONFIG2
-//#pragma config BOR4V = BOR40V   // Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
+#pragma config BOR4V = BOR40V   // Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
 #pragma    config WRT = OFF 
 
 #include <xc.h>
@@ -56,9 +56,16 @@ uint8_t get_spi(unsigned SS);
 void main(void) {
     setup();
     while (1) {
-        pot = get_spi(S_Pot);
-        contador = get_spi(S_Cont);
-        termometro = get_spi(S_Term);
+        
+        S_Pot = 0; //Slave Select
+        __delay_ms(1);
+        spiWrite(1);
+        pot = spiRead();
+        __delay_ms(1);
+        S_Pot = 1; //Slave Deselect  
+       // pot = get_spi(S_Pot);
+        //contador = get_spi(S_Cont);
+        //termometro = get_spi(S_Term);
         PORTD = pot;
     }
 }
@@ -71,8 +78,8 @@ void main(void) {
 void setup(void) {
     ANSEL = 0;
     ANSELH = 0;
-    TRISA = 0;
     TRISC = 0;
+    TRISCbits.TRISC4 = 1;
     TRISB = 0;
     TRISD = 0;
     PORTB = 0;
@@ -86,6 +93,7 @@ void setup(void) {
 uint8_t get_spi(unsigned SS){
         SS = 0; //Slave Select
         __delay_ms(1);
+        spiWrite(1);
         temp = spiRead();
         __delay_ms(1);
         SS = 1; //Slave Deselect  
