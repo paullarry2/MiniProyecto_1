@@ -55,6 +55,8 @@ uint8_t get_spi(unsigned SS);
 
 void main(void) {
     setup();
+    Lcd_Init();
+    Lcd_Clear();
     while (1) {
         
         S_Pot = 0; //Slave Select
@@ -78,7 +80,13 @@ void main(void) {
         __delay_ms(5);
         S_Term = 1; //Slave Deselect  
         
-        
+        //Pasos para creacion del display principal
+        Lcd_Set_Cursor(1,1); 
+        Lcd_Write_String("S1:");
+        Lcd_Set_Cursor(1,7);
+        Lcd_Write_String("S2:");
+        Lcd_Set_Cursor(1,13);
+        Lcd_Write_String("S3:");
  
     }
 }
