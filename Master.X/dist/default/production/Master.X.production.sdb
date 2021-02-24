@@ -24,7 +24,7 @@ SPI_CLOCK_IDLE_LOW 0
 SPI_IDLE_2_ACTIVE 0
 SPI_ACTIVE_2_IDLE 64
 ]
-"105 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+"83 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
 [e E1292 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -59,8 +59,12 @@ SPI_ACTIVE_2_IDLE 64
 [v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
 "54
 [v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
-"54 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+"56 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
 [v _main main `(v  1 e 1 0 ]
+"71
+[v _setup setup `(v  1 e 1 0 ]
+"86
+[v _get_spi get_spi `(uc  1 e 1 0 ]
 "12 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
 "29
@@ -69,7 +73,7 @@ SPI_ACTIVE_2_IDLE 64
 [v _spiRead spiRead `(uc  1 e 1 0 ]
 "228 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
-[s S151 . 1 `uc 1 RB0 1 0 :1:0 
+[s S160 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -79,14 +83,16 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 RB7 1 0 :1:7 
 ]
 "245
-[u S160 . 1 `S151 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES160  1 e 1 @6 ]
+[u S169 . 1 `S160 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES169  1 e 1 @6 ]
 "352
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
 "843
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "850
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
+"1416
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1478
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
 "1540
@@ -156,10 +162,35 @@ SPI_ACTIVE_2_IDLE 64
 [v _termometro termometro `uc  1 e 1 0 ]
 "43
 [v _contador contador `uc  1 e 1 0 ]
-"54
+"44
+[v _temp temp `uc  1 e 1 0 ]
+"56
 [v _main main `(v  1 e 1 0 ]
 {
-"87
+"64
+} 0
+"71
+[v _setup setup `(v  1 e 1 0 ]
+{
+"84
+} 0
+"12 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
+[v _spiInit spiInit `(v  1 e 1 0 ]
+{
+[v spiInit@sType sType `E1264  1 a 1 wreg ]
+[v spiInit@sType sType `E1264  1 a 1 wreg ]
+[v spiInit@sDataSample sDataSample `E1272  1 p 1 0 ]
+[v spiInit@sClockIdle sClockIdle `E1276  1 p 1 1 ]
+[v spiInit@sTransmitEdge sTransmitEdge `E1280  1 p 1 2 ]
+"14
+[v spiInit@sType sType `E1264  1 a 1 3 ]
+"27
+} 0
+"86 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+[v _get_spi get_spi `(uc  1 e 1 0 ]
+{
+[v get_spi@SS SS `ui  1 p 2 0 ]
+"93
 } 0
 "47 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
 [v _spiRead spiRead `(uc  1 e 1 0 ]

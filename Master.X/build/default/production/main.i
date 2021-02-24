@@ -2681,48 +2681,25 @@ char spiRead();
 uint8_t pot;
 uint8_t termometro;
 uint8_t contador;
+uint8_t temp;
 
 
 
 
-void conf_but(void);
+void setup(void);
+uint8_t get_spi(unsigned SS);
 
 
 
 
 
 void main(void) {
+    setup();
     while (1) {
-        PORTBbits.RB0 = 0;
-        _delay((unsigned long)((1)*((8000000)/4000.0)));
-
-        pot = spiRead();
-
-        _delay((unsigned long)((1)*((8000000)/4000.0)));
-        PORTBbits.RB0 = 1;
-
-
-        PORTBbits.RB1 = 0;
-        _delay((unsigned long)((1)*((8000000)/4000.0)));
-
-        contador = spiRead();
-
-        _delay((unsigned long)((1)*((8000000)/4000.0)));
-        PORTBbits.RB1 = 1;
-
-
-
-        PORTBbits.RB1 = 0;
-        _delay((unsigned long)((1)*((8000000)/4000.0)));
-
-        termometro = spiRead();
-
-        _delay((unsigned long)((1)*((8000000)/4000.0)));
-        PORTBbits.RB1 = 1;
-
-
-
-
+        pot = get_spi(PORTBbits.RB0);
+        contador = get_spi(PORTBbits.RB1);
+        termometro = get_spi(PORTBbits.RB2);
+        PORTD = pot;
     }
 }
 
@@ -2734,6 +2711,7 @@ void main(void) {
 void setup(void) {
     ANSEL = 0;
     ANSELH = 0;
+    TRISA = 0;
     TRISC = 0;
     TRISB = 0;
     TRISD = 0;
@@ -2743,4 +2721,13 @@ void setup(void) {
     PORTBbits.RB1 = 1;
     PORTBbits.RB2 = 1;
     spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+}
+
+uint8_t get_spi(unsigned SS){
+        SS = 0;
+        _delay((unsigned long)((1)*((8000000)/4000.0)));
+        temp = spiRead();
+        _delay((unsigned long)((1)*((8000000)/4000.0)));
+        SS = 1;
+        return (temp);
 }

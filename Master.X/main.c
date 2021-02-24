@@ -3,7 +3,7 @@
  * Author: Larry Paúl Fuentes
  * Carné 18117
  * Mini Proyecto 1
- * Slave ADC
+ * Master
  * Digital 2
  *
  * Created on 22 de febrero de 2021, 4:52 PM
@@ -41,48 +41,25 @@
 uint8_t pot;
 uint8_t termometro;
 uint8_t contador;
+uint8_t temp;
 
 //******************************************************************************
 //Prototipos
 //******************************************************************************
-void conf_but(void);
+void setup(void);
+uint8_t get_spi(unsigned SS);
 
 //******************************************************************************
 //Main
 //******************************************************************************
 
 void main(void) {
+    setup();
     while (1) {
-        S_Pot = 0;//Slave Potenciometro
-        __delay_ms(1);
-
-        pot = spiRead();
-
-        __delay_ms(1);
-        S_Pot = 1; //Slave Apago Potenciometro
-        
-
-        S_Cont = 0; //Slave Contador
-        __delay_ms(1);
-
-        contador = spiRead();
-
-        __delay_ms(1);
-        S_Cont = 1; //Slave Deselect Contador 
-        
-        
-        
-        S_Cont = 0; //Slave Termometro
-        __delay_ms(1);
-
-        termometro = spiRead();
-
-        __delay_ms(1);
-        S_Cont = 1; //Slave Deselect Termometro
-        
-        
-
-
+        pot = get_spi(S_Pot);
+        contador = get_spi(S_Cont);
+        termometro = get_spi(S_Term);
+        PORTD = pot;
     }
 }
 
@@ -94,6 +71,7 @@ void main(void) {
 void setup(void) {
     ANSEL = 0;
     ANSELH = 0;
+    TRISA = 0;
     TRISC = 0;
     TRISB = 0;
     TRISD = 0;
@@ -105,3 +83,11 @@ void setup(void) {
     spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 }
 
+uint8_t get_spi(unsigned SS){
+        SS = 0; //Slave Select
+        __delay_ms(1);
+        temp = spiRead();
+        __delay_ms(1);
+        SS = 1; //Slave Deselect  
+        return (temp);
+}
