@@ -11,17 +11,17 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Universidad\AppData\Local\Temp\smo8.o
+$C:\Users\Universidad\AppData\Local\Temp\sq30.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\SlaveCont.X.production.o
 cinit CODE 0 F F 4 2
-text1 CODE 0 4C 4C 23 2
-text2 CODE 0 6F 6F 1E 2
+text1 CODE 0 4C 4C 24 2
+text2 CODE 0 70 70 1E 2
 text3 CODE 0 13 13 39 2
-text4 CODE 0 96 96 6 2
-maintext CODE 0 8D 8D 9 2
+text4 CODE 0 97 97 6 2
+maintext CODE 0 8E 8E 9 2
 cstackCOMMON COMMON 1 70 70 7 1
 cstackBANK0 BANK0 1 20 20 3 1
 intentry CODE 0 4 4 8 2
@@ -41,13 +41,13 @@ BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 9C-1FFF 2
+CONST 9D-1FFF 2
 ENTRY 3-3 2
-ENTRY 9C-1FFF 2
+ENTRY 9D-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE 9C-1FFF 2
+CODE 9D-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
@@ -55,9 +55,9 @@ SFR3 180-18F 1
 COMMON 77-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 9C-1FFF 2
+STRCODE 9D-1FFF 2
 STRING 3-3 2
-STRING 9C-1FFF 2
+STRING 9D-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -72,63 +72,64 @@ STRING 9C-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\SlaveCont.X.production.o
-F cinit CODE >630:C:\Users\Universidad\AppData\Local\Temp\smo8.s
-F cinit CODE >633:C:\Users\Universidad\AppData\Local\Temp\smo8.s
-F cinit CODE >639:C:\Users\Universidad\AppData\Local\Temp\smo8.s
-F cinit CODE >641:C:\Users\Universidad\AppData\Local\Temp\smo8.s
-10 cinit CODE >642:C:\Users\Universidad\AppData\Local\Temp\smo8.s
-4 intentry CODE >86:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-96 text4 CODE >34:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
-97 text4 CODE >36:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
-9B text4 CODE >37:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
-13 text3 CODE >86:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-13 text3 CODE >87:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-17 text3 CODE >88:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-24 text3 CODE >89:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-2A text3 CODE >90:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-2E text3 CODE >91:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-33 text3 CODE >92:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-35 text3 CODE >95:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-36 text3 CODE >97:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-3C text3 CODE >98:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-42 text3 CODE >99:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-45 text3 CODE >101:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-6F text2 CODE >12:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
-70 text2 CODE >14:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
-73 text2 CODE >15:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
-77 text2 CODE >17:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
-7D text2 CODE >18:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
-7E text2 CODE >19:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
-7F text2 CODE >22:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
-86 text2 CODE >23:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
-87 text2 CODE >24:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
-87 text2 CODE >26:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
-8C text2 CODE >27:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
-4C text1 CODE >58:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-4C text1 CODE >60:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-4D text1 CODE >61:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-4E text1 CODE >62:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-4F text1 CODE >63:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-52 text1 CODE >64:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-53 text1 CODE >65:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-56 text1 CODE >66:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-57 text1 CODE >67:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-58 text1 CODE >68:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-59 text1 CODE >69:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-5A text1 CODE >70:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-5C text1 CODE >71:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-5D text1 CODE >72:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-5E text1 CODE >73:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-5F text1 CODE >74:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-62 text1 CODE >75:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-63 text1 CODE >76:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-64 text1 CODE >77:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-65 text1 CODE >79:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-6E text1 CODE >81:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-8D maintext CODE >47:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-8D maintext CODE >48:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-92 maintext CODE >49:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
-92 maintext CODE >50:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\main.c
+F cinit CODE >632:C:\Users\Universidad\AppData\Local\Temp\sq30.s
+F cinit CODE >635:C:\Users\Universidad\AppData\Local\Temp\sq30.s
+F cinit CODE >641:C:\Users\Universidad\AppData\Local\Temp\sq30.s
+F cinit CODE >643:C:\Users\Universidad\AppData\Local\Temp\sq30.s
+10 cinit CODE >644:C:\Users\Universidad\AppData\Local\Temp\sq30.s
+4 intentry CODE >87:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+97 text4 CODE >34:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
+98 text4 CODE >36:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
+9C text4 CODE >37:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
+13 text3 CODE >87:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+13 text3 CODE >88:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+17 text3 CODE >89:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+24 text3 CODE >90:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+2A text3 CODE >91:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+2E text3 CODE >92:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+33 text3 CODE >93:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+35 text3 CODE >96:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+36 text3 CODE >98:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+3C text3 CODE >99:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+42 text3 CODE >100:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+45 text3 CODE >102:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+70 text2 CODE >12:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
+71 text2 CODE >14:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
+74 text2 CODE >15:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
+78 text2 CODE >17:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
+7E text2 CODE >18:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
+7F text2 CODE >19:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
+80 text2 CODE >22:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
+87 text2 CODE >23:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
+88 text2 CODE >24:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
+88 text2 CODE >26:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
+8D text2 CODE >27:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\SPI.c
+4C text1 CODE >58:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+4C text1 CODE >60:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+4D text1 CODE >61:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+4E text1 CODE >62:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+4F text1 CODE >63:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+52 text1 CODE >64:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+53 text1 CODE >65:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+56 text1 CODE >66:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+57 text1 CODE >67:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+58 text1 CODE >68:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+59 text1 CODE >69:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+5A text1 CODE >70:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+5C text1 CODE >71:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+5D text1 CODE >72:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+5E text1 CODE >73:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+5F text1 CODE >74:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+60 text1 CODE >75:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+63 text1 CODE >76:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+64 text1 CODE >77:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+65 text1 CODE >78:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+66 text1 CODE >80:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+6F text1 CODE >82:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+8E maintext CODE >47:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+8E maintext CODE >48:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+93 maintext CODE >49:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
+93 maintext CODE >50:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveCont.X\mainC.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -142,7 +143,7 @@ F cinit CODE >641:C:\Users\Universidad\AppData\Local\Temp\smo8.s
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
-__Hspace_0 9C 0 ABS 0 - -
+__Hspace_0 9D 0 ABS 0 - -
 __Hspace_1 77 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
@@ -151,28 +152,29 @@ spiInit@sTransmitEdge 22 0 BANK0 1 cstackBANK0 dist/default/production\SlaveCont
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
 _IOCB 96 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\smo8.o
-_main 11A 0 CODE 0 maintext dist/default/production\SlaveCont.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\sq30.o
+_main 11C 0 CODE 0 maintext dist/default/production\SlaveCont.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
-start 18 0 CODE 0 init C:\Users\Universidad\AppData\Local\Temp\smo8.o
+start 18 0 CODE 0 init C:\Users\Universidad\AppData\Local\Temp\sq30.o
 __size_of_main 0 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\smo8.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\smo8.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\smo8.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\smo8.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\smo8.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\smo8.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sq30.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sq30.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sq30.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sq30.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sq30.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\sq30.o
 wtemp0 7E 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 _ANSELH 189 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 __size_of_spiInit 0 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\smo8.o
-___stacklo 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\smo8.o
+___stackhi 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\sq30.o
+___stacklo 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\sq30.o
 spiInit@sDataSample 20 0 BANK0 1 cstackBANK0 dist/default/production\SlaveCont.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\SlaveCont.X.production.o
+_TRISAbits 85 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 _TRISBbits 86 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 _TRISCbits 87 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\SlaveCont.X.production.o
@@ -180,7 +182,7 @@ _SSPBUF 13 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 _TRISC5 43D 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\smo8.o
+___int_sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\sq30.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -188,7 +190,7 @@ __Hbank3 0 0 ABS 0 bank3 -
 __Hcinit 26 0 CODE 0 cinit -
 __Hstack 0 0 STACK 2 stack -
 __Hmaintext 0 0 ABS 0 maintext -
-__end_of_spiInit 11A 0 CODE 0 text2 dist/default/production\SlaveCont.X.production.o
+__end_of_spiInit 11C 0 CODE 0 text2 dist/default/production\SlaveCont.X.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 4 config -
 __Lbank0 0 0 ABS 0 bank0 -
@@ -218,15 +220,15 @@ __Ltext 0 0 ABS 0 text -
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _ISR 26 0 CODE 0 text3 dist/default/production\SlaveCont.X.production.o
-__S0 9C 0 ABS 0 - -
+__S0 9D 0 ABS 0 - -
 __S1 77 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 saved_w 7E 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 __end_of_ISR 98 0 CODE 0 text3 dist/default/production\SlaveCont.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Universidad\AppData\Local\Temp\smo8.o
-__pmaintext 11A 0 CODE 0 maintext dist/default/production\SlaveCont.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Universidad\AppData\Local\Temp\sq30.o
+__pmaintext 11C 0 CODE 0 maintext dist/default/production\SlaveCont.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 __Lspace_0 0 0 ABS 0 - -
@@ -242,10 +244,10 @@ __Hintentry 18 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 6 0 CODE 0 reset_vec -
 __ptext1 98 0 CODE 0 text1 dist/default/production\SlaveCont.X.production.o
-__ptext2 DE 0 CODE 0 text2 dist/default/production\SlaveCont.X.production.o
+__ptext2 E0 0 CODE 0 text2 dist/default/production\SlaveCont.X.production.o
 __ptext3 26 0 CODE 0 text3 dist/default/production\SlaveCont.X.production.o
-__ptext4 12C 0 CODE 0 text4 dist/default/production\SlaveCont.X.production.o
-_spiInit DE 0 CODE 0 text2 dist/default/production\SlaveCont.X.production.o
+__ptext4 12E 0 CODE 0 text4 dist/default/production\SlaveCont.X.production.o
+_spiInit E0 0 CODE 0 text2 dist/default/production\SlaveCont.X.production.o
 spiWrite@dat 70 0 COMMON 1 cstackCOMMON dist/default/production\SlaveCont.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 spiInit@sType 76 0 COMMON 1 cstackCOMMON dist/default/production\SlaveCont.X.production.o
@@ -259,7 +261,7 @@ __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\SlaveCont.X.production.o
 _SSPSTAT 94 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 __Hend_init 1E 0 CODE 0 end_init -
-__end_of_main 12C 0 CODE 0 maintext dist/default/production\SlaveCont.X.production.o
+__end_of_main 12E 0 CODE 0 maintext dist/default/production\SlaveCont.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 _PORTC 7 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
@@ -280,9 +282,9 @@ __size_of_ISR 0 0 ABS 0 - dist/default/production\SlaveCont.X.production.o
 _conf_but 98 0 CODE 0 text1 dist/default/production\SlaveCont.X.production.o
 spiInit@sClockIdle 21 0 BANK0 1 cstackBANK0 dist/default/production\SlaveCont.X.production.o
 __initialization 1E 0 CODE 0 cinit dist/default/production\SlaveCont.X.production.o
-_spiWrite 12C 0 CODE 0 text4 dist/default/production\SlaveCont.X.production.o
-__end_of_conf_but DE 0 CODE 0 text1 dist/default/production\SlaveCont.X.production.o
-__end_of_spiWrite 138 0 CODE 0 text4 dist/default/production\SlaveCont.X.production.o
+_spiWrite 12E 0 CODE 0 text4 dist/default/production\SlaveCont.X.production.o
+__end_of_conf_but E0 0 CODE 0 text1 dist/default/production\SlaveCont.X.production.o
+__end_of_spiWrite 13A 0 CODE 0 text4 dist/default/production\SlaveCont.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -310,7 +312,7 @@ __end_of_spiWrite 138 0 CODE 0 text4 dist/default/production\SlaveCont.X.product
 %SEGMENTS
 cstackCOMMON 1 70 70 7 1
 cstackBANK0 1 20 20 3 1
-intentry 0 4 8 98 2
+intentry 0 4 8 99 2
 reset_vec 0 0 0 3 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section

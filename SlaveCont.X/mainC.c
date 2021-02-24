@@ -3,10 +3,10 @@
  * Author: Larry Paúl Fuentes
  * Carné 18117
  * Mini Proyecto 1
- * Slave Termometro
+ * Slave Contador 8 bits
  * Digital 2
  *
- * Created on 22 de febrero de 2021, 6:45 PM
+ * Created on 22 de febrero de 2021, 5:49 PM
  */
 //******************************************************************************
 //Librerias
@@ -27,102 +27,76 @@
 #pragma    config WRT = OFF 
 
 #include <xc.h>
-#include "Adc_int_.h"
+#include <stdint.h>
 #include "SPI.h"
+
 #define _XTAL_FREQ (8000000)
-#define led_r RD2
-#define led_a RD1
-#define led_g RD0
 
 //******************************************************************************
 //Variables
 //******************************************************************************
-int term;
-int adc_fin;
-
 
 //******************************************************************************
-//Prototipos
+//Prototipo de funciones
 //******************************************************************************
 void conf_but(void);
-
 //******************************************************************************
 //Main
 //******************************************************************************
 
 void main(void) {
     conf_but();
-    adc_fin=0;
-    confADC();
-    term = 0;
-    conf_ch(0);
-    
-    while(1){
-        if (adc_fin == 0) {
-            adc_fin = 1;
-            __delay_ms(10); // Acquisition time
-            ADCON0bits.GO = 1; // Enciende la conversion   
-        }  
-        
-        if (term < 100){
-            led_g = 1;
-            led_a = 0;
-            led_r = 0;
-        }
-        else if (100 < term & term < 114){
-            led_a = 1;
-            led_g = 0;
-            led_r = 0;
-        }
-        else if (114 < term){
-            led_a = 0;
-            led_g = 0;
-            led_r = 1;
-        }
+    while (1) {
     }
 }
 
 
 //******************************************************************************
-//FUNCIONES
+//Funciones
 //******************************************************************************
-void conf_but(void){
+
+void conf_but(void) {
     // CONFIGURACION PUERTOS
     INTCONbits.GIE = 1; //Habilito mis interrupciones
-    INTCONbits.PEIE = 1; //Habilita interrupciones perifericas 
-    ANSEL = 0;// Indicar que el ansel y el anselh esten en 0, (digirales)
+    INTCONbits.PEIE = 1; //Habilita interrupciones perifericas
+    INTCONbits.RBIE = 1;
+    ANSEL = 0; // Indicar que el ansel y el anselh esten en 0, (digirales)
     ANSELH = 0;
-    ANSELbits.ANS0 = 1; //Excepto el pin AN0 (Term)
-    TRISB=0x00; //Pone los puertos como outputs, en b los prim 2 pin input
-    TRISD=0x00;
-    TRISE=0x00;
-    TRISA=0;
-    TRISC = 0;
-    TRISC4 = 1;
-    TRISAbits.TRISA0 = 1;//habilita como entrada el puerto analogico (pot)
+    TRISB = 0x00;
+    TRISC = 0;//Pone los puertos como outputs, en b los prim 2 pin input
+    TRISBbits.TRISB0 = 1;
+    TRISBbits.TRISB1 = 1; //Habilitar los puertos como entradas
+    TRISCbits.TRISC4 = 1;
+    IOCB = 0b00000011; //Indicar que pines estan 
+    TRISD = 0x00;
+    TRISE = 0x00;
+    TRISA = 0;
+    TRISAbits.TRISA5 = 1;
     PORTD = 0;
     PORTB = 0;
     PORTC = 0;
     PORTE = 0;
+
     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
     //Configuracion de mi slave,  SSPSTAT IGUAL A 0, habilitado el SSPEN, CKP = 0
-}  
+}
 //******************************************************************************
 //Interrupcion
 //******************************************************************************
 
 void __interrupt() ISR(void) {//Interrupciones
-
-    if (PIR1bits.ADIF == 1) { //Termino de convevrtir?
-        //Chequea la bandera del ADC
-        term = ADRESH; //Copia el valor de la conversion al puerto C
-        adc_fin = 0; //Apagar bandera de copiando 
-
+    if (INTCONbits.RBIF == 1) { // Si la bandera del interrupt on change "if"
+        __delay_ms(100);
+        if (PORTBbits.RB1 == 1) {
+            PORTD++; //Si el boton esta presionado, aumenta el puerto
+        } else if (PORTBbits.RB0 == 1) {
+            PORTD--; // Si el boton esta presionado, decrementa
+        }
     }
-    PIR1bits.ADIF = 0; //Apagar bandera de conversion
-    
+    INTCONbits.RBIF = 0; //Apaga bandera al terminar la accion.
+
     if (SSPIF == 1) {
-        spiWrite(term);
+        spiWrite(PORTD);
         SSPIF = 0;
     }
 }

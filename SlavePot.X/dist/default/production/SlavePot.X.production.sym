@@ -165,7 +165,7 @@ cstackCOMMON 70 78 COMMON 70 1
 cstackBANK0 20 25 BANK0 20 1
 %locals
 dist/default/production\SlavePot.X.production.o
-C:\Users\Universidad\AppData\Local\Temp\s52g.s
+C:\Users\Universidad\AppData\Local\Temp\sgj0.s
 799 F 0 CODE 0
 802 F 0 CODE 0
 816 F 0 CODE 0
@@ -175,7 +175,7 @@ C:\Users\Universidad\AppData\Local\Temp\s52g.s
 825 13 0 CODE 0
 827 13 0 CODE 0
 828 14 0 CODE 0
-main.c
+mainP.c
 52 17 0 CODE 0
 53 17 0 CODE 0
 54 1C 0 CODE 0
@@ -194,7 +194,7 @@ Adc_int_.c
 22 B8 0 CODE 0
 23 BE 0 CODE 0
 26 C2 0 CODE 0
-main.c
+mainP.c
 72 6F 0 CODE 0
 74 6F 0 CODE 0
 75 70 0 CODE 0
@@ -237,7 +237,7 @@ Adc_int_.c
 13 CF 0 CODE 0
 14 D2 0 CODE 0
 17 D5 0 CODE 0
-main.c
+mainP.c
 98 4B 0 CODE 0
 100 4B 0 CODE 0
 102 51 0 CODE 0

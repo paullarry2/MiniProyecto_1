@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "mainT.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 14 "main.c"
+# 1 "mainT.c" 2
+# 14 "mainT.c"
 #pragma config FOSC = INTRC_NOCLKOUT
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
@@ -2504,7 +2504,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 29 "main.c" 2
+# 29 "mainT.c" 2
 
 # 1 "./Adc_int_.h" 1
 # 14 "./Adc_int_.h"
@@ -2648,7 +2648,7 @@ typedef uint16_t uintptr_t;
 
 void confADC(void);
 void conf_ch(int sel);
-# 30 "main.c" 2
+# 30 "mainT.c" 2
 
 # 1 "./SPI.h" 1
 # 17 "./SPI.h"
@@ -2685,8 +2685,8 @@ void spiInit(Spi_Type, Spi_Data_Sample, Spi_Clock_Idle, Spi_Transmit_Edge);
 void spiWrite(char);
 unsigned spiDataReady();
 char spiRead();
-# 31 "main.c" 2
-# 40 "main.c"
+# 31 "mainT.c" 2
+# 40 "mainT.c"
 int term;
 int adc_fin;
 
@@ -2750,6 +2750,7 @@ void conf_but(void){
     TRISC = 0;
     TRISC4 = 1;
     TRISAbits.TRISA0 = 1;
+    TRISAbits.TRISA5 = 1;
     PORTD = 0;
     PORTB = 0;
     PORTC = 0;
