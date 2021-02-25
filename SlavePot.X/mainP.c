@@ -50,8 +50,8 @@ void conf_but(void);
 //******************************************************************************
 
 void main(void) {
-    conf_but();
-    confADC();
+    conf_but(); //Llamo config inicial
+    confADC(); //llamo config adc
     conf_ch(0);
     while (1) {
         if (adc_fin == 0) {
@@ -77,13 +77,13 @@ void conf_but(void) {
     ANSELH = 0;
     ANSELbits.ANS0 = 1; //Excepto el pin AN0 (Pot)
     TRISC = 0x00;
-    TRISCbits.TRISC4 = 1;
+    TRISCbits.TRISC4 = 1; //Habilito el SDI como entrada
     TRISB = 0x00; //Pone los puertos como outputs, en b los prim 2 pin input
     TRISD = 0x00;
     TRISE = 0x00;
     TRISA = 0;
     TRISAbits.TRISA0 = 1; //habilita como entrada el puerto analogico (pot)
-    TRISAbits.TRISA5 = 1;
+    TRISAbits.TRISA5 = 1; //Habilito mi Slave select como entrada
     PORTD = 0;
     PORTB = 0;
     PORTC = 0;
@@ -104,8 +104,8 @@ void __interrupt() ISR(void) {//Interrupciones
     }
     PIR1bits.ADIF = 0; //Apagar bandera de conversion
 
-    if (SSPIF == 1) {
-        spiWrite(pot);
-        SSPIF = 0;
+    if (SSPIF == 1) { //Si mi master escribe, interrupcion reviso bandera
+        spiWrite(pot); //Mando mi variable potenciometro, contiene conversion
+        SSPIF = 0; // Apago bandera
     }
 }

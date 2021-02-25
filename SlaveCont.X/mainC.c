@@ -45,7 +45,7 @@ void conf_but(void);
 //******************************************************************************
 
 void main(void) {
-    conf_but();
+    conf_but(); //llamar config
     while (1) {
     }
 }
@@ -66,12 +66,12 @@ void conf_but(void) {
     TRISC = 0;//Pone los puertos como outputs, en b los prim 2 pin input
     TRISBbits.TRISB0 = 1;
     TRISBbits.TRISB1 = 1; //Habilitar los puertos como entradas
-    TRISCbits.TRISC4 = 1;
+    TRISCbits.TRISC4 = 1; //Poner el SDI como entrada
     IOCB = 0b00000011; //Indicar que pines estan 
     TRISD = 0x00;
     TRISE = 0x00;
     TRISA = 0;
-    TRISAbits.TRISA5 = 1;
+    TRISAbits.TRISA5 = 1; //Slave Select
     PORTD = 0;
     PORTB = 0;
     PORTC = 0;
@@ -95,8 +95,8 @@ void __interrupt() ISR(void) {//Interrupciones
     }
     INTCONbits.RBIF = 0; //Apaga bandera al terminar la accion.
 
-    if (SSPIF == 1) {
-        spiWrite(PORTD);
-        SSPIF = 0;
+    if (SSPIF == 1) { // Si mi master escribe, interrupcion reviso bandera
+        spiWrite(PORTD); //Mando mi contador(Puerto D)
+        SSPIF = 0; // Apago bandera
     }
 }

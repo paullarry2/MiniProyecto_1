@@ -39,10 +39,12 @@
 //******************************************************************************
 //Variables
 //******************************************************************************
+//Almacenan mis valores obtenidos de SPI
 uint8_t pot;
 uint8_t termometro;
 uint8_t contador;
 
+//Almacenan los chars utilizados para imprimir en el LCD
 uint8_t uniPV;
 uint8_t decPV;
 uint8_t cenPV;
@@ -52,6 +54,7 @@ uint8_t cenTV;
 uint8_t uniCV;
 uint8_t decCV;
 uint8_t cenCV;
+//Variable temporal para reescalar mi valor del SPI
 uint16_t temp;
 
 //******************************************************************************
@@ -66,29 +69,29 @@ void impr_Pot(char uni, char dec, char cen, uint8_t val, int fact);
 //******************************************************************************
 
 void main(void) {
-    setup();
-    Lcd_Init();
-    Lcd_Clear();
+    setup(); //Setup master
+    Lcd_Init(); //Inicializo mi pantalla 
+    Lcd_Clear(); //Limpio pantalla
     while (1) {
 
-        S_Pot = 0; //Slave Select
+        S_Pot = 0; //Slave Select Potenciometro
         __delay_ms(5);
-        spiWrite(1);
-        pot = spiRead();
+        spiWrite(1); //mando valor, para que funcione SPI, valor despreciable
+        pot = spiRead(); //Leo valor del SPI y guardo 
         __delay_ms(5);
         S_Pot = 1; //Slave Deselect  
 
-        S_Cont = 0; //Slave Select
+        S_Cont = 0; //Slave Select Contador 
         __delay_ms(5);
         spiWrite(1);
-        contador = spiRead();
+        contador = spiRead();//Leo valor del SPI y guardo 
         __delay_ms(5);
         S_Cont = 1; //Slave Deselect   
 
-        S_Term = 0; //Slave Select
+        S_Term = 0; //Slave Select Termometro
         __delay_ms(5);
         spiWrite(1);
-        termometro = spiRead();
+        termometro = spiRead(); //Leo valor del SPI y guardo
         __delay_ms(5);
         S_Term = 1; //Slave Deselect  
 
@@ -100,41 +103,41 @@ void main(void) {
         Lcd_Set_Cursor(1, 13);
         Lcd_Write_String("S3:");
 
-        impr_Pot(uniPV, decPV, cenPV, pot, 2);
-        impr_cont(uniCV, decCV, cenCV, contador, 1);
+        impr_Pot(uniPV, decPV, cenPV, pot, 2); //Funcion importan valores del spi
+        impr_cont(uniCV, decCV, cenCV, contador, 1); //convierten los valores en chars
 
-        if (termometro < 69) {
-            temp = termometro * 0.81;
-            temp = 55 - temp;
-            temp = temp * 10;
-            uniTV = temp / 100;
-            temp = temp - (uniTV * 100);
-            decTV = temp / 10;
-            temp = temp - (decTV * 10);
-            cenTV = temp;
+        if (termometro < 69) { //Valores menores a 69 menores a 0, subrutina negativos
+            temp = termometro * 0.81; //multiplico por factor de grado
+            temp = 55 - temp; // 55 menos el valor me dara el grado actual
+            temp = temp * 10; //Multiplico por 10 para no tener floats
+            uniTV = temp / 100; //obtengo valor de decena unidad
+            temp = temp - (uniTV * 100); //Le quito el valor obtenido al temporal 
+            decTV = temp / 10; //obtengo unidad
+            temp = temp - (decTV * 10); //Quito unidad
+            cenTV = temp; //Sobrante es el decimal
             
             
             Lcd_Set_Cursor(2, 12);
-            Lcd_Write_String("-");
+            Lcd_Write_String("-"); //Como son val negativos poner el signo negativo
             
             Lcd_Set_Cursor(2, 13);
             uniTV = uniTV + 48;
-            Lcd_Write_Char(uniTV);
+            Lcd_Write_Char(uniTV); //Pongo Decena
 
             Lcd_Set_Cursor(2, 14);
             decTV = decTV + 48;
-            Lcd_Write_Char(decTV);
+            Lcd_Write_Char(decTV); //Pongo Unidad
 
             Lcd_Set_Cursor(2, 15);
-            Lcd_Write_String(".");
+            Lcd_Write_String("."); //Punto 
             
             Lcd_Set_Cursor(2, 16);
-            cenTV = cenTV + 48;
+            cenTV = cenTV + 48; //Decimal
             Lcd_Write_Char(cenTV);
         }
         else  {
             temp = termometro * 0.81;
-            temp = temp - 55;
+            temp = temp - 55; //Ahora como son positivos el desfase de 55 se quita
             temp = temp*10;
             uniTV = temp / 100;
             temp = temp - (uniTV * 100);
@@ -143,7 +146,7 @@ void main(void) {
             cenTV = temp;
             
             Lcd_Set_Cursor(2, 12);
-            Lcd_Write_String("+");
+            Lcd_Write_String("+"); //Grado positivo
             
             Lcd_Set_Cursor(2, 13);
             uniTV = uniTV + 48;
@@ -186,16 +189,17 @@ void setup(void) {
 }
 
 void impr_cont(char uni, char dec, char cen, uint8_t val, int fact) {
-    temp = val * fact;
-    uni = temp / 100;
-    temp = temp - (uni * 100);
-    dec = temp / 10;
-    temp = temp - (dec * 10);
-    cen = temp;
+    //Funcion   que imprime el contador 
+    temp = val * fact; //Multiplico por el factor de voltaje / Valor (factor = 1))
+    uni = temp / 100;  //Obtengo Centena
+    temp = temp - (uni * 100); //Quito Centena
+    dec = temp / 10; //obtengo Decena
+    temp = temp - (dec * 10); //Quito Centena
+    cen = temp; //Obtengo unidad
 
-
+    //Rutina de impresión
     Lcd_Set_Cursor(2, 7);
-    uni = uni + 48;
+    uni = uni + 48; //Sumo 48 por Ascii
     Lcd_Write_Char(uni);
 
     Lcd_Set_Cursor(2, 8);
@@ -208,20 +212,20 @@ void impr_cont(char uni, char dec, char cen, uint8_t val, int fact) {
 }
 
 void impr_Pot(char uni, char dec, char cen, uint8_t val, int fact) {
-    temp = val * fact;
-    uni = temp / 100;
-    temp = temp - (uni * 100);
-    dec = temp / 10;
-    temp = temp - (dec * 10);
-    cen = temp;
+    temp = val * fact; //Multiplico por el factor de voltaje / Valor (factor = 2))
+    uni = temp / 100; //Unidad del voltaje
+    temp = temp - (uni * 100); //Quito unidad
+    dec = temp / 10; //Unidad decima 
+    temp = temp - (dec * 10); //Quito decima
+    cen = temp; //Unidad centesima 
 
-
+    //Rutina de impresión
     Lcd_Set_Cursor(2, 1);
-    uni = uni + 48;
+    uni = uni + 48; 
     Lcd_Write_Char(uni);
 
     Lcd_Set_Cursor(2, 2);
-    Lcd_Write_String(":");
+    Lcd_Write_String("."); //Pongo el punto del decimal 
 
     Lcd_Set_Cursor(2, 3);
     dec = dec + 48;

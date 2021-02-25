@@ -1,0 +1,30 @@
+Configurar mi libreria SPI
+Configurar mi ADC
+Configurar Salidas y entradas
+
+Main LOOP Slave Termometro
+conf_adc();
+conf();
+
+if (adc_fin == 0)
+	adc_fin = 1;
+	delay;
+	ADC.GO;
+if (termometro < valor_25)
+	led verde = 1;
+if (valor_25 < termometro < valor_36)
+	led amarillo = 1;
+if (valor_36 < termometro)
+	led Rojo =1;
+
+INTERRRUPCION
+
+if (bandera_ADC)
+	if (adc_fin)
+		termometro = adresh;
+		adc_fin = 0;
+	bandera_ADC = 0;
+
+if (bandera_SPI)
+	spiWrite(termometro)
+	SSPIF = 0;	

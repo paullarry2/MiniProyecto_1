@@ -1,0 +1,23 @@
+Configurar mi libreria SPI
+Configurar mi Interrupt On Change
+Configurar Salidas y entradas
+
+Main LOOP Slave Contador
+conf();
+
+while(1)
+
+INTERRRUPCION
+
+if (bandera_IOC)
+	if (button 1)
+		delay
+		portd++
+	if (button 2)
+		delay
+		portd--
+	bandera_IOC = 0;	
+
+if (bandera_SPI)
+	spiWrite(PORTD)
+	SSPIF = 0;	

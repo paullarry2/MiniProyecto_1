@@ -51,11 +51,11 @@ void conf_but(void);
 //******************************************************************************
 
 void main(void) {
-    conf_but();
-    adc_fin=0;
-    confADC();
-    term = 0;
-    conf_ch(0);
+    conf_but(); //llamo mi setup principal
+    adc_fin=0; //bandera termino adc
+    confADC(); //llamo config adc
+    term = 0; //Inicializo mi variable que guarda al Adresh
+    conf_ch(0); //Canal RA0
     
     while(1){
         if (adc_fin == 0) {
@@ -64,19 +64,20 @@ void main(void) {
             ADCON0bits.GO = 1; // Enciende la conversion   
         }  
         
-        if (term < 100){
-            led_g = 1;
+        if (term < 100){ //Si mi valor no pasa los 100, significa no paso los 25C
+            led_g = 1; //Luz verde
             led_a = 0;
             led_r = 0;
         }
-        else if (100 < term & term < 113){
+        else if (100 < term & term < 113){ //Si mi valor no pasa los 100 ni los
+            //113, significa rango de 25C a 36C
             led_a = 1;
-            led_g = 0;
+            led_g = 0; //Luz amarilla
             led_r = 0;
         }
-        else if (113 <= term){
+        else if (113 <= term){ //Si mi valor pasa o igual a 113, arriba de los 36C
             led_a = 0;
-            led_g = 0;
+            led_g = 0; //Luz ROja
             led_r = 1;
         }
     }
@@ -98,9 +99,9 @@ void conf_but(void){
     TRISE=0x00;
     TRISA=0;
     TRISC = 0;
-    TRISC4 = 1;
+    TRISC4 = 1; //Pone el SDI como entrada
     TRISAbits.TRISA0 = 1;//habilita como entrada el puerto analogico (pot)
-    TRISAbits.TRISA5 = 1;
+    TRISAbits.TRISA5 = 1; // habilitar el Slave select como entrada
     PORTD = 0;
     PORTB = 0;
     PORTC = 0;
@@ -121,8 +122,8 @@ void __interrupt() ISR(void) {//Interrupciones
     }
     PIR1bits.ADIF = 0; //Apagar bandera de conversion
     
-    if (SSPIF == 1) {
-        spiWrite(term);
-        SSPIF = 0;
+    if (SSPIF == 1) { //Si mi master escribe, interrupcion reviso bandera
+        spiWrite(term); //Mando mi conversion de termometro
+        SSPIF = 0; // Apago bandera
     }
 }

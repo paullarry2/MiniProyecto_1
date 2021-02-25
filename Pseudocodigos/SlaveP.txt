@@ -1,0 +1,25 @@
+Configurar mi libreria SPI
+Configurar mi ADC
+Configurar Salidas y entradas
+
+Main LOOP Slave POTENCIOMETRO
+conf_adc();
+conf();
+
+if (adc_fin == 0)
+	adc_fin = 1;
+	delay;
+	ADC.GO;
+
+INTERRRUPCION
+
+if (bandera_ADC)
+	if (adc_fin)
+		pot = adresh;
+		adc_fin = 0;
+	bandera_ADC = 0;
+
+if (bandera_SPI)
+	spiWrite(pot)
+	SSPIF = 0;	
+	

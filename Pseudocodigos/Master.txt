@@ -1,0 +1,28 @@
+Configurar mi libreria SPI
+Configurar mi LCD
+Configurar mi USART
+Configurar Salidas y entradas
+
+Main LOOP MASTER
+LCD_init;
+LCD_clear
+conf();
+
+SLave1 =0;
+var1 =spiRead;
+Slave1 =1;
+
+SLave2 =0;
+var2 =spiRead;
+Slave2 =1;
+
+SLave3 =0;
+var3 =spiRead;
+Slave3 =1;
+
+Imprimir Linea de arriba antiguo lab
+
+Impr_Var1();
+Impr_Var2();
+impr_var3();
+
