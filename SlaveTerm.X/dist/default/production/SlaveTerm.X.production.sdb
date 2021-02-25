@@ -284,7 +284,7 @@ SPI_ACTIVE_2_IDLE 64
 "115 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveTerm.X\mainT.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"129
+"128
 } 0
 "34 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\SlaveTerm.X\SPI.c
 [v _spiWrite spiWrite `(v  1 e 1 0 ]

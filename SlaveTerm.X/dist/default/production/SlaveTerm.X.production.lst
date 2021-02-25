@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Wed Feb 24 13:47:39 2021
+                                                                                               Wed Feb 24 18:09:10 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	16F887
@@ -1169,11 +1169,11 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1153  009F  01F6               	clrf	_adc_fin+1
   1154  00A0                     i1l818:
   1155                           
-  1156                           ;mainT.c: 123:     PIR1bits.ADIF = 0;
+  1156                           ;mainT.c: 122:     PIR1bits.ADIF = 0;
   1157  00A0  130C               	bcf	12,6	;volatile
   1158  00A1                     i1l820:
   1159                           
-  1160                           ;mainT.c: 125:     if (SSPIF == 1) {
+  1160                           ;mainT.c: 124:     if (SSPIF == 1) {
   1161  00A1  1D8C               	btfss	12,3	;volatile
   1162  00A2  28A4               	goto	u11_21
   1163  00A3  28A5               	goto	u11_20
@@ -1182,12 +1182,12 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1166  00A5                     u11_20:
   1167  00A5                     i1l822:
   1168                           
-  1169                           ;mainT.c: 126:         spiWrite(term);
+  1169                           ;mainT.c: 125:         spiWrite(term);
   1170  00A5  0877               	movf	_term,w
   1171  00A6  120A  118A  211D  120A  118A  	fcall	_spiWrite
   1172  00AB                     i1l824:
   1173                           
-  1174                           ;mainT.c: 127:         SSPIF = 0;
+  1174                           ;mainT.c: 126:         SSPIF = 0;
   1175  00AB  1283               	bcf	3,5	;RP0=0, select bank0
   1176  00AC  1303               	bcf	3,6	;RP1=0, select bank0
   1177  00AD  118C               	bcf	12,3	;volatile
@@ -1440,7 +1440,7 @@ DATA                 0      0       F      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Wed Feb 24 13:47:39 2021
+Symbol Table                                                                                   Wed Feb 24 18:09:10 2021
 
             _SSPSTATbits 0094                       l11 011C                       l14 00FE  
                      l32 00EE                       l16 0108                       l33 00F3  

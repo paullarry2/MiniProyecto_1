@@ -24,7 +24,7 @@ SPI_CLOCK_IDLE_LOW 0
 SPI_IDLE_2_ACTIVE 0
 SPI_ACTIVE_2_IDLE 64
 ]
-"103 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+"140 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
 [e E1292 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -45,10 +45,20 @@ SPI_CLOCK_IDLE_LOW 0
 SPI_IDLE_2_ACTIVE 0
 SPI_ACTIVE_2_IDLE 64
 ]
+"43 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
 "6 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
@@ -57,12 +67,24 @@ SPI_ACTIVE_2_IDLE 64
 [v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
 "12
 [v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+"20
+[v _Lcd_Clear Lcd_Clear `(v  1 e 1 0 ]
+"25
+[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
+"36
+[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
 "54
 [v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
-"56 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+"62
+[v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
+"68 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"91
+"127
 [v _setup setup `(v  1 e 1 0 ]
+"142
+[v _impr_cont impr_cont `(v  1 e 1 0 ]
+"164
+[v _impr_Pot impr_Pot `(v  1 e 1 0 ]
 "12 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
 "29
@@ -73,7 +95,7 @@ SPI_ACTIVE_2_IDLE 64
 [v _spiRead spiRead `(uc  1 e 1 0 ]
 "228 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
-[s S155 . 1 `uc 1 RB0 1 0 :1:0 
+[s S163 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -83,8 +105,8 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 RB7 1 0 :1:7 
 ]
 "245
-[u S164 . 1 `S155 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES164  1 e 1 @6 ]
+[u S172 . 1 `S163 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES172  1 e 1 @6 ]
 "352
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
 "843
@@ -97,6 +119,8 @@ SPI_ACTIVE_2_IDLE 64
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"1664
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
 "2177
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
 [s S42 . 1 `uc 1 BF 1 0 :1:0 
@@ -156,18 +180,24 @@ SPI_ACTIVE_2_IDLE 64
 [v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
 "4463
 [v _TRISC5 TRISC5 `VEb  1 e 0 @1085 ]
-"41 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+"42 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
 [v _pot pot `uc  1 e 1 0 ]
-"42
-[v _termometro termometro `uc  1 e 1 0 ]
 "43
-[v _contador contador `uc  1 e 1 0 ]
+[v _termometro termometro `uc  1 e 1 0 ]
 "44
-[v _temp temp `uc  1 e 1 0 ]
-"56
+[v _contador contador `uc  1 e 1 0 ]
+"49
+[v _uniTV uniTV `uc  1 e 1 0 ]
+"50
+[v _decTV decTV `uc  1 e 1 0 ]
+"51
+[v _cenTV cenTV `uc  1 e 1 0 ]
+"55
+[v _temp temp `ui  1 e 2 0 ]
+"68
 [v _main main `(v  1 e 1 0 ]
 {
-"84
+"120
 } 0
 "34 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
 [v _spiWrite spiWrite `(v  1 e 1 0 ]
@@ -188,10 +218,10 @@ SPI_ACTIVE_2_IDLE 64
 {
 "32
 } 0
-"91 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+"127 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"104
+"141
 } 0
 "12 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
@@ -204,4 +234,171 @@ SPI_ACTIVE_2_IDLE 64
 "14
 [v spiInit@sType sType `E1264  1 a 1 3 ]
 "27
+} 0
+"142 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\main.c
+[v _impr_cont impr_cont `(v  1 e 1 0 ]
+{
+[v impr_cont@uni uni `uc  1 a 1 wreg ]
+[v impr_cont@uni uni `uc  1 a 1 wreg ]
+[v impr_cont@dec dec `uc  1 p 1 8 ]
+[v impr_cont@cen cen `uc  1 p 1 9 ]
+[v impr_cont@val val `uc  1 p 1 10 ]
+[v impr_cont@fact fact `i  1 p 2 11 ]
+"162
+} 0
+"164
+[v _impr_Pot impr_Pot `(v  1 e 1 0 ]
+{
+[v impr_Pot@uni uni `uc  1 a 1 wreg ]
+[v impr_Pot@uni uni `uc  1 a 1 wreg ]
+[v impr_Pot@dec dec `uc  1 p 1 8 ]
+[v impr_Pot@cen cen `uc  1 p 1 9 ]
+[v impr_Pot@val val `uc  1 p 1 10 ]
+[v impr_Pot@fact fact `i  1 p 2 11 ]
+"188
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"30
+} 0
+"62 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\lcd.c
+[v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
+{
+[v Lcd_Write_String@a a `*.24uc  1 a 1 wreg ]
+"63
+[v Lcd_Write_String@i i `i  1 a 2 3 ]
+"62
+[v Lcd_Write_String@a a `*.24uc  1 a 1 wreg ]
+"64
+[v Lcd_Write_String@a a `*.24uc  1 a 1 5 ]
+"66
+} 0
+"54
+[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
+{
+[v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
+[v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
+[v Lcd_Write_Char@a a `uc  1 a 1 2 ]
+"60
+} 0
+"25
+[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
+{
+[v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
+"26
+[v Lcd_Set_Cursor@temp temp `uc  1 a 1 7 ]
+"25
+[v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
+[v Lcd_Set_Cursor@b b `uc  1 p 1 4 ]
+"27
+[v Lcd_Set_Cursor@a a `uc  1 a 1 6 ]
+"34
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 10 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 9 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 0 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 8 ]
+"44
+} 0
+"43 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 36 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 35 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 26 ]
+"70
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S616 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S621 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S624 . 4 `l 1 i 4 0 `d 1 f 4 0 `S616 1 fAsBytes 4 0 `S621 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S624  1 a 4 20 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 14 ]
+[s S693 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S696 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S693 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S696  1 a 2 24 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 19 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 18 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 13 ]
+"8
+[v ___flmul@b b `d  1 p 4 0 ]
+[v ___flmul@a a `d  1 p 4 4 ]
+"205
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+{
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 6 ]
+"5
+[v __Umul8_16@product product `ui  1 a 2 4 ]
+"4
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
+"60
+} 0
+"36 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Master.X\lcd.c
+[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
+{
+"52
+} 0
+"20
+[v _Lcd_Clear Lcd_Clear `(v  1 e 1 0 ]
+{
+"23
+} 0
+"12
+[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+{
+[v Lcd_Cmd@a a `uc  1 a 1 wreg ]
+[v Lcd_Cmd@a a `uc  1 a 1 wreg ]
+[v Lcd_Cmd@a a `uc  1 a 1 3 ]
+"18
+} 0
+"8
+[v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
+{
+[v Lcd_Port@a a `uc  1 a 1 wreg ]
+[v Lcd_Port@a a `uc  1 a 1 wreg ]
+[v Lcd_Port@a a `uc  1 a 1 0 ]
+"10
 } 0

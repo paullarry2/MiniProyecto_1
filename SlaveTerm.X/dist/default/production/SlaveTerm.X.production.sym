@@ -168,7 +168,7 @@ cstackCOMMON 70 78 COMMON 70 1
 cstackBANK0 20 25 BANK0 20 1
 %locals
 dist/default/production\SlaveTerm.X.production.o
-C:\Users\Universidad\AppData\Local\Temp\sncc.s
+C:\Users\Universidad\AppData\Local\Temp\smn4.s
 804 F 0 CODE 0
 807 F 0 CODE 0
 821 F 0 CODE 0
@@ -260,11 +260,11 @@ mainT.c
 117 91 0 CODE 0
 119 97 0 CODE 0
 120 9E 0 CODE 0
-123 A0 0 CODE 0
-125 A1 0 CODE 0
-126 A5 0 CODE 0
-127 AB 0 CODE 0
-129 AE 0 CODE 0
+122 A0 0 CODE 0
+124 A1 0 CODE 0
+125 A5 0 CODE 0
+126 AB 0 CODE 0
+128 AE 0 CODE 0
 115 4 0 CODE 0
 SPI.c
 34 11D 0 CODE 0

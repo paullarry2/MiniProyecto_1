@@ -118,7 +118,6 @@ void __interrupt() ISR(void) {//Interrupciones
         //Chequea la bandera del ADC
         term = ADRESH; //Copia el valor de la conversion al puerto C
         adc_fin = 0; //Apagar bandera de copiando 
-
     }
     PIR1bits.ADIF = 0; //Apagar bandera de conversion
     

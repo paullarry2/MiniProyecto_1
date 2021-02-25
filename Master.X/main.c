@@ -29,6 +29,7 @@
 #include <xc.h>
 #include <stdint.h>
 #include "SPI.h"
+#include "lcd.h"
 #define S_Pot PORTBbits.RB0
 #define S_Cont PORTBbits.RB1
 #define S_Term PORTBbits.RB2
@@ -41,13 +42,24 @@
 uint8_t pot;
 uint8_t termometro;
 uint8_t contador;
-uint8_t temp;
+
+uint8_t uniPV;
+uint8_t decPV;
+uint8_t cenPV;
+uint8_t uniTV;
+uint8_t decTV;
+uint8_t cenTV;
+uint8_t uniCV;
+uint8_t decCV;
+uint8_t cenCV;
+uint16_t temp;
 
 //******************************************************************************
 //Prototipos
 //******************************************************************************
 void setup(void);
-uint8_t get_spi(unsigned SS);
+void impr_cont(char uni, char dec, char cen, uint8_t val, int fact);
+void impr_Pot(char uni, char dec, char cen, uint8_t val, int fact);
 
 //******************************************************************************
 //Main
@@ -87,7 +99,23 @@ void main(void) {
         Lcd_Write_String("S2:");
         Lcd_Set_Cursor(1,13);
         Lcd_Write_String("S3:");
- 
+        
+        impr_Pot(uniPV, decPV, cenPV, pot, 2);
+        impr_cont(uniCV, decCV, cenCV, contador, 1);
+        
+        if (termometro < 69){
+            temp = termometro * 0.489;
+        }
+        
+       
+        temp = termometro * 0.489;
+        uniTV = temp / 100;
+        temp = temp - (uniTV * 100);
+        decTV = temp / 10;
+        temp = temp - (decTV * 10);
+        cenTV = temp;
+        
+        
     }
 }
 
@@ -102,6 +130,7 @@ void setup(void) {
     TRISC = 0;
     TRISC4 = 1;
     TRISB = 0;
+    TRISE = 0x00;
     TRISD = 0;
     PORTB = 0;
     PORTD = 0;
@@ -110,13 +139,50 @@ void setup(void) {
     S_Term = 1;
     spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 }
+void impr_cont(char uni, char dec, char cen, uint8_t val, int fact){
+        temp = val * fact;
+        uni = temp / 100;
+        temp = temp - (uni * 100);
+        dec = temp / 10;
+        temp = temp - (dec * 10);
+        cen = temp;
+        
+        
+        Lcd_Set_Cursor(2,7);
+        uni = uni + 48;
+        Lcd_Write_Char(uni);
+        
+        Lcd_Set_Cursor(2,8);
+        dec = dec + 48;
+        Lcd_Write_Char(dec);
+        
+        Lcd_Set_Cursor(2,9);
+        cen = cen + 48;
+        Lcd_Write_Char(cen);
+}
 
-uint8_t get_spi(unsigned SS){
-        SS = 0; //Slave Select
-        __delay_ms(1);
-        spiWrite(1);
-        temp = spiRead();
-        __delay_ms(1);
-        SS = 1; //Slave Deselect  
-        return (temp);
+void impr_Pot(char uni, char dec, char cen, uint8_t val, int fact){
+        temp = val * fact;
+        uni = temp / 100;
+        temp = temp - (uni * 100);
+        dec = temp / 10;
+        temp = temp - (dec * 10);
+        cen = temp;
+        
+        
+        Lcd_Set_Cursor(2,1);
+        uni = uni + 48;
+        Lcd_Write_Char(uni);
+        
+        Lcd_Set_Cursor(2,2);
+        uni = uni + 48;
+        Lcd_Write_String(":");
+        
+        Lcd_Set_Cursor(2,3);
+        dec = dec + 48;
+        Lcd_Write_Char(dec);
+        
+        Lcd_Set_Cursor(2,4);
+        cen = cen + 48;
+        Lcd_Write_Char(cen);
 }

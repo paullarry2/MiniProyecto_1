@@ -604,28 +604,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 "120
 [; ;mainT.c: 120:         adc_fin = 0;
 [e = _adc_fin -> 0 `i ]
-"122
-[; ;mainT.c: 122:     }
+"121
+[; ;mainT.c: 121:     }
 }
 [e :U 150 ]
-"123
-[; ;mainT.c: 123:     PIR1bits.ADIF = 0;
+"122
+[; ;mainT.c: 122:     PIR1bits.ADIF = 0;
 [e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-"125
-[; ;mainT.c: 125:     if (SSPIF == 1) {
+"124
+[; ;mainT.c: 124:     if (SSPIF == 1) {
 [e $ ! == -> _SSPIF `i -> 1 `i 151  ]
 {
-"126
-[; ;mainT.c: 126:         spiWrite(term);
+"125
+[; ;mainT.c: 125:         spiWrite(term);
 [e ( _spiWrite (1 -> _term `uc ]
-"127
-[; ;mainT.c: 127:         SSPIF = 0;
+"126
+[; ;mainT.c: 126:         SSPIF = 0;
 [e = _SSPIF -> -> 0 `i `b ]
-"128
-[; ;mainT.c: 128:     }
+"127
+[; ;mainT.c: 127:     }
 }
 [e :U 151 ]
-"129
-[; ;mainT.c: 129: }
+"128
+[; ;mainT.c: 128: }
 [e :UE 149 ]
 }

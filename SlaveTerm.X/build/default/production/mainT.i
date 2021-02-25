@@ -2768,7 +2768,6 @@ void __attribute__((picinterrupt(("")))) ISR(void) {
 
         term = ADRESH;
         adc_fin = 0;
-
     }
     PIR1bits.ADIF = 0;
 
