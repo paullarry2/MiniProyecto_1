@@ -70,7 +70,7 @@ void main(void) {
     Lcd_Init();
     Lcd_Clear();
     while (1) {
-        
+
         S_Pot = 0; //Slave Select
         __delay_ms(5);
         spiWrite(1);
@@ -84,38 +84,83 @@ void main(void) {
         contador = spiRead();
         __delay_ms(5);
         S_Cont = 1; //Slave Deselect   
-        
+
         S_Term = 0; //Slave Select
         __delay_ms(5);
         spiWrite(1);
         termometro = spiRead();
         __delay_ms(5);
         S_Term = 1; //Slave Deselect  
-        
+
         //Pasos para creacion del display principal
-        Lcd_Set_Cursor(1,1); 
+        Lcd_Set_Cursor(1, 1);
         Lcd_Write_String("S1:");
-        Lcd_Set_Cursor(1,7);
+        Lcd_Set_Cursor(1, 7);
         Lcd_Write_String("S2:");
-        Lcd_Set_Cursor(1,13);
+        Lcd_Set_Cursor(1, 13);
         Lcd_Write_String("S3:");
-        
+
         impr_Pot(uniPV, decPV, cenPV, pot, 2);
         impr_cont(uniCV, decCV, cenCV, contador, 1);
-        
-        if (termometro < 69){
-            temp = termometro * 0.489;
+
+        if (termometro < 69) {
+            temp = termometro * 0.81;
+            temp = 55 - temp;
+            temp = temp * 10;
+            uniTV = temp / 100;
+            temp = temp - (uniTV * 100);
+            decTV = temp / 10;
+            temp = temp - (decTV * 10);
+            cenTV = temp;
+            
+            
+            Lcd_Set_Cursor(2, 12);
+            Lcd_Write_String("-");
+            
+            Lcd_Set_Cursor(2, 13);
+            uniTV = uniTV + 48;
+            Lcd_Write_Char(uniTV);
+
+            Lcd_Set_Cursor(2, 14);
+            decTV = decTV + 48;
+            Lcd_Write_Char(decTV);
+
+            Lcd_Set_Cursor(2, 15);
+            Lcd_Write_String(".");
+            
+            Lcd_Set_Cursor(2, 16);
+            cenTV = cenTV + 48;
+            Lcd_Write_Char(cenTV);
         }
-        
-       
-        temp = termometro * 0.489;
-        uniTV = temp / 100;
-        temp = temp - (uniTV * 100);
-        decTV = temp / 10;
-        temp = temp - (decTV * 10);
-        cenTV = temp;
-        
-        
+        else  {
+            temp = termometro * 0.81;
+            temp = temp - 55;
+            temp = temp*10;
+            uniTV = temp / 100;
+            temp = temp - (uniTV * 100);
+            decTV = temp / 10;
+            temp = temp - (decTV * 10);
+            cenTV = temp;
+            
+            Lcd_Set_Cursor(2, 12);
+            Lcd_Write_String("+");
+            
+            Lcd_Set_Cursor(2, 13);
+            uniTV = uniTV + 48;
+            Lcd_Write_Char(uniTV);
+
+            Lcd_Set_Cursor(2, 14);
+            decTV = decTV + 48;
+            Lcd_Write_Char(decTV);
+
+            Lcd_Set_Cursor(2, 15);
+            Lcd_Write_String(".");
+            
+            Lcd_Set_Cursor(2, 16);
+            cenTV = cenTV + 48;
+            Lcd_Write_Char(cenTV);
+
+        }
     }
 }
 
@@ -139,50 +184,50 @@ void setup(void) {
     S_Term = 1;
     spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 }
-void impr_cont(char uni, char dec, char cen, uint8_t val, int fact){
-        temp = val * fact;
-        uni = temp / 100;
-        temp = temp - (uni * 100);
-        dec = temp / 10;
-        temp = temp - (dec * 10);
-        cen = temp;
-        
-        
-        Lcd_Set_Cursor(2,7);
-        uni = uni + 48;
-        Lcd_Write_Char(uni);
-        
-        Lcd_Set_Cursor(2,8);
-        dec = dec + 48;
-        Lcd_Write_Char(dec);
-        
-        Lcd_Set_Cursor(2,9);
-        cen = cen + 48;
-        Lcd_Write_Char(cen);
+
+void impr_cont(char uni, char dec, char cen, uint8_t val, int fact) {
+    temp = val * fact;
+    uni = temp / 100;
+    temp = temp - (uni * 100);
+    dec = temp / 10;
+    temp = temp - (dec * 10);
+    cen = temp;
+
+
+    Lcd_Set_Cursor(2, 7);
+    uni = uni + 48;
+    Lcd_Write_Char(uni);
+
+    Lcd_Set_Cursor(2, 8);
+    dec = dec + 48;
+    Lcd_Write_Char(dec);
+
+    Lcd_Set_Cursor(2, 9);
+    cen = cen + 48;
+    Lcd_Write_Char(cen);
 }
 
-void impr_Pot(char uni, char dec, char cen, uint8_t val, int fact){
-        temp = val * fact;
-        uni = temp / 100;
-        temp = temp - (uni * 100);
-        dec = temp / 10;
-        temp = temp - (dec * 10);
-        cen = temp;
-        
-        
-        Lcd_Set_Cursor(2,1);
-        uni = uni + 48;
-        Lcd_Write_Char(uni);
-        
-        Lcd_Set_Cursor(2,2);
-        uni = uni + 48;
-        Lcd_Write_String(":");
-        
-        Lcd_Set_Cursor(2,3);
-        dec = dec + 48;
-        Lcd_Write_Char(dec);
-        
-        Lcd_Set_Cursor(2,4);
-        cen = cen + 48;
-        Lcd_Write_Char(cen);
+void impr_Pot(char uni, char dec, char cen, uint8_t val, int fact) {
+    temp = val * fact;
+    uni = temp / 100;
+    temp = temp - (uni * 100);
+    dec = temp / 10;
+    temp = temp - (dec * 10);
+    cen = temp;
+
+
+    Lcd_Set_Cursor(2, 1);
+    uni = uni + 48;
+    Lcd_Write_Char(uni);
+
+    Lcd_Set_Cursor(2, 2);
+    Lcd_Write_String(":");
+
+    Lcd_Set_Cursor(2, 3);
+    dec = dec + 48;
+    Lcd_Write_Char(dec);
+
+    Lcd_Set_Cursor(2, 4);
+    cen = cen + 48;
+    Lcd_Write_Char(cen);
 }

@@ -69,12 +69,12 @@ void main(void) {
             led_a = 0;
             led_r = 0;
         }
-        else if (100 < term & term < 114){
+        else if (100 < term & term < 113){
             led_a = 1;
             led_g = 0;
             led_r = 0;
         }
-        else if (114 < term){
+        else if (113 <= term){
             led_a = 0;
             led_g = 0;
             led_r = 1;

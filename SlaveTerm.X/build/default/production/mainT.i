@@ -2719,12 +2719,12 @@ void main(void) {
             RD1 = 0;
             RD2 = 0;
         }
-        else if (100 < term & term < 114){
+        else if (100 < term & term < 113){
             RD1 = 1;
             RD0 = 0;
             RD2 = 0;
         }
-        else if (114 < term){
+        else if (113 <= term){
             RD1 = 0;
             RD0 = 0;
             RD2 = 1;

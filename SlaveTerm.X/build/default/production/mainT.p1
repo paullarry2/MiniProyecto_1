@@ -476,9 +476,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 144  ]
 "72
-[; ;mainT.c: 72:         else if (100 < term & term < 114){
+[; ;mainT.c: 72:         else if (100 < term & term < 113){
 [e :U 143 ]
-[e $ ! & < -> 100 `i _term < _term -> 114 `i 145  ]
+[e $ ! & < -> 100 `i _term < _term -> 113 `i 145  ]
 {
 "73
 [; ;mainT.c: 73:             RD1 = 1;
@@ -494,9 +494,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 146  ]
 "77
-[; ;mainT.c: 77:         else if (114 < term){
+[; ;mainT.c: 77:         else if (113 <= term){
 [e :U 145 ]
-[e $ ! < -> 114 `i _term 147  ]
+[e $ ! <= -> 113 `i _term 147  ]
 {
 "78
 [; ;mainT.c: 78:             RD1 = 0;
