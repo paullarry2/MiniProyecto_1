@@ -14,7 +14,7 @@
 #pragma config FOSC = INTRC_NOCLKOUT // Oscillator Selection bits (RC oscillator: CLKOUT function on RA6/OSC2/CLKOUT pin, RC on RA7/OSC1/CLKIN)
 #pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled and can be enabled by SWDTEN bit of the WDTCON register)
 #pragma config PWRTE = OFF      // Power-up Timer Enable bit (PWRT disabled)
-#pragma config MCLRE = OFF       // RE3/MCLR pin function select bit (RE3/MCLR pin function is MCLR)
+#pragma config MCLRE = ON      // RE3/MCLR pin function select bit (RE3/MCLR pin function is MCLR)
 #pragma config CP = OFF         // Code Protection bit (Program memory code protection is disabled)
 #pragma config CPD = OFF        // Data Code Protection bit (Data memory code protection is disabled)
 #pragma config BOREN = ON      // Brown Out Reset Selection bits (BOR disabled)
@@ -28,6 +28,8 @@
 
 #include <xc.h>
 #include <stdint.h>
+#include <stdlib.h>
+#include <stdio.h>
 #include "I2C.h"
 #include "BMP280.h"
 
@@ -44,7 +46,10 @@
 //******************************************************************************
 uint8_t presmas;
 long temperature;
-int test;
+
+
+
+unsigned long pressure;
 typedef enum
 {
   MODE_SLEEP  = 0x00,  // sleep mode
@@ -103,6 +108,8 @@ struct
   int16_t  dig_P9;
 } BMP280_calib;
 
+char buffer[17];
+
 //******************************************************************************
 //Prototipo de Funciones
 //******************************************************************************
@@ -115,8 +122,10 @@ void main(void) {
     setup();
     BMP280_begin(MODE_NORMAL, SAMPLING_X1, SAMPLING_X1, FILTER_OFF, STANDBY_0_5);
     while(1){
-        BMP280_readTemperature(&temperature); 
-        PORTB = temperature;
+//        BMP280_readTemperature(&temperature);
+        BMP280_readPressure(&pressure);        // read pressure
+//        sprintf(buffer, "Pres: %04u.%02uhPa", (unsigned int)(pressure/100), (unsigned int)(pressure%100));
+//        PORTB = temperature;
 //        I2C_Master_Start();
 //        I2C_Master_Write(0x51);
 //        PORTD = I2C_Master_Read(0);
