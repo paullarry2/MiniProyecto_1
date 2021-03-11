@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>Master_mp1</name>
-            <creation-uuid>01ba79e5-25a8-4c03-a42b-f7928a587ed8</creation-uuid>
+            <name>Maestro_mp2</name>
+            <creation-uuid>db1d9b83-53cf-4926-8a0d-5d9982ffbce3</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
@@ -12,7 +12,9 @@
             <asminc-extensions/>
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
-            <sourceRootList/>
+            <sourceRootList>
+                <sourceRootElem>.</sourceRootElem>
+            </sourceRootList>
             <confList>
                 <confElem>
                     <name>default</name>
