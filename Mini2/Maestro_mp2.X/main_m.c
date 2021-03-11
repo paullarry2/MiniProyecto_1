@@ -39,73 +39,96 @@
 #define p_msb 0xF7
 #define p_lsb 0xF7
 
+#ifndef BMP280_I2C_ADDRESS
+  #define BMP280_I2C_ADDRESS  0xEC
+#endif
 
+#define BMP280_CHIP_ID        0x58
+
+#define BMP280_REG_DIG_T1     0x88
+#define BMP280_REG_DIG_T2     0x8A
+#define BMP280_REG_DIG_T3     0x8C
+
+#define BMP280_REG_DIG_P1     0x8E
+#define BMP280_REG_DIG_P2     0x90
+#define BMP280_REG_DIG_P3     0x92
+#define BMP280_REG_DIG_P4     0x94
+#define BMP280_REG_DIG_P5     0x96
+#define BMP280_REG_DIG_P6     0x98
+#define BMP280_REG_DIG_P7     0x9A
+#define BMP280_REG_DIG_P8     0x9C
+#define BMP280_REG_DIG_P9     0x9E
+
+#define BMP280_REG_CHIPID     0xD0
+#define BMP280_REG_SOFTRESET  0xE0
+
+#define BMP280_REG_STATUS     0xF3
+#define BMP280_REG_CONTROL    0xF4
+#define BMP280_REG_CONFIG     0xF5
+#define BMP280_REG_PRESS_MSB  0xF7
 
 //******************************************************************************
 //Variables
 //******************************************************************************
 uint8_t presmas;
-long temperature;
-
-
-
+signed long temperature;
 unsigned long pressure;
-typedef enum
-{
-  MODE_SLEEP  = 0x00,  // sleep mode
-  MODE_FORCED = 0x01,  // forced mode
-  MODE_NORMAL = 0x03   // normal mode
+int presion;
+
+typedef enum {
+    MODE_SLEEP = 0x00, // sleep mode
+    MODE_FORCED = 0x01, // forced mode
+    MODE_NORMAL = 0x03 // normal mode
 } BMP280_mode;
 
 // oversampling setting. osrs_t[2:0], osrs_p[2:0]
-typedef enum
-{
-  SAMPLING_SKIPPED = 0x00,  //skipped, output set to 0x80000
-  SAMPLING_X1      = 0x01,  // oversampling x1
-  SAMPLING_X2      = 0x02,  // oversampling x2
-  SAMPLING_X4      = 0x03,  // oversampling x4
-  SAMPLING_X8      = 0x04,  // oversampling x8
-  SAMPLING_X16     = 0x05   // oversampling x16
+
+typedef enum {
+    SAMPLING_SKIPPED = 0x00, //skipped, output set to 0x80000
+    SAMPLING_X1 = 0x01, // oversampling x1
+    SAMPLING_X2 = 0x02, // oversampling x2
+    SAMPLING_X4 = 0x03, // oversampling x4
+    SAMPLING_X8 = 0x04, // oversampling x8
+    SAMPLING_X16 = 0x05 // oversampling x16
 } BMP280_sampling;
 
 // filter setting filter[2:0]
-typedef enum
-{
-  FILTER_OFF = 0x00,  // filter off
-  FILTER_2   = 0x01,  // filter coefficient = 2
-  FILTER_4   = 0x02,  // filter coefficient = 4
-  FILTER_8   = 0x03,  // filter coefficient = 8
-  FILTER_16  = 0x04   // filter coefficient = 16
+
+typedef enum {
+    FILTER_OFF = 0x00, // filter off
+    FILTER_2 = 0x01, // filter coefficient = 2
+    FILTER_4 = 0x02, // filter coefficient = 4
+    FILTER_8 = 0x03, // filter coefficient = 8
+    FILTER_16 = 0x04 // filter coefficient = 16
 } BMP280_filter;
 
 // standby (inactive) time in ms (used in normal mode), t_sb[2:0]
-typedef enum
-{
-  STANDBY_0_5   =  0x00,  // standby time = 0.5 ms
-  STANDBY_62_5  =  0x01,  // standby time = 62.5 ms
-  STANDBY_125   =  0x02,  // standby time = 125 ms
-  STANDBY_250   =  0x03,  // standby time = 250 ms
-  STANDBY_500   =  0x04,  // standby time = 500 ms
-  STANDBY_1000  =  0x05,  // standby time = 1000 ms
-  STANDBY_2000  =  0x06,  // standby time = 2000 ms
-  STANDBY_4000  =  0x07   // standby time = 4000 ms
+
+typedef enum {
+    STANDBY_0_5 = 0x00, // standby time = 0.5 ms
+    STANDBY_62_5 = 0x01, // standby time = 62.5 ms
+    STANDBY_125 = 0x02, // standby time = 125 ms
+    STANDBY_250 = 0x03, // standby time = 250 ms
+    STANDBY_500 = 0x04, // standby time = 500 ms
+    STANDBY_1000 = 0x05, // standby time = 1000 ms
+    STANDBY_2000 = 0x06, // standby time = 2000 ms
+    STANDBY_4000 = 0x07 // standby time = 4000 ms
 } standby_time;
 
-struct
-{
-  uint16_t dig_T1;
-  int16_t  dig_T2;
-  int16_t  dig_T3;
+struct {
+    uint16_t dig_T1;
+    int16_t dig_T2;
+    int16_t dig_T3;
 
-  uint16_t dig_P1;
-  int16_t  dig_P2;
-  int16_t  dig_P3;
-  int16_t  dig_P4;
-  int16_t  dig_P5;
-  int16_t  dig_P6;
-  int16_t  dig_P7;
-  int16_t  dig_P8;
-  int16_t  dig_P9;
+    uint16_t dig_P1;
+    int16_t dig_P2;
+    int16_t dig_P3;
+    int16_t dig_P4;
+    int16_t dig_P5;
+    int16_t dig_P6;
+    int16_t dig_P7;
+    int16_t dig_P8;
+    int16_t dig_P9;
 } BMP280_calib;
 
 char buffer[17];
@@ -118,22 +141,30 @@ void setup(void);
 //******************************************************************************
 //Main Loop 
 //******************************************************************************
+
 void main(void) {
     setup();
-    BMP280_begin(MODE_NORMAL, SAMPLING_X1, SAMPLING_X1, FILTER_OFF, STANDBY_0_5);
-    while(1){
+    if(BMP280_begin(MODE_NORMAL, SAMPLING_X1, SAMPLING_X1, FILTER_OFF, STANDBY_0_5) == 0)
+{  // connection error or device address wrong!
+        PORTBbits.RB2 = 1;
+    while (1) {}}
+    while (1) {
+    BMP280_readTemperature(&temperature);  // read temperature
+    BMP280_readPressure(&pressure);    
+
 //        BMP280_readTemperature(&temperature);
-        BMP280_readPressure(&pressure);        // read pressure
-//        sprintf(buffer, "Pres: %04u.%02uhPa", (unsigned int)(pressure/100), (unsigned int)(pressure%100));
-//        PORTB = temperature;
-//        I2C_Master_Start();
-//        I2C_Master_Write(0x51);
-//        PORTD = I2C_Master_Read(0);
-//        I2C_Master_Stop();
-//        __delay_ms(200);
-//        PORTB++;   
+
+        //        sprintf(buffer, "Pres: %04u.%02uhPa", (unsigned int)(pressure/100), (unsigned int)(pressure%100));
+        //        PORTB = temperature;
+        //        I2C_Master_Start();
+        //        I2C_Master_Write(0x51);
+        //        PORTD = I2C_Master_Read(0);
+        //        I2C_Master_Stop();
+        //        __delay_ms(200);
+        //        PORTB++;   
     }
 }
+
 
 //******************************************************************************
 //Funciones
@@ -148,5 +179,5 @@ void setup(void) {
     TRISD = 0;
     PORTB = 0;
     PORTD = 0;
-    I2C_Master_Init(100000);        // Inicializar Comuncación I2C
+    I2C_Master_Init(100000); // Inicializar Comuncación I2C
 }

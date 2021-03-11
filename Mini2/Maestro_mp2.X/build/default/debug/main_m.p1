@@ -1,25 +1,39 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"95 main_m.c
-[; ;main_m.c: 95: {
+"118 main_m.c
+[; ;main_m.c: 118: struct {
 [s S143 `ui 1 `i 1 `i 1 `ui 1 `i 1 `i 1 `i 1 `i 1 `i 1 `i 1 `i 1 `i 1 ]
 [n S143 . dig_T1 dig_T2 dig_T3 dig_P1 dig_P2 dig_P3 dig_P4 dig_P5 dig_P6 dig_P7 dig_P8 dig_P9 ]
 [p mainexit ]
-"116
-[; ;main_m.c: 116: void setup(void);
+"139
+[; ;main_m.c: 139: void setup(void);
 [v _setup `(v ~T0 @X0 0 ef ]
-"123
-[; ;main_m.c: 123:     BMP280_begin(MODE_NORMAL, SAMPLING_X1, SAMPLING_X1, FILTER_OFF, STANDBY_0_5);
+"147
+[; ;main_m.c: 147:     if(BMP280_begin(MODE_NORMAL, SAMPLING_X1, SAMPLING_X1, FILTER_OFF, STANDBY_0_5) == 0)
 [v _BMP280_begin `(i ~T0 @X0 0 e? ]
-[c E1488 0 1 3 .. ]
-[n E1488 . MODE_SLEEP MODE_FORCED MODE_NORMAL  ]
-[c E1493 0 1 2 3 4 5 .. ]
-[n E1493 . SAMPLING_SKIPPED SAMPLING_X1 SAMPLING_X2 SAMPLING_X4 SAMPLING_X8 SAMPLING_X16  ]
-[c E1501 0 1 2 3 4 .. ]
-[n E1501 . FILTER_OFF FILTER_2 FILTER_4 FILTER_8 FILTER_16  ]
-[c E1508 0 1 2 3 4 5 6 7 .. ]
-[n E1508 . STANDBY_0_5 STANDBY_62_5 STANDBY_125 STANDBY_250 STANDBY_500 STANDBY_1000 STANDBY_2000 STANDBY_4000  ]
-"126
-[; ;main_m.c: 126:         BMP280_readPressure(&pressure);
+[c E1489 0 1 3 .. ]
+[n E1489 . MODE_SLEEP MODE_FORCED MODE_NORMAL  ]
+[c E1494 0 1 2 3 4 5 .. ]
+[n E1494 . SAMPLING_SKIPPED SAMPLING_X1 SAMPLING_X2 SAMPLING_X4 SAMPLING_X8 SAMPLING_X16  ]
+[c E1502 0 1 2 3 4 .. ]
+[n E1502 . FILTER_OFF FILTER_2 FILTER_4 FILTER_8 FILTER_16  ]
+[c E1509 0 1 2 3 4 5 6 7 .. ]
+[n E1509 . STANDBY_0_5 STANDBY_62_5 STANDBY_125 STANDBY_250 STANDBY_500 STANDBY_1000 STANDBY_2000 STANDBY_4000  ]
+"234 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 234:     struct {
+[s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S8 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"233
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 233: typedef union {
+[u S7 `S8 1 ]
+[n S7 . . ]
+"245
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 245: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x006)));
+[v _PORTBbits `VS7 ~T0 @X0 0 e@6 ]
+"152 main_m.c
+[; ;main_m.c: 152:     BMP280_readTemperature(&temperature);
+[v _BMP280_readTemperature `(i ~T0 @X0 0 e? ]
+"153
+[; ;main_m.c: 153:     BMP280_readPressure(&pressure);
 [v _BMP280_readPressure `(i ~T0 @X0 0 e? ]
 "3387 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3387: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
@@ -306,85 +320,107 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"47 main_m.c
-[; ;main_m.c: 47: uint8_t presmas;
+"73 main_m.c
+[; ;main_m.c: 73: uint8_t presmas;
 [v _presmas `uc ~T0 @X0 1 e ]
-"48
-[; ;main_m.c: 48: long temperature;
+"74
+[; ;main_m.c: 74: signed long temperature;
 [v _temperature `l ~T0 @X0 1 e ]
-"52
-[; ;main_m.c: 52: unsigned long pressure;
+"75
+[; ;main_m.c: 75: unsigned long pressure;
 [v _pressure `ul ~T0 @X0 1 e ]
-"109
-[; ;main_m.c: 109: } BMP280_calib;
+"76
+[; ;main_m.c: 76: int presion;
+[v _presion `i ~T0 @X0 1 e ]
+"132
+[; ;main_m.c: 132: } BMP280_calib;
 [v _BMP280_calib `S143 ~T0 @X0 1 e ]
-"111
-[; ;main_m.c: 111: char buffer[17];
+"134
+[; ;main_m.c: 134: char buffer[17];
 [v _buffer `uc ~T0 @X0 -> 17 `i e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"121
-[; ;main_m.c: 121: void main(void) {
+"145
+[; ;main_m.c: 145: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"122
-[; ;main_m.c: 122:     setup();
+"146
+[; ;main_m.c: 146:     setup();
 [e ( _setup ..  ]
-"123
-[; ;main_m.c: 123:     BMP280_begin(MODE_NORMAL, SAMPLING_X1, SAMPLING_X1, FILTER_OFF, STANDBY_0_5);
-[e ( _BMP280_begin , , , , . `E1488 2 . `E1493 1 . `E1493 1 . `E1501 0 . `E1508 0 ]
-"124
-[; ;main_m.c: 124:     while(1){
-[e :U 146 ]
+"147
+[; ;main_m.c: 147:     if(BMP280_begin(MODE_NORMAL, SAMPLING_X1, SAMPLING_X1, FILTER_OFF, STANDBY_0_5) == 0)
+[e $ ! == ( _BMP280_begin , , , , . `E1489 2 . `E1494 1 . `E1494 1 . `E1502 0 . `E1509 0 -> 0 `i 145  ]
+"148
+[; ;main_m.c: 148: {
 {
-"126
-[; ;main_m.c: 126:         BMP280_readPressure(&pressure);
-[e ( _BMP280_readPressure &U _pressure ]
-"135
-[; ;main_m.c: 135:     }
+"149
+[; ;main_m.c: 149:         PORTBbits.RB2 = 1;
+[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
+"150
+[; ;main_m.c: 150:     while (1) {}}
+[e :U 147 ]
+{
+}
+[e :U 146 ]
+[e $U 147  ]
+[e :U 148 ]
 }
 [e :U 145 ]
-[e $U 146  ]
-[e :U 147 ]
-"136
-[; ;main_m.c: 136: }
+"151
+[; ;main_m.c: 151:     while (1) {
+[e :U 150 ]
+{
+"152
+[; ;main_m.c: 152:     BMP280_readTemperature(&temperature);
+[e ( _BMP280_readTemperature &U _temperature ]
+"153
+[; ;main_m.c: 153:     BMP280_readPressure(&pressure);
+[e ( _BMP280_readPressure &U _pressure ]
+"165
+[; ;main_m.c: 165:     }
+}
+[e :U 149 ]
+[e $U 150  ]
+[e :U 151 ]
+"166
+[; ;main_m.c: 166: }
 [e :UE 144 ]
 }
-"142
-[; ;main_m.c: 142: void setup(void) {
+"173
+[; ;main_m.c: 173: void setup(void) {
 [v _setup `(v ~T0 @X0 1 ef ]
 {
 [e :U _setup ]
 [f ]
-"143
-[; ;main_m.c: 143:     ANSEL = 0;
+"174
+[; ;main_m.c: 174:     ANSEL = 0;
 [e = _ANSEL -> -> 0 `i `uc ]
-"144
-[; ;main_m.c: 144:     ANSELH = 0;
+"175
+[; ;main_m.c: 175:     ANSELH = 0;
 [e = _ANSELH -> -> 0 `i `uc ]
-"145
-[; ;main_m.c: 145:     TRISC = 0;
+"176
+[; ;main_m.c: 176:     TRISC = 0;
 [e = _TRISC -> -> 0 `i `uc ]
-"146
-[; ;main_m.c: 146:     TRISB = 0;
+"177
+[; ;main_m.c: 177:     TRISB = 0;
 [e = _TRISB -> -> 0 `i `uc ]
-"147
-[; ;main_m.c: 147:     TRISE = 0;
+"178
+[; ;main_m.c: 178:     TRISE = 0;
 [e = _TRISE -> -> 0 `i `uc ]
-"148
-[; ;main_m.c: 148:     TRISD = 0;
+"179
+[; ;main_m.c: 179:     TRISD = 0;
 [e = _TRISD -> -> 0 `i `uc ]
-"149
-[; ;main_m.c: 149:     PORTB = 0;
+"180
+[; ;main_m.c: 180:     PORTB = 0;
 [e = _PORTB -> -> 0 `i `uc ]
-"150
-[; ;main_m.c: 150:     PORTD = 0;
+"181
+[; ;main_m.c: 181:     PORTD = 0;
 [e = _PORTD -> -> 0 `i `uc ]
-"151
-[; ;main_m.c: 151:     I2C_Master_Init(100000);
+"182
+[; ;main_m.c: 182:     I2C_Master_Init(100000);
 [e ( _I2C_Master_Init (1 -> -> 100000 `l `ul ]
-"152
-[; ;main_m.c: 152: }
-[e :UE 148 ]
+"183
+[; ;main_m.c: 183: }
+[e :UE 152 ]
 }

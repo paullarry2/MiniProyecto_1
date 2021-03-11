@@ -2861,69 +2861,66 @@ void I2C_Slave_Init(uint8_t address);
 
 # 1 "./BMP280.h" 1
 # 34 "main_m.c" 2
-# 47 "main_m.c"
+# 73 "main_m.c"
 uint8_t presmas;
-long temperature;
-
-
-
+signed long temperature;
 unsigned long pressure;
-typedef enum
-{
-  MODE_SLEEP = 0x00,
-  MODE_FORCED = 0x01,
-  MODE_NORMAL = 0x03
+int presion;
+
+typedef enum {
+    MODE_SLEEP = 0x00,
+    MODE_FORCED = 0x01,
+    MODE_NORMAL = 0x03
 } BMP280_mode;
 
 
-typedef enum
-{
-  SAMPLING_SKIPPED = 0x00,
-  SAMPLING_X1 = 0x01,
-  SAMPLING_X2 = 0x02,
-  SAMPLING_X4 = 0x03,
-  SAMPLING_X8 = 0x04,
-  SAMPLING_X16 = 0x05
+
+typedef enum {
+    SAMPLING_SKIPPED = 0x00,
+    SAMPLING_X1 = 0x01,
+    SAMPLING_X2 = 0x02,
+    SAMPLING_X4 = 0x03,
+    SAMPLING_X8 = 0x04,
+    SAMPLING_X16 = 0x05
 } BMP280_sampling;
 
 
-typedef enum
-{
-  FILTER_OFF = 0x00,
-  FILTER_2 = 0x01,
-  FILTER_4 = 0x02,
-  FILTER_8 = 0x03,
-  FILTER_16 = 0x04
+
+typedef enum {
+    FILTER_OFF = 0x00,
+    FILTER_2 = 0x01,
+    FILTER_4 = 0x02,
+    FILTER_8 = 0x03,
+    FILTER_16 = 0x04
 } BMP280_filter;
 
 
-typedef enum
-{
-  STANDBY_0_5 = 0x00,
-  STANDBY_62_5 = 0x01,
-  STANDBY_125 = 0x02,
-  STANDBY_250 = 0x03,
-  STANDBY_500 = 0x04,
-  STANDBY_1000 = 0x05,
-  STANDBY_2000 = 0x06,
-  STANDBY_4000 = 0x07
+
+typedef enum {
+    STANDBY_0_5 = 0x00,
+    STANDBY_62_5 = 0x01,
+    STANDBY_125 = 0x02,
+    STANDBY_250 = 0x03,
+    STANDBY_500 = 0x04,
+    STANDBY_1000 = 0x05,
+    STANDBY_2000 = 0x06,
+    STANDBY_4000 = 0x07
 } standby_time;
 
-struct
-{
-  uint16_t dig_T1;
-  int16_t dig_T2;
-  int16_t dig_T3;
+struct {
+    uint16_t dig_T1;
+    int16_t dig_T2;
+    int16_t dig_T3;
 
-  uint16_t dig_P1;
-  int16_t dig_P2;
-  int16_t dig_P3;
-  int16_t dig_P4;
-  int16_t dig_P5;
-  int16_t dig_P6;
-  int16_t dig_P7;
-  int16_t dig_P8;
-  int16_t dig_P9;
+    uint16_t dig_P1;
+    int16_t dig_P2;
+    int16_t dig_P3;
+    int16_t dig_P4;
+    int16_t dig_P5;
+    int16_t dig_P6;
+    int16_t dig_P7;
+    int16_t dig_P8;
+    int16_t dig_P9;
 } BMP280_calib;
 
 char buffer[17];
@@ -2936,15 +2933,20 @@ void setup(void);
 
 
 
+
 void main(void) {
     setup();
-    BMP280_begin(MODE_NORMAL, SAMPLING_X1, SAMPLING_X1, FILTER_OFF, STANDBY_0_5);
-    while(1){
-
-        BMP280_readPressure(&pressure);
-# 135 "main_m.c"
+    if(BMP280_begin(MODE_NORMAL, SAMPLING_X1, SAMPLING_X1, FILTER_OFF, STANDBY_0_5) == 0)
+{
+        PORTBbits.RB2 = 1;
+    while (1) {}}
+    while (1) {
+    BMP280_readTemperature(&temperature);
+    BMP280_readPressure(&pressure);
+# 165 "main_m.c"
     }
 }
+
 
 
 
