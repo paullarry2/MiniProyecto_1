@@ -19,8 +19,8 @@
 #define _XTAL_FREQ 8000000
 #endif
 
-void UART_config();
-void UART_send_char(char bt);
+void Uart_conf();
+void Uart_send_char(char bt);
 void UART_send_string(char* st_pt);
 char UART_get_char();
 

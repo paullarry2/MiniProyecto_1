@@ -2861,11 +2861,33 @@ void I2C_Slave_Init(uint8_t address);
 
 # 1 "./BMP280.h" 1
 # 34 "main_m.c" 2
-# 73 "main_m.c"
+
+# 1 "./UART.h" 1
+# 16 "./UART.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
+# 16 "./UART.h" 2
+
+
+
+
+
+
+void Uart_conf();
+void Uart_send_char(char bt);
+void UART_send_string(char* st_pt);
+char UART_get_char();
+# 35 "main_m.c" 2
+# 74 "main_m.c"
 uint8_t presmas;
 signed long temperature;
 unsigned long pressure;
-int presion;
+char RX_Trans;
+uint32_t temp;
+char dec_t;
+char uni_t;
+char deci_t;
+char centi_t;
+
 
 typedef enum {
     MODE_SLEEP = 0x00,
@@ -2929,6 +2951,7 @@ char buffer[17];
 
 
 void setup(void);
+void Enviar_temp(void);
 
 
 
@@ -2943,6 +2966,27 @@ void main(void) {
     while (1) {
     BMP280_readTemperature(&temperature);
     BMP280_readPressure(&pressure);
+    Enviar_temp();
+    UART_send_string("#");
+    Uart_send_char(dec_t);
+    Uart_send_char(uni_t);
+    UART_send_string(".");
+    Uart_send_char(deci_t);
+    Uart_send_char(centi_t);
+
+
+    if (RX_Trans == 0b00000000){
+        PORTBbits.RB6 = 0;
+    }
+    else if (RX_Trans == 0b00000001){
+        PORTBbits.RB6 = 1;
+    }
+    else if (RX_Trans == 0b00000010){
+        PORTBbits.RB7 = 0;
+    }
+    else if (RX_Trans == 0b00000011){
+        PORTBbits.RB7 = 1;
+    }
     }
 }
 
@@ -2961,4 +3005,26 @@ void setup(void) {
     PORTB = 0;
     PORTD = 0;
     I2C_Master_Init(100000);
+    Uart_conf();
+}
+void Enviar_temp(void){
+    temp = temperature;
+    dec_t = temp /1000;
+    temp = temp - (dec_t*1000);
+    uni_t = temp /100;
+    temp = temp - (uni_t*100);
+    deci_t = temp /10;
+    temp = temp - (deci_t*10);
+    centi_t = temp;
+}
+
+
+
+
+
+void __attribute__((picinterrupt(("")))) isr(void) {
+    if (PIR1bits.RCIF == 1) {
+        RX_Trans = UART_get_char();
+        PIR1bits.RCIF = 0;
+    }
 }

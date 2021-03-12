@@ -2632,14 +2632,14 @@ typedef uint16_t uintptr_t;
 
 
 
-void UART_config();
-void UART_send_char(char bt);
+void Uart_conf();
+void Uart_send_char(char bt);
 void UART_send_string(char* st_pt);
 char UART_get_char();
 # 1 "UART.c" 2
 
 
-void UART_config() {
+void Uart_conf() {
 
 
 
@@ -2652,7 +2652,6 @@ void UART_config() {
 
 
 
-
     RCSTAbits.CREN = 1;
     PIE1bits.RCIE = 1;
     RCSTAbits.RX9 = 0;
@@ -2660,26 +2659,22 @@ void UART_config() {
 
 
 
-
-    SPBRG = 51;
+    SPBRG = (8000000/(16 * 9600)) - 1;
     SPBRGH = 0;
-
-
-
     TXSTAbits.BRGH = 1;
     BAUDCTLbits.BRG16 = 0;
 
 
 }
 
-void UART_send_char(char bt) {
+void Uart_send_char(char bt) {
     while (!TXIF);
     TXREG = bt;
 }
 
 void UART_send_string(char* st_pt) {
     while (*st_pt)
-        UART_send_char(*st_pt++);
+        Uart_send_char(*st_pt++);
 }
 
 char UART_get_char() {

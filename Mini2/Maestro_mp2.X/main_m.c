@@ -32,6 +32,7 @@
 #include <stdio.h>
 #include "I2C.h"
 #include "BMP280.h"
+#include "UART.h"
 
 #define _XTAL_FREQ (8000000) 
 #define address_r 0xEF
@@ -73,7 +74,13 @@
 uint8_t presmas;
 signed long temperature;
 unsigned long pressure;
-int presion;
+char RX_Trans;
+uint32_t temp;
+char dec_t;
+char uni_t;
+char deci_t;
+char centi_t;
+
 
 typedef enum {
     MODE_SLEEP = 0x00, // sleep mode
@@ -137,6 +144,7 @@ char buffer[17];
 //Prototipo de Funciones
 //******************************************************************************
 void setup(void);
+void Enviar_temp(void);
 
 //******************************************************************************
 //Main Loop 
@@ -151,6 +159,27 @@ void main(void) {
     while (1) {
     BMP280_readTemperature(&temperature);  // read temperature
     BMP280_readPressure(&pressure);    
+    Enviar_temp();
+    UART_send_string("#");
+    Uart_send_char(dec_t);
+    Uart_send_char(uni_t);
+    UART_send_string(".");
+    Uart_send_char(deci_t);
+    Uart_send_char(centi_t);
+   
+    
+    if (RX_Trans == 0b00000000){
+        PORTBbits.RB6 = 0; //LED ROJO
+    }
+    else if (RX_Trans == 0b00000001){
+        PORTBbits.RB6 = 1; //LED ROJO
+    }
+    else if (RX_Trans == 0b00000010){
+        PORTBbits.RB7 = 0; //LED AZUL
+    }
+    else if (RX_Trans == 0b00000011){
+        PORTBbits.RB7 = 1; //LED AZUL
+    }
     }
 }
 
@@ -169,4 +198,26 @@ void setup(void) {
     PORTB = 0;
     PORTD = 0;
     I2C_Master_Init(100000); // Inicializar Comuncación I2C
+    Uart_conf();
+}
+void Enviar_temp(void){
+    temp = temperature;
+    dec_t = temp /1000;
+    temp = temp - (dec_t*1000);
+    uni_t = temp /100;
+    temp = temp - (uni_t*100);
+    deci_t = temp /10;
+    temp = temp - (deci_t*10);
+    centi_t = temp;
+}
+
+//******************************************************************************
+//Interrupciones
+//******************************************************************************
+
+void __interrupt() isr(void) {
+    if (PIR1bits.RCIF == 1) {
+        RX_Trans = UART_get_char(); //Aqui recibimos el dato de la recepcion
+        PIR1bits.RCIF = 0;
+    }
 }

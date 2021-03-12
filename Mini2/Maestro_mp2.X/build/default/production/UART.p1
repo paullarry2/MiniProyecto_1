@@ -335,10 +335,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
 "3 UART.c
-[; ;UART.c: 3: void UART_config() {
-[v _UART_config `(v ~T0 @X0 1 ef ]
+[; ;UART.c: 3: void Uart_conf() {
+[v _Uart_conf `(v ~T0 @X0 1 ef ]
 {
-[e :U _UART_config ]
+[e :U _Uart_conf ]
 [f ]
 "7
 [; ;UART.c: 7:     TXSTAbits.TXEN = 1;
@@ -358,112 +358,112 @@ Version 4.0 HI-TECH Software Intermediate Code
 "12
 [; ;UART.c: 12:     PIE1bits.TXIE = 0;
 [e = . . _PIE1bits 0 4 -> -> 0 `i `uc ]
-"17
-[; ;UART.c: 17:     RCSTAbits.CREN = 1;
+"16
+[; ;UART.c: 16:     RCSTAbits.CREN = 1;
 [e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
-"18
-[; ;UART.c: 18:     PIE1bits.RCIE = 1;
+"17
+[; ;UART.c: 17:     PIE1bits.RCIE = 1;
 [e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
-"19
-[; ;UART.c: 19:     RCSTAbits.RX9 = 0;
+"18
+[; ;UART.c: 18:     RCSTAbits.RX9 = 0;
 [e = . . _RCSTAbits 0 6 -> -> 0 `i `uc ]
-"20
-[; ;UART.c: 20:     TRISCbits.TRISC7 = 1;
+"19
+[; ;UART.c: 19:     TRISCbits.TRISC7 = 1;
 [e = . . _TRISCbits 0 7 -> -> 1 `i `uc ]
-"25
-[; ;UART.c: 25:     SPBRG = 51;
-[e = _SPBRG -> -> 51 `i `uc ]
-"26
-[; ;UART.c: 26:     SPBRGH = 0;
+"23
+[; ;UART.c: 23:     SPBRG = (8000000/(16 * 9600)) - 1;
+[e = _SPBRG -> - / -> 8000000 `l -> * -> 16 `i -> 9600 `i `l -> -> 1 `i `l `uc ]
+"24
+[; ;UART.c: 24:     SPBRGH = 0;
 [e = _SPBRGH -> -> 0 `i `uc ]
-"30
-[; ;UART.c: 30:     TXSTAbits.BRGH = 1;
+"25
+[; ;UART.c: 25:     TXSTAbits.BRGH = 1;
 [e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
-"31
-[; ;UART.c: 31:     BAUDCTLbits.BRG16 = 0;
+"26
+[; ;UART.c: 26:     BAUDCTLbits.BRG16 = 0;
 [e = . . _BAUDCTLbits 0 3 -> -> 0 `i `uc ]
-"34
-[; ;UART.c: 34: }
+"29
+[; ;UART.c: 29: }
 [e :UE 138 ]
 }
-"36
-[; ;UART.c: 36: void UART_send_char(char bt) {
-[v _UART_send_char `(v ~T0 @X0 1 ef1`uc ]
+"31
+[; ;UART.c: 31: void Uart_send_char(char bt) {
+[v _Uart_send_char `(v ~T0 @X0 1 ef1`uc ]
 {
-[e :U _UART_send_char ]
+[e :U _Uart_send_char ]
 [v _bt `uc ~T0 @X0 1 r1 ]
 [f ]
-"37
-[; ;UART.c: 37:     while (!TXIF);
+"32
+[; ;UART.c: 32:     while (!TXIF);
 [e $U 140  ]
 [e :U 141 ]
 [e :U 140 ]
 [e $ ! _TXIF 141  ]
 [e :U 142 ]
-"38
-[; ;UART.c: 38:     TXREG = bt;
+"33
+[; ;UART.c: 33:     TXREG = bt;
 [e = _TXREG -> _bt `uc ]
-"39
-[; ;UART.c: 39: }
+"34
+[; ;UART.c: 34: }
 [e :UE 139 ]
 }
-"41
-[; ;UART.c: 41: void UART_send_string(char* st_pt) {
+"36
+[; ;UART.c: 36: void UART_send_string(char* st_pt) {
 [v _UART_send_string `(v ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _UART_send_string ]
 [v _st_pt `*uc ~T0 @X0 1 r1 ]
 [f ]
-"42
-[; ;UART.c: 42:     while (*st_pt)
+"37
+[; ;UART.c: 37:     while (*st_pt)
 [e $U 144  ]
 [e :U 145 ]
-"43
-[; ;UART.c: 43:         UART_send_char(*st_pt++);
-[e ( _UART_send_char (1 *U ++ _st_pt * -> -> 1 `i `x -> -> # *U _st_pt `i `x ]
+"38
+[; ;UART.c: 38:         Uart_send_char(*st_pt++);
+[e ( _Uart_send_char (1 *U ++ _st_pt * -> -> 1 `i `x -> -> # *U _st_pt `i `x ]
 [e :U 144 ]
-"42
-[; ;UART.c: 42:     while (*st_pt)
+"37
+[; ;UART.c: 37:     while (*st_pt)
 [e $ != -> *U _st_pt `i -> 0 `i 145  ]
 [e :U 146 ]
-"44
-[; ;UART.c: 44: }
+"39
+[; ;UART.c: 39: }
 [e :UE 143 ]
 }
-"46
-[; ;UART.c: 46: char UART_get_char() {
+"41
+[; ;UART.c: 41: char UART_get_char() {
 [v _UART_get_char `(uc ~T0 @X0 1 ef ]
 {
 [e :U _UART_get_char ]
 [f ]
-"47
-[; ;UART.c: 47:     if (RCSTAbits.OERR == 1)
+"42
+[; ;UART.c: 42:     if (RCSTAbits.OERR == 1)
 [e $ ! == -> . . _RCSTAbits 0 1 `i -> 1 `i 148  ]
-"48
-[; ;UART.c: 48:     {
+"43
+[; ;UART.c: 43:     {
 {
-"49
-[; ;UART.c: 49:         RCSTAbits.CREN = 0;
+"44
+[; ;UART.c: 44:         RCSTAbits.CREN = 0;
 [e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
-"50
-[; ;UART.c: 50:         RCSTAbits.CREN = 1;
+"45
+[; ;UART.c: 45:         RCSTAbits.CREN = 1;
 [e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
-"51
-[; ;UART.c: 51:     }
+"46
+[; ;UART.c: 46:     }
 }
 [e :U 148 ]
-"53
-[; ;UART.c: 53:     while (!PIR1bits.RCIF);
+"48
+[; ;UART.c: 48:     while (!PIR1bits.RCIF);
 [e $U 149  ]
 [e :U 150 ]
 [e :U 149 ]
 [e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 150  ]
 [e :U 151 ]
-"54
-[; ;UART.c: 54:     return RCREG;
+"49
+[; ;UART.c: 49:     return RCREG;
 [e ) -> _RCREG `uc ]
 [e $UE 147  ]
-"56
-[; ;UART.c: 56: }
+"51
+[; ;UART.c: 51: }
 [e :UE 147 ]
 }
