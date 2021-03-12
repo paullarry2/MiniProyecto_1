@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\Maestro_mp2.X.production.sym \
   --cmf=dist/default/production\Maestro_mp2.X.production.cmf -z -Q16F887 \
-  -oC:\Users\Universidad\AppData\Local\Temp\s1q68.2 \
+  -oC:\Users\Universidad\AppData\Local\Temp\s1sm4.2 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Maestro_mp2.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK \
@@ -19,7 +19,7 @@ Linker command line:
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\Universidad\AppData\Local\Temp\s1q68.o \
+  -pfunctab=ENTRY -k C:\Users\Universidad\AppData\Local\Temp\s1sm4.o \
   dist/default/production\Maestro_mp2.X.production.o 
 
 Object code version is 3.11
@@ -29,7 +29,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Universidad\AppData\Local\Temp\s1q68.o
+C:\Users\Universidad\AppData\Local\Temp\s1sm4.o
                 end_init                              0        0        3        0       0
                 config                             2007     2007        2        0       4
 dist/default/production\Maestro_mp2.X.production.o
@@ -234,6 +234,7 @@ I2C_Master_Read@temp             cstackCOMMON 0074
 I2C_Master_Write@d               cstackCOMMON 0070
 _ANSEL                           (abs)        0188
 _ANSELH                          (abs)        0189
+_BAUDCTLbits                     (abs)        0187
 _BMP280_Configure                text13       0D21
 _BMP280_Read16                   text11       0DB1
 _BMP280_Read8                    text10       0CE5
@@ -242,13 +243,13 @@ _BMP280_Write                    text14       0C25
 _BMP280_begin                    text9        0F1A
 _BMP280_calib                    bssBANK1     00B5
 _BMP280_readPressure             text5        02C5
-_BMP280_readPressure$965         cstackBANK0  004B
-_BMP280_readPressure$966         cstackBANK0  003E
-_BMP280_readPressure$967         cstackBANK0  0042
-_BMP280_readPressure$968         cstackBANK0  0046
+_BMP280_readPressure$1178        cstackBANK0  004B
+_BMP280_readPressure$1179        cstackBANK0  003E
+_BMP280_readPressure$1180        cstackBANK0  0042
+_BMP280_readPressure$1181        cstackBANK0  0046
 _BMP280_readTemperature          text3        00B3
-_BMP280_readTemperature$963      cstackBANK0  004B
-_BMP280_readTemperature$964      cstackBANK0  0046
+_BMP280_readTemperature$1176     cstackBANK0  004B
+_BMP280_readTemperature$1177     cstackBANK0  0046
 _GIE                             (abs)        005F
 _I2C_Master_Init                 text2        0CAD
 _I2C_Master_Read                 text12       0C7F
@@ -257,9 +258,15 @@ _I2C_Master_Stop                 text16       0BF6
 _I2C_Master_Wait                 text18       0009
 _I2C_Master_Write                text15       0BFF
 _PEIE                            (abs)        005E
+_PIE1bits                        (abs)        008C
+_PIR1bits                        (abs)        000C
 _PORTB                           (abs)        0006
 _PORTBbits                       (abs)        0006
 _PORTD                           (abs)        0008
+_RCREG                           (abs)        001A
+_RCSTAbits                       (abs)        0018
+_SPBRG                           (abs)        0099
+_SPBRGH                          (abs)        009A
 _SSPADD                          (abs)        0093
 _SSPBUF                          (abs)        0013
 _SSPCON                          (abs)        0014
@@ -275,6 +282,9 @@ _TRISC4                          (abs)        043C
 _TRISCbits                       (abs)        0087
 _TRISD                           (abs)        0088
 _TRISE                           (abs)        0089
+_TXIF                            (abs)        0064
+_TXREG                           (abs)        0019
+_TXSTAbits                       (abs)        0098
 __Habs1                          abs1         0000
 __Hbank0                         bank0        0000
 __Hbank1                         bank1        0000
@@ -490,7 +500,7 @@ Total ram usage:        0 bytes
 
  *************** function _setup *****************
  Defined at:
-		line 173 in file "main_m.c"
+		line 162 in file "main_m.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type

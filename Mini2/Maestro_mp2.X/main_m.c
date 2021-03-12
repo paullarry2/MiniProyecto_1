@@ -151,17 +151,6 @@ void main(void) {
     while (1) {
     BMP280_readTemperature(&temperature);  // read temperature
     BMP280_readPressure(&pressure);    
-
-//        BMP280_readTemperature(&temperature);
-
-        //        sprintf(buffer, "Pres: %04u.%02uhPa", (unsigned int)(pressure/100), (unsigned int)(pressure%100));
-        //        PORTB = temperature;
-        //        I2C_Master_Start();
-        //        I2C_Master_Write(0x51);
-        //        PORTD = I2C_Master_Read(0);
-        //        I2C_Master_Stop();
-        //        __delay_ms(200);
-        //        PORTB++;   
     }
 }
 

@@ -377,50 +377,50 @@ Version 4.0 HI-TECH Software Intermediate Code
 "153
 [; ;main_m.c: 153:     BMP280_readPressure(&pressure);
 [e ( _BMP280_readPressure &U _pressure ]
-"165
-[; ;main_m.c: 165:     }
+"154
+[; ;main_m.c: 154:     }
 }
 [e :U 149 ]
 [e $U 150  ]
 [e :U 151 ]
-"166
-[; ;main_m.c: 166: }
+"155
+[; ;main_m.c: 155: }
 [e :UE 144 ]
 }
-"173
-[; ;main_m.c: 173: void setup(void) {
+"162
+[; ;main_m.c: 162: void setup(void) {
 [v _setup `(v ~T0 @X0 1 ef ]
 {
 [e :U _setup ]
 [f ]
-"174
-[; ;main_m.c: 174:     ANSEL = 0;
+"163
+[; ;main_m.c: 163:     ANSEL = 0;
 [e = _ANSEL -> -> 0 `i `uc ]
-"175
-[; ;main_m.c: 175:     ANSELH = 0;
+"164
+[; ;main_m.c: 164:     ANSELH = 0;
 [e = _ANSELH -> -> 0 `i `uc ]
-"176
-[; ;main_m.c: 176:     TRISC = 0;
+"165
+[; ;main_m.c: 165:     TRISC = 0;
 [e = _TRISC -> -> 0 `i `uc ]
-"177
-[; ;main_m.c: 177:     TRISB = 0;
+"166
+[; ;main_m.c: 166:     TRISB = 0;
 [e = _TRISB -> -> 0 `i `uc ]
-"178
-[; ;main_m.c: 178:     TRISE = 0;
+"167
+[; ;main_m.c: 167:     TRISE = 0;
 [e = _TRISE -> -> 0 `i `uc ]
-"179
-[; ;main_m.c: 179:     TRISD = 0;
+"168
+[; ;main_m.c: 168:     TRISD = 0;
 [e = _TRISD -> -> 0 `i `uc ]
-"180
-[; ;main_m.c: 180:     PORTB = 0;
+"169
+[; ;main_m.c: 169:     PORTB = 0;
 [e = _PORTB -> -> 0 `i `uc ]
-"181
-[; ;main_m.c: 181:     PORTD = 0;
+"170
+[; ;main_m.c: 170:     PORTD = 0;
 [e = _PORTD -> -> 0 `i `uc ]
-"182
-[; ;main_m.c: 182:     I2C_Master_Init(100000);
+"171
+[; ;main_m.c: 171:     I2C_Master_Init(100000);
 [e ( _I2C_Master_Init (1 -> -> 100000 `l `ul ]
-"183
-[; ;main_m.c: 183: }
+"172
+[; ;main_m.c: 172: }
 [e :UE 152 ]
 }

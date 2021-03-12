@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Universidad\AppData\Local\Temp\s1q68.o
+$C:\Users\Universidad\AppData\Local\Temp\s1sm4.o
 end_init CODE 0 0 0 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\Maestro_mp2.X.production.o
@@ -91,20 +91,20 @@ STRING 1000-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Maestro_mp2.X.production.o
-7EB cinit CODE >821:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-7EB cinit CODE >824:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-7EB cinit CODE >877:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-7EC cinit CODE >878:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-7ED cinit CODE >879:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-7EE cinit CODE >880:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-7EF cinit CODE >881:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-7F4 cinit CODE >884:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-7F5 cinit CODE >885:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-7F6 cinit CODE >886:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-7F7 cinit CODE >887:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-7FC cinit CODE >893:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-7FC cinit CODE >895:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-7FD cinit CODE >896:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
+7EB cinit CODE >997:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+7EB cinit CODE >1000:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+7EB cinit CODE >1053:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+7EC cinit CODE >1054:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+7ED cinit CODE >1055:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+7EE cinit CODE >1056:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+7EF cinit CODE >1057:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+7F4 cinit CODE >1060:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+7F5 cinit CODE >1061:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+7F6 cinit CODE >1062:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+7F7 cinit CODE >1063:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+7FC cinit CODE >1069:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+7FC cinit CODE >1071:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+7FD cinit CODE >1072:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
 9 text18 CODE >32:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\I2C.c
 9 text18 CODE >34:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\I2C.c
 15 text18 CODE >35:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\I2C.c
@@ -289,17 +289,17 @@ CE1 text2 CODE >21:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\
 CE2 text2 CODE >22:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\I2C.c
 CE3 text2 CODE >23:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\I2C.c
 CE4 text2 CODE >24:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\I2C.c
-C09 text1 CODE >173:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
-C09 text1 CODE >174:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
-C0C text1 CODE >175:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
-C0D text1 CODE >176:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
-C10 text1 CODE >177:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
-C11 text1 CODE >178:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
-C12 text1 CODE >179:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
-C13 text1 CODE >180:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
-C16 text1 CODE >181:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
-C17 text1 CODE >182:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
-C24 text1 CODE >183:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
+C09 text1 CODE >162:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
+C09 text1 CODE >163:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
+C0C text1 CODE >164:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
+C0D text1 CODE >165:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
+C10 text1 CODE >166:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
+C11 text1 CODE >167:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
+C12 text1 CODE >168:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
+C13 text1 CODE >169:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
+C16 text1 CODE >170:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
+C17 text1 CODE >171:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
+C24 text1 CODE >172:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
 C52 maintext CODE >145:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
 C52 maintext CODE >146:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
 C57 maintext CODE >147:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
@@ -307,16 +307,16 @@ C6D maintext CODE >149:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyect
 C6E maintext CODE >150:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
 C6F maintext CODE >152:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
 C75 maintext CODE >153:C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
-BE5 clrtext CODE >864:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-BE5 clrtext CODE >865:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-BE6 clrtext CODE >866:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-BE6 clrtext CODE >867:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-BE7 clrtext CODE >868:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-BE8 clrtext CODE >869:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-BE9 clrtext CODE >870:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-BEA clrtext CODE >871:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-BEB clrtext CODE >872:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
-BEC clrtext CODE >873:C:\Users\Universidad\AppData\Local\Temp\s1q68.s
+BE5 clrtext CODE >1040:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+BE5 clrtext CODE >1041:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+BE6 clrtext CODE >1042:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+BE6 clrtext CODE >1043:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+BE7 clrtext CODE >1044:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+BE8 clrtext CODE >1045:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+BE9 clrtext CODE >1046:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+BEA clrtext CODE >1047:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+BEB clrtext CODE >1048:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
+BEC clrtext CODE >1049:C:\Users\Universidad\AppData\Local\Temp\s1sm4.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -341,11 +341,12 @@ __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __size_of_BMP280_Update 0 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\s1q68.o
+_TXIF 64 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\s1sm4.o
 _main 18A4 0 CODE 0 maintext dist/default/production\Maestro_mp2.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 BMP280_begin@T_sampling 23 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp2.X.production.o
-start 0 0 CODE 0 init C:\Users\Universidad\AppData\Local\Temp\s1q68.o
+start 0 0 CODE 0 init C:\Users\Universidad\AppData\Local\Temp\s1sm4.o
 __size_of___aldiv 0 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 __size_of___lldiv 0 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
@@ -354,12 +355,12 @@ __end_of_BMP280_Read16 1BFA 0 CODE 0 text11 dist/default/production\Maestro_mp2.
 __Hpowerup 0 0 CODE 0 powerup -
 I2C_Master_Read@a 70 0 COMMON 1 cstackCOMMON dist/default/production\Maestro_mp2.X.production.o
 __end_of_BMP280_Update 1E34 0 CODE 0 text4 dist/default/production\Maestro_mp2.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\s1q68.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\s1q68.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\s1q68.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\s1q68.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\s1q68.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\s1q68.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\s1sm4.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\s1sm4.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\s1sm4.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\s1sm4.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\s1sm4.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Universidad\AppData\Local\Temp\s1sm4.o
 ___aldiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\Maestro_mp2.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -374,8 +375,9 @@ __end_of_BMP280_readTemperature 58A 0 CODE 0 text3 dist/default/production\Maest
 __end_of___lldiv 1CC6 0 CODE 0 text7 dist/default/production\Maestro_mp2.X.production.o
 BMP280_Configure@mode 20 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp2.X.production.o
 BMP280_Configure@filter 78 0 COMMON 1 cstackCOMMON dist/default/production\Maestro_mp2.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\s1q68.o
-___stacklo 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\s1q68.o
+___stackhi 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\s1sm4.o
+___stacklo 0 0 ABS 0 - C:\Users\Universidad\AppData\Local\Temp\s1sm4.o
+_BAUDCTLbits 187 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 ___lldiv@counter 7D 0 COMMON 1 cstackCOMMON dist/default/production\Maestro_mp2.X.production.o
 start_initialization FD6 0 CODE 0 cinit dist/default/production\Maestro_mp2.X.production.o
@@ -383,20 +385,19 @@ _TRISCbits 87 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 ___aldiv@quotient 22 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp2.X.production.o
 ___lldiv@dividend 74 0 COMMON 1 cstackCOMMON dist/default/production\Maestro_mp2.X.production.o
 clear_ram0 17CA 0 CODE 0 clrtext dist/default/production\Maestro_mp2.X.production.o
+_SPBRGH 9A 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp2.X.production.o
 _SSPADD 93 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 _SSPBUF 13 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\s1q68.o
+___int_sp 0 0 STACK 2 stack C:\Users\Universidad\AppData\Local\Temp\s1sm4.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
 __Hcinit 1000 0 CODE 0 cinit -
-_BMP280_readTemperature$963 4B 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp2.X.production.o
-_BMP280_readTemperature$964 46 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp2.X.production.o
 __Hstack 0 0 STACK 2 stack -
 _BMP280_Configure 1A42 0 CODE 0 text13 dist/default/production\Maestro_mp2.X.production.o
 I2C_Master_Write@d 70 0 COMMON 1 cstackCOMMON dist/default/production\Maestro_mp2.X.production.o
@@ -442,20 +443,20 @@ BMP280_readPressure@pres 4A 0 BANK0 1 cstackBANK0 dist/default/production\Maestr
 BMP280_readPressure@var1 57 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp2.X.production.o
 BMP280_readPressure@var2 4F 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp2.X.production.o
 ?_BMP280_Read16 76 0 COMMON 1 cstackCOMMON dist/default/production\Maestro_mp2.X.production.o
+_BMP280_readTemperature$1176 4B 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp2.X.production.o
+_BMP280_readTemperature$1177 46 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp2.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
 ___lldiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\Maestro_mp2.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Universidad\AppData\Local\Temp\s1q68.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Universidad\AppData\Local\Temp\s1sm4.o
 BMP280_Write@_data 72 0 COMMON 1 cstackCOMMON dist/default/production\Maestro_mp2.X.production.o
-_BMP280_readPressure$965 4B 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp2.X.production.o
-_BMP280_readPressure$966 3E 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp2.X.production.o
-_BMP280_readPressure$967 42 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp2.X.production.o
-_BMP280_readPressure$968 46 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp2.X.production.o
 __size_of_BMP280_readTemperature 0 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 __size_of_BMP280_readPressure 0 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 __size_of___lmul 0 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __LbssBANK1 0 0 ABS 0 bssBANK1 -
 __end_of_BMP280_Configure 1AD2 0 CODE 0 text13 dist/default/production\Maestro_mp2.X.production.o
+_RCSTAbits 18 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
+_PIE1bits 8C 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 __ptext10 19CA 0 CODE 0 text10 dist/default/production\Maestro_mp2.X.production.o
 __ptext11 1B62 0 CODE 0 text11 dist/default/production\Maestro_mp2.X.production.o
 __ptext12 18FE 0 CODE 0 text12 dist/default/production\Maestro_mp2.X.production.o
@@ -497,6 +498,7 @@ __Lspace_4 0 0 ABS 0 - -
 __end_of_I2C_Master_Write 1812 0 CODE 0 text15 dist/default/production\Maestro_mp2.X.production.o
 BMP280_Configure@_ctrl_meas 21 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp2.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+_PIR1bits C 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 __Lend_init 0 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __size_of_I2C_Master_Start 0 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
@@ -532,6 +534,10 @@ __end_of_BMP280_begin 2000 0 CODE 0 text9 dist/default/production\Maestro_mp2.X.
 BMP280_readPressure@p 53 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp2.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
+_BMP280_readPressure$1178 4B 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp2.X.production.o
+_BMP280_readPressure$1179 3E 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp2.X.production.o
+_BMP280_readPressure$1180 42 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp2.X.production.o
+_BMP280_readPressure$1181 46 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp2.X.production.o
 _I2C_Master_Init 195A 0 CODE 0 text2 dist/default/production\Maestro_mp2.X.production.o
 _I2C_Master_Read 18FE 0 CODE 0 text12 dist/default/production\Maestro_mp2.X.production.o
 _I2C_Master_Stop 17EC 0 CODE 0 text16 dist/default/production\Maestro_mp2.X.production.o
@@ -549,6 +555,7 @@ ___lmul@multiplicand 2A 0 BANK0 1 cstackBANK0 dist/default/production\Maestro_mp
 __end_of_BMP280_readPressure FD6 0 CODE 0 text5 dist/default/production\Maestro_mp2.X.production.o
 ___lldiv@quotient 79 0 COMMON 1 cstackCOMMON dist/default/production\Maestro_mp2.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Maestro_mp2.X.production.o
+_TXSTAbits 98 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 _SSPCON2 91 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 _SSPSTAT 94 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 __Hend_init 6 0 CODE 0 end_init -
@@ -557,12 +564,15 @@ __end_of_main 18FE 0 CODE 0 maintext dist/default/production\Maestro_mp2.X.produ
 _ANSEL 188 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 _PORTD 8 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
+_RCREG 1A 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
+_SPBRG 99 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 _SSPIE 463 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 _SSPIF 63 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 _TRISB 86 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 _TRISC 87 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 _TRISD 88 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 _TRISE 89 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
+_TXREG 19 0 ABS 0 - dist/default/production\Maestro_mp2.X.production.o
 __end_of_setup 184A 0 CODE 0 text1 dist/default/production\Maestro_mp2.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -

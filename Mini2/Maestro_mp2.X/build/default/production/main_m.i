@@ -2943,7 +2943,6 @@ void main(void) {
     while (1) {
     BMP280_readTemperature(&temperature);
     BMP280_readPressure(&pressure);
-# 165 "main_m.c"
     }
 }
 

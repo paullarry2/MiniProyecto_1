@@ -109,8 +109,10 @@ STANDBY_4000 7
 [v _I2C_Master_Read I2C_Master_Read `(us  1 e 2 0 ]
 "145 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
 [v _main main `(v  1 e 1 0 ]
-"173
+"162
 [v _setup setup `(v  1 e 1 0 ]
+"36 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\UART.c
+[v _UART_send_char UART_send_char `(v  1 e 1 0 ]
 "32 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\BMP280.c
 [v _adc_T adc_T `l  1 e 4 0 ]
 [v _adc_P adc_P `l  1 e 4 0 ]
@@ -134,10 +136,47 @@ STANDBY_4000 7
 [v _PORTBbits PORTBbits `VES78  1 e 1 @6 ]
 "352
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
+[s S471 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"553
+[u S479 . 1 `S471 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES479  1 e 1 @12 ]
 "843
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "850
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
+[s S371 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"1068
+[s S380 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S384 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nRC8 1 0 :1:6 
+]
+[s S387 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[u S390 . 1 `S371 1 . 1 0 `S380 1 . 1 0 `S384 1 . 1 0 `S387 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES390  1 e 1 @24 ]
+"1133
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1140
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
 "1478
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
 "1540
@@ -158,6 +197,17 @@ STANDBY_4000 7
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "1664
 [v _TRISE TRISE `VEuc  1 e 1 @137 ]
+[s S427 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+]
+"1718
+[u S435 . 1 `S427 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES435  1 e 1 @140 ]
 "1979
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
 [s S168 . 1 `uc 1 SEN 1 0 :1:0 
@@ -176,6 +226,41 @@ STANDBY_4000 7
 [v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
 "2177
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+[s S334 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"2582
+[s S343 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 nTX8 1 0 :1:6 
+]
+[s S347 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[u S350 . 1 `S334 1 . 1 0 `S343 1 . 1 0 `S347 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES350  1 e 1 @152 ]
+"2642
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"2704
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @154 ]
+[s S448 . 1 `uc 1 ABDEN 1 0 :1:0 
+`uc 1 WUE 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 BRG16 1 0 :1:3 
+`uc 1 SCKP 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 RCIDL 1 0 :1:6 
+`uc 1 ABDOVF 1 0 :1:7 
+]
+"3352
+[u S457 . 1 `S448 1 . 1 0 ]
+[v _BAUDCTLbits BAUDCTLbits `VES457  1 e 1 @391 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3449
@@ -192,6 +277,8 @@ STANDBY_4000 7
 [v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
 "4460
 [v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
+"4544
+[v _TXIF TXIF `VEb  1 e 0 @100 ]
 "74 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\main_m.c
 [v _temperature temperature `l  1 e 4 0 ]
 "75
@@ -199,12 +286,12 @@ STANDBY_4000 7
 "145
 [v _main main `(v  1 e 1 0 ]
 {
-"166
+"155
 } 0
-"173
+"162
 [v _setup setup `(v  1 e 1 0 ]
 {
-"183
+"172
 } 0
 "16 C:\Users\Universidad\Documents\MiniProyecto_1\MiniProyecto_1\Mini2\Maestro_mp2.X\I2C.c
 [v _I2C_Master_Init I2C_Master_Init `(v  1 e 1 0 ]
